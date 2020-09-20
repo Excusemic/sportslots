@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+
+<html lang="zxx">
+<head>
+    <!-- TITLE OF SITE -->
+    <title>SportSlots</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="SportSlots" />
+    <meta name="keywords" content="SportSlots, Basketball, Sport, Basket, Kosarka " />
+    <meta name="author" content="SportSlots">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- FAVICON -->
+    <link rel="apple-touch-icon" sizes="57x57" href="favi/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favi/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favi/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favi/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favi/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favi/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favi/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favi/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favi/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="favi/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favi/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favi/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favi/favicon-16x16.png">
+    <link rel="manifest" href="favi/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favi/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- =============================================   CSS Begins   ================================================== -->
+
+    <!-- Bootstrap -->
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-reboot.min.css" rel="stylesheet">
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-
+    Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> --> 
+    
+        
+    <!-- =============================================   FONTS & ICONS  ================================================== -->
+
+    <!-- Font Awesome -->
+
+    <link href="css/all.min.css" rel="stylesheet">
+
+    <!-- FONTS -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900" rel="stylesheet">
+
+
+    <!-- Main Style -->
+
+    <link href="css/style.css" rel="stylesheet">
+
+
+</head>
+<body>
+
+    <div class="sign-in-overlay">
+        <div class="sign-in-content">
+            <p class="sign-in-p">Sign up</p>
+            <form id="create-acc-form">
+              <input type="text" id="fName" name="fName" placeholder="First name"><br>
+              <input type="text" id="lName" name="lName" placeholder="Last name"><br>
+              <input type="text" id="bDay"placeholder="Birthday"
+              onfocus="(this.type='date')"
+              onblur="(this.type='text')" name="bDay"><br>
+              <input type="email" id="email" name="email" placeholder="Email adress"><br>
+              <input type="password" id="pass" name="pass" placeholder="Password"><br>
+              <input type="submit" value="Sign up">
+            </form> 
+            <p  class="sign-in-p">sign up with</p>
+            <button class="sign-in-facebok">
+                <img src="icons/fb-icon-colored.png" alt="facebook">
+                <p>Facebook</p>
+            </button>
+            <button class="sign-in-google">
+                <img src="icons/google-icon-colored.png" alt="google">
+                <p>Google</p>
+            </button>
+            <p class="log-in-text">Already have an account?<a href="#">Log in</a></p>
+            <span class="x-button exit-signin">x</span>
+        </div>
+    </div>
+    <div class="searching-overlay">
+        <div class="pop-up-search">
+            <h3>Searching...</h3>
+        </div>
+    </div>
+    
+    <!--**************************************** HEADER AND NAVIGATION START ***********************************-->
+    <header class="header">
+        <div class="header-content">
+            <img src="logo/logo-mobile.png" alt="logo"  onclick="location.href='index.html'" class="logo-mobile">
+            <img src="logo/sslogo.png" alt="logo"  onclick="location.href='index.html'" class="logo-desktop">
+            <nav class="header-nav nav-desktop">
+                <div class="login-signup">
+                            <form id="signin-form">
+                                <label for="email">Email:</label>
+                                <input type="email" name="" id="emailLogin">
+                                <label for="password">Password:</label>
+                                <input type="password" name="" id="passLogin">
+                                <input type="submit" value="Log in">
+                            </form>
+                            <p>Don't have an account? <span class="sign-up-header-btn">Sign up!</span></p>
+                </div>
+                <div class="signed-in-content-nav">
+                    <ul class="nav-content">
+                        <li class="nav-item"><a href="#">My games</a>
+                            <ul class="nav-dropdown">
+                                <li><a href="upcoming-games.html">Coming up</a></li>
+                                <li><a href="games-history.html">History</a></li>
+                                <li><a href="create-game-1.html">Create a game</a></li>
+                                <li><a href="find-game.html">Find a game</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a href="#">Courts</a>
+                            <ul class="nav-dropdown">
+                                <li><a href="add-court.html">Add a court</a></li>
+                                <li><a href="my-courts.html">My courts</a></li>
+                                <li><a href="find-court.html">Find a court</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a href="messages.html">Messages</a></li>
+                        <li class="nav-item"><a href="#">Help</a></li>
+                        <li class="nav-profile sign-up-button nav-item"><a href="#"><span class="nameOfUser"></span><img alt="Profile picture" id="playerAvatar"></a>
+                            <div class="notification-bubble"><span>12</span></div>
+                            <ul class="nav-dropdown">
+                                <li><a href="notifications.html">Notifications</a></li>
+                                <li><a href="account-edit-profile.html">Edit profile</a></li>
+                                <li><a href="account.html">Account</a></li>
+                                <hr>
+                                <li><a href="reservations.html">Reservations</a></li>
+                                <li><a href="manage-slots.html">Manage slots</a></li>
+                                <hr>
+                                <li class="logout-btn"><a href="">Log out</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <nav class="nav mobile-nav">
+                <div class="notification-div">
+                    <img src="icons/notification.png" alt="notifications">
+                    <div class="notification-bubble"><span>12</span></div>
+                </div>
+                <img src="icons/ham.png" alt="ham" class="hambtn">
+            </nav>
+            <div class="side-menu">
+                <div class="new-to-ss">
+                    <div class="create-acc">
+                        <p>New to sportslots?</p>
+                        <button class="green-button mobile-create-acc-btn">Create account</button>
+                    </div>
+                    <div class="sign-in-side-menu">
+                        <p>Already have an account?</p>
+                        <button class="green-button login-mobile">Sign in</button>
+                        <p class="forgot-password">Forgot password?</p>
+                    </div>
+                    <form id="signin-form-mobile" class="side-menu-form">
+                        <label for="email">Email:</label>
+                        <br>
+                        <input type="email" name="" id="emailLoginMobile">
+                        <br>
+                        <br>
+                        <label for="password">Password:</label>
+                        <br>
+                        <input type="password" name="" id="passLoginMobile">
+                        <br>
+                        <br>
+                        <input type="submit" value="Log in">
+                    </form>
+
+                </div>
+                <div class="signed-in-menu">
+                    <p class="expand-list expandGames" listTarget="expand-games">My games</p>
+                    <ul class="my-games-mobile-nav">
+                        <li><a href="upcoming-games.html">Coming up</a></li>
+                        <li><a href="games-history.html">History</a></li>
+                        <li><a href="create-game-1.html">Create a game</a></li>
+                        <li><a href="find-game.html">Find a game</a></li>
+                    </ul>
+                    <hr>
+                    <p class="expand-list expandCourts" listTarget="expand-courts">Courts</p>
+                    <ul class="courts-mobile-nav">
+                        <li><a href="add-court.html">Add a court</a></li>
+                        <li><a href="my-courts.html">My courts</a></li>
+                        <li><a href="find-court.html">Find a court</a></li>
+                    </ul>
+                    <hr>
+                    <p class="message-p"><a href="messages.html">Messages</a></p>
+                    <hr>
+                    <p class="expand-list expandProfile" listTarget="expand-profile">Profile</p>
+                    <ul class="profile-mobile-nav">
+                        <li><a href="notifications.html">Notifications</a></li>
+                        <li><a href="account-edit-profile.html">Edit profile</a></li>
+                        <li><a href="account.html">Account</a></li>
+                        <hr>
+                        <li><a href="reservations.html">Reservations</a></li>
+                        <li><a href="manage-slots.html">Manage slots</a></li>
+                        <hr>
+                        <li class="logout-btn"><a href="">Log out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--**************************************** HEADER AND NAVIGATION END ***********************************-->
+
+    <section class="upcoming-games-history-games-container slot-details-container">
+        <div class="upcoming-games-history-games-content slot-details-content">
+            <h3>Slot details</h3>
+            <div class="upcoming-games-history-games-courts">
+
+                <div class="upcoming-court-history-court-paid players-pending">
+                    <img src="court_images/super-court-img2.png" alt="court">
+                    <div class="chosen-court-details-paid">
+                        <h4>Super Sport Court</h4>
+                        <p>Lorem ipsum street 235b<br>New York, US<br></p>
+                        <div class="date-div">
+                            <span class="booked-date">Wed, Oct 3</span> <span class="booked-time">08AM/10Am</span> 
+                            <span class="status-confirmed">
+                                <span class="span-green status">CONFIRMED</span> <span class="player-number">12 Players</span>
+                                <div class="go-to-chat">
+                                    <div>
+                                        <h4 class="price-dollars"><img src="icons/player_stamp.png" alt="">&#36;6.5</h4>
+                                    </div>
+                                </div> 
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="more">
+                        <img src="icons/dots.png" alt="more" class="dots">
+                        <ul class="more-list">
+                            <li>Reschedule</li>
+                            <li>Leave group</li>
+                            <li>Cancel slot</li>
+                            <li>Delete group</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="change-or-pay notice">
+                <!-- Notification type 1 -->
+                <div class="booked-slot">
+                    <img src="icons/checkmark_green.png" alt="booked">
+                    <div class="text">
+                        <p>Congrats!</p>
+                        <p>11 players accepted the invitation</p>
+                        <p class="span-black">Slot is booked</p>
+                    </div>
+                </div>
+                <!-- Notification type 2 -->
+                <div class="booked-slot no-longer-available-slot">
+                    <img src="icons/info_orange_large.png" alt="booked">
+                    <div class="text">
+                        <p>This slot is no longer available</p>
+                        <p>Try finding another one</p>
+                        <button class="green-button">Reschedule</button>
+                    </div>
+                </div>
+                <!-- Notification type 3 -->
+                <div class="booked-slot ended-slot">
+                    <img src="icons/checkmark_green.png" alt="booked">
+                    <div class="text">
+                        <p>The slot has ended</p>
+                        <p>Reschedule or turn ON automatic rebook in order to keep the same slot every week</p>
+                        <button class="green-button">Reschedule</button>
+                    </div>
+                </div>
+                <!-- Notification type 4 -->
+                <div class="booked-slot rebook-turned-on">
+                    <img src="icons/checkmark_green.png" alt="booked">
+                    <div class="text">
+                        <h4 class="span-black">
+                            REBOOK IS TURNED ON!
+                        </h4>
+                        <p>This feature enables you to have the same alot booked every week for the next 2 months</p>
+                        <p>All confirmed players will need to accept in order for rebook option to be active</p>
+                        <div class="buttons-rebook">
+                            <button class="green-button">Accept</button>
+                            <button class="grey-button">
+                                Decline
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Notification type 5 -->
+                <div class="booked-slot player-exlcuded">
+                    <div>
+                        <img src="icons/info_orange_large.png" alt="booked">
+                        <div class="text">
+                            <p>1 player is excluded from the slot</p>
+                            <p>These are the following options</p>
+                        </div>
+                    </div>
+                    <div class="options">
+                        <div>
+                            <p class="span-black">Invite new player</p>
+                            <p>The new player will cover the payment and join the group</p>
+                            <button class="green-button">
+                                Invite new player
+                            </button>
+                        </div>
+                        <div>
+                            <p class="span-black">Share extra cost</p>
+                            <p>Extra cost of <span class="span-black">$2.5</span> will be applied to all remaining players in the slot</p>
+                            <button class="green-button">
+                                Share extra cost
+                            </button>
+                        </div>
+                        <div>
+                            <p class="span-black">Cancellation</p>
+                            <p>According to cancellation policy cancelling penalty is <span class="span-black">$22</span></p>
+                            <button class="grey-button">
+                                Cancel slot
+                            </button>
+                        </div>
+                    </div>
+                    <p class="dislaimer-red">
+                        *Please discuss all actions with players. Only the group admins can select options
+                    </p>
+                </div>
+            </div>
+            <div class="go-to-chat-div">
+                <button class="go-to-chat-button">GO TO GROUP CHAT
+                </button>
+            </div>
+        </div>
+        
+
+    </section>
+
+    <section class="find-players-fp confirmed-players-slot-details">
+        <div class="find-players-content-fp confirmed-players">
+            <div class="court-info-confirmed-players">
+                <h4 class="confirmed-players-header">Confirmed players</h4>
+            </div>
+            <div class="players-fp">
+
+
+                <div class="player-box-invite">
+                    <img src="players/player1.png" alt="player">
+                    <div class="player-info-invite">
+                        <h5>Smoke Mardeljano</h5>
+                        <p>Belgrade, Serbia</p>
+                    </div>
+                    <div class="player-height-years">
+                        <p class="player-height">188cm</p>
+                        <p class="player-years">33 years</p>
+                    </div>
+                    <div class="star-rating-step2">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span>5.0</span>
+                    </div>
+                    <div class="more">
+                        <img src="icons/dots.png" alt="more" class="dots">
+                        <ul class="more-list">
+                            <li>Exclude</li>
+                            <li>Make admin</li>
+                            <li>Remove</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="player-box-invite">
+                    <img src="players/player1.png" alt="player">
+                    <div class="player-info-invite">
+                        <h5>Smoke Mardeljano</h5>
+                        <p>Belgrade, Serbia</p>
+                    </div>
+                    <div class="player-height-years">
+                        <p class="player-height">188cm</p>
+                        <p class="player-years">33 years</p>
+                    </div>
+                    <div class="star-rating-step2">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span>5.0</span>
+                    </div>
+                    <div class="more">
+                        <img src="icons/dots.png" alt="more" class="dots">
+                        <ul class="more-list">
+                            <li>Exclude</li>
+                            <li>Make admin</li>
+                            <li>Remove</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="player-box-invite">
+                    <img src="players/player1.png" alt="player">
+                    <div class="player-info-invite">
+                        <h5>Smoke Mardeljano</h5>
+                        <p>Belgrade, Serbia</p>
+                    </div>
+                    <div class="player-height-years">
+                        <p class="player-height">188cm</p>
+                        <p class="player-years">33 years</p>
+                    </div>
+                    <div class="star-rating-step2">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span>5.0</span>
+                    </div>
+                    <div class="more">
+                        <img src="icons/dots.png" alt="more" class="dots">
+                        <ul class="more-list">
+                            <li>Exclude</li>
+                            <li>Make admin</li>
+                            <li>Remove</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="player-box-invite">
+                    <img src="players/player1.png" alt="player">
+                    <div class="player-info-invite">
+                        <h5>Smoke Mardeljano</h5>
+                        <p>Belgrade, Serbia</p>
+                    </div>
+                    <div class="player-height-years">
+                        <p class="player-height">188cm</p>
+                        <p class="player-years">33 years</p>
+                    </div>
+                    <div class="star-rating-step2">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span>5.0</span>
+                    </div>
+                    <div class="more">
+                        <img src="icons/dots.png" alt="more" class="dots">
+                        <ul class="more-list">
+                            <li>Exclude</li>
+                            <li>Make admin</li>
+                            <li>Remove</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="player-box-invite">
+                    <img src="players/player1.png" alt="player">
+                    <div class="player-info-invite">
+                        <h5>Smoke Mardeljano</h5>
+                        <p>Belgrade, Serbia</p>
+                    </div>
+                    <div class="player-height-years">
+                        <p class="player-height">188cm</p>
+                        <p class="player-years">33 years</p>
+                    </div>
+                    <div class="star-rating-step2">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span>5.0</span>
+                    </div>
+                    <div class="more">
+                        <img src="icons/dots.png" alt="more" class="dots">
+                        <ul class="more-list">
+                            <li>Exclude</li>
+                            <li>Make admin</li>
+                            <li>Remove</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="player-box-invite">
+                    <img src="players/player1.png" alt="player">
+                    <div class="player-info-invite">
+                        <h5>Smoke Mardeljano</h5>
+                        <p>Belgrade, Serbia</p>
+                    </div>
+                    <div class="player-height-years">
+                        <p class="player-height">188cm</p>
+                        <p class="player-years">33 years</p>
+                    </div>
+                    <div class="star-rating-step2">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span>5.0</span>
+                    </div>
+                    <div class="more">
+                        <img src="icons/dots.png" alt="more" class="dots">
+                        <ul class="more-list">
+                            <li>Exclude</li>
+                            <li>Make admin</li>
+                            <li>Remove</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+
+
+
+            </div>
+        </div>
+
+    </section>
+
+    <div class="slot-invitation">
+        <h5>Slot invitation link</h5>
+        <div class="invitaion-link">
+            <p>https://qderae/213123123</p>
+        </div>
+        <p class="span-green">Copy link</p>
+        <button class="green-button">Invite players</button>
+    </div>
+    
+    <div class="slot-details-settings">
+        <h5>Settings</h5>
+        <div class="settings-switches">
+                <div class="switch">
+                    <p>Others can join</p>
+                    <div class="onoffswitch">
+                        <input type="checkbox" name="onoffswitchJoin" class="onoffswitch-checkbox" id="myonoffswitchJoin" tabindex="0" checked>
+                        <label class="onoffswitch-label" for="myonoffswitchJoin"></label>
+                    </div>
+                </div>
+                <div class="switch">
+                    <p>Others can invite</p>
+                    <div class="onoffswitch">
+                        <input type="checkbox" name="onoffswitchInvite" class="onoffswitch-checkbox" id="myonoffswitchInvite" tabindex="0" checked>
+                        <label class="onoffswitch-label" for="myonoffswitchInvite"></label>
+                    </div>
+                </div>
+                <div class="switch switch-automatic">
+                    <p>Automatic rebook</p>
+                    <div class="onoffswitch">
+                        <input type="checkbox" name="onoffswitchRebook" class="onoffswitch-checkbox" id="myonoffswitchRebook" tabindex="0" checked>
+                        <label class="onoffswitch-label" for="myonoffswitchRebook"></label>
+                    </div>
+                    <div class="automatic-rebook-text">
+                        <p>Keep this slot booked in the future.<br>
+                        It will be active for the next 2 months.<br>
+                        <span class="span-green">Learn more</span></p>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+
+
+<!--************************************ MOBILE FOOTER START ************************************-->
+    <div class="footer-container">
+        <div class="footer-content">
+            <div class="my-games" id="myGamesFooter">
+                <img src="icons/mygames-bottom.png" alt="my games">
+                <p>My games</p>
+            </div>
+            <div class="new-game"  onclick="location.href='create-game-1.html'">
+                <img src="icons/newgame-bottom.png" alt="new game">
+                <p>New game</p>
+            </div>
+            <div class="messages-footer"  onclick="location.href='messages.html'">
+                <img src="icons/msg-bottom.png" alt="messages">
+                <p>Messages</p>
+            </div>
+            <div class="profile">
+                <img src="icons/profileicon.png" alt="profile" id="profileFooter">
+                <p>Profile</p>
+            </div>
+        </div>
+    </div>
+
+
+
+<!--************************************ MOBILE FOOTER END************************************-->
+
+
+
+
+
+    <!--************************************ SCRIPTS *****************************************-->
+                    <!-- The core Firebase JS SDK is always required and must be listed first -->
+                    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+                    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-firestore.js"></script>
+                    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-auth.js"></script>
+                
+                    <!-- TODO: Add SDKs for Firebase products that you want to use
+                        https://firebase.google.com/docs/web/setup#available-libraries -->
+                
+                    <script>
+                    // Your web app's Firebase configuration
+                    var firebaseConfig = {
+                        apiKey: "AIzaSyAOer4uBO05vpedXG0S68_TC_gDuylFVVU",
+                        authDomain: "sportslots-f03b9.firebaseapp.com",
+                        databaseURL: "https://sportslots-f03b9.firebaseio.com",
+                        projectId: "sportslots-f03b9",
+                        storageBucket: "sportslots-f03b9.appspot.com",
+                        messagingSenderId: "486189809343",
+                        appId: "1:486189809343:web:40b83e90bfe895d053100a"
+                    };
+                    // Initialize Firebase
+                    firebase.initializeApp(firebaseConfig);
+
+                    </script>
+                    <!-- jquery -->
+                    <script src="js/jquery-3.4.1.slim.min.js"></script>
+                    <!-- Bootstrap -->
+                    <script src="js/popper.min.js"></script>
+                    <script src="js/bootstrap.min.js"></script>
+                    <script src="js/waypoints.min.js"></script>
+                    <script src="js/slick.min.js"></script>
+                    <script src="js/jquery.ajaxchimp.min.js"></script>
+
+                     <!-- Custom Scripts -->
+                     <script>
+                         document.querySelector('#book-pending-slot').addEventListener('click', () => {
+                            document.querySelector('#book-pending-slot').classList.toggle('green-button-clicked');
+                            document.querySelector('.disclaimer-pending-players').classList.toggle('toggle-display');
+                         })
+                     </script>
+                     <script src="js/menu.js"></script>
+                    <script src="js/main.js"></script>
+                    <!-- Font Awesome  -->
+
+                    <script src="js/all.min.js"></script>
+                    <!--<script src="https://use.fontawesome.com/b9733a5df8.js"></script>-->
+
+
+                    <!-- Bootstrap ONLINE LINK -->
+
+
+
+                    <!--
+                    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+                    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+                    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> 
+                    -->
+
+</body>
+</html>

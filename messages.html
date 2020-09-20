@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+
+<html lang="zxx">
+<head>
+    <!-- TITLE OF SITE -->
+    <title>SportSlots</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="SportSlots" />
+    <meta name="keywords" content="SportSlots, Basketball, Sport, Basket, Kosarka " />
+    <meta name="author" content="SportSlots">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- FAVICON -->
+    <link rel="apple-touch-icon" sizes="57x57" href="favi/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favi/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favi/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favi/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favi/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favi/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favi/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favi/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favi/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="favi/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favi/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favi/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favi/favicon-16x16.png">
+    <link rel="manifest" href="favi/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favi/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- =============================================   CSS Begins   ================================================== -->
+
+    <!-- Bootstrap -->
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-reboot.min.css" rel="stylesheet">
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-
+    Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> --> 
+    
+        
+    <!-- =============================================   FONTS & ICONS  ================================================== -->
+
+    <!-- Font Awesome -->
+
+    <link href="css/all.min.css" rel="stylesheet">
+
+    <!-- FONTS -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900" rel="stylesheet">
+
+
+    <!-- Main Style -->
+
+    <link href="css/style.css" rel="stylesheet">
+
+
+</head>
+<body>
+    <div class="pop-up-excluding">
+        <div class="pop-up-excluding-content">
+            <h4 class="span-green">Excluding</h4>
+            <div class="info">
+                <p class="span-black court">Super sports court indoor 3</p>
+                <p class="time">Wed, Oct 3 / 08AM-10AM</p>
+                <p class="confirmed">11 confirmed players</p>
+            </div>
+            <p class="span-black">You are about to exti a slot that has been booked.</p>
+            <p class="span-black">Your payment will be refunded when a anew players fills in your spot or when the slot is canceled (according to owner's policy).</p>
+            <div class="buttons">
+                <button class="green-button">Exit slot</button>
+                <button class="grey-button">Cancel</button>
+            </div>
+            <div class="x-button">X</div>
+        </div>
+    </div>
+    <div class="sign-in-overlay">
+        <div class="sign-in-content">
+            <p class="sign-in-p">Sign up</p>
+            <form id="create-acc-form">
+              <input type="text" id="fName" name="fName" placeholder="First name"><br>
+              <input type="text" id="lName" name="lName" placeholder="Last name"><br>
+              <input type="text" id="bDay"placeholder="Birthday"
+              onfocus="(this.type='date')"
+              onblur="(this.type='text')" name="bDay"><br>
+              <input type="email" id="email" name="email" placeholder="Email adress"><br>
+              <input type="password" id="pass" name="pass" placeholder="Password"><br>
+              <input type="submit" value="Sign up">
+            </form> 
+            <p  class="sign-in-p">sign up with</p>
+            <button class="sign-in-facebok">
+                <img src="icons/fb-icon-colored.png" alt="facebook">
+                <p>Facebook</p>
+            </button>
+            <button class="sign-in-google">
+                <img src="icons/google-icon-colored.png" alt="google">
+                <p>Google</p>
+            </button>
+            <p class="log-in-text">Already have an account?<a href="#">Log in</a></p>
+            <span class="x-button exit-signin">x</span>
+        </div>
+    </div>
+    <div class="searching-overlay">
+        <div class="pop-up-search">
+            <h3>Searching...</h3>
+        </div>
+    </div>
+    
+    <!--**************************************** HEADER AND NAVIGATION START ***********************************-->
+    <header class="header">
+        <div class="header-content">
+            <img src="logo/logo-mobile.png" alt="logo"  onclick="location.href='index.html'" class="logo-mobile">
+            <img src="logo/sslogo.png" alt="logo"  onclick="location.href='index.html'" class="logo-desktop">
+            <nav class="header-nav nav-desktop">
+                <div class="login-signup">
+                            <form id="signin-form">
+                                <label for="email">Email:</label>
+                                <input type="email" name="" id="emailLogin">
+                                <label for="password">Password:</label>
+                                <input type="password" name="" id="passLogin">
+                                <input type="submit" value="Log in">
+                            </form>
+                            <p>Don't have an account? <span class="sign-up-header-btn">Sign up!</span></p>
+                </div>
+                <div class="signed-in-content-nav">
+                    <ul class="nav-content">
+                        <li class="nav-item"><a href="#">My games</a>
+                            <ul class="nav-dropdown">
+                                <li><a href="upcoming-games.html">Coming up</a></li>
+                                <li><a href="games-history.html">History</a></li>
+                                <li><a href="create-game-1.html">Create a game</a></li>
+                                <li><a href="find-game.html">Find a game</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a href="#">Courts</a>
+                            <ul class="nav-dropdown">
+                                <li><a href="add-court.html">Add a court</a></li>
+                                <li><a href="my-courts.html">My courts</a></li>
+                                <li><a href="find-court.html">Find a court</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a href="messages.html">Messages</a></li>
+                        <li class="nav-item"><a href="#">Help</a></li>
+                        <li class="nav-profile sign-up-button nav-item"><a href="#"><span class="nameOfUser"></span><img alt="Profile picture" id="playerAvatar"></a>
+                            <div class="notification-bubble"><span>12</span></div>
+                            <ul class="nav-dropdown">
+                                <li><a href="notifications.html">Notifications</a></li>
+                                <li><a href="account-edit-profile.html">Edit profile</a></li>
+                                <li><a href="account.html">Account</a></li>
+                                <hr>
+                                <li><a href="reservations.html">Reservations</a></li>
+                                <li><a href="manage-slots.html">Manage slots</a></li>
+                                <hr>
+                                <li class="logout-btn"><a href="">Log out</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <nav class="nav mobile-nav">
+                <div class="notification-div">
+                    <img src="icons/notification.png" alt="notifications">
+                    <div class="notification-bubble"><span>12</span></div>
+                </div>
+                <img src="icons/ham.png" alt="ham" class="hambtn">
+            </nav>
+            <div class="side-menu">
+                <div class="new-to-ss">
+                    <div class="create-acc">
+                        <p>New to sportslots?</p>
+                        <button class="green-button mobile-create-acc-btn">Create account</button>
+                    </div>
+                    <div class="sign-in-side-menu">
+                        <p>Already have an account?</p>
+                        <button class="green-button login-mobile">Sign in</button>
+                        <p class="forgot-password">Forgot password?</p>
+                    </div>
+                    <form id="signin-form-mobile" class="side-menu-form">
+                        <label for="email">Email:</label>
+                        <br>
+                        <input type="email" name="" id="emailLoginMobile">
+                        <br>
+                        <br>
+                        <label for="password">Password:</label>
+                        <br>
+                        <input type="password" name="" id="passLoginMobile">
+                        <br>
+                        <br>
+                        <input type="submit" value="Log in">
+                    </form>
+
+                </div>
+                <div class="signed-in-menu">
+                    <p class="expand-list expandGames" listTarget="expand-games">My games</p>
+                    <ul class="my-games-mobile-nav">
+                        <li><a href="upcoming-games.html">Coming up</a></li>
+                        <li><a href="games-history.html">History</a></li>
+                        <li><a href="create-game-1.html">Create a game</a></li>
+                        <li><a href="find-game.html">Find a game</a></li>
+                    </ul>
+                    <hr>
+                    <p class="expand-list expandCourts" listTarget="expand-courts">Courts</p>
+                    <ul class="courts-mobile-nav">
+                        <li><a href="add-court.html">Add a court</a></li>
+                        <li><a href="my-courts.html">My courts</a></li>
+                        <li><a href="find-court.html">Find a court</a></li>
+                    </ul>
+                    <hr>
+                    <p class="message-p"><a href="messages.html">Messages</a></p>
+                    <hr>
+                    <p class="expand-list expandProfile" listTarget="expand-profile">Profile</p>
+                    <ul class="profile-mobile-nav">
+                        <li><a href="notifications.html">Notifications</a></li>
+                        <li><a href="account-edit-profile.html">Edit profile</a></li>
+                        <li><a href="account.html">Account</a></li>
+                        <hr>
+                        <li><a href="reservations.html">Reservations</a></li>
+                        <li><a href="manage-slots.html">Manage slots</a></li>
+                        <hr>
+                        <li class="logout-btn"><a href="">Log out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--**************************************** HEADER AND NAVIGATION END ***********************************-->
+    <!--**************************************** MESSAGEs START ***********************************-->
+
+    <div class="messages-container">
+        <aside class="message-list">
+            <div class="message-chatheads-container">
+                <div class="message-chatheads-header">
+                    <div class="upper-header">
+                        <span class="span-black">Messages</span>
+                        <div class="options">
+                        </div>
+                    </div>
+                    <div class="lower-header">
+                        <input type="text" name="" id="" placeholder="Seach Messages...">
+                    </div>
+                </div>
+                <div class="message-chatheads-content">
+                    <div class="chathead">
+                        <div class="chathead-content">
+                            <img src="players/player3.png" alt="player">
+                            <div class="info">
+                                <h6 class="span-black chathead-name">Super Sport Court</h6>
+                                <span class="status"><span class="span-green">CONFIRMED </span><span class="player-number"> / 7 other players</span></span>
+                                <span class="time">Wed, Oct 3 / 08Am - 10 AM</span>
+                            </div>
+                        </div>
+                        <div class="more">
+                            <img src="icons/dots.png" alt="more" class="dots">
+                            <ul class="more-list">
+                                <li>Mute(Unmute)</li>
+                                <li>Hide</li>
+                                <li>Delete</li>
+                                <li>Mark as read</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="chathead">
+                        <div class="chathead-content">
+                            <img src="players/player3.png" alt="player">
+                            <div class="info">
+                                <h6 class="span-black chathead-name">3x3 Pro ball</h6>
+                                <span class="status"><span class="span-orange">PENDING</span><span class="player-number"> / 4 of 11 confirmed</span></span>
+                                <br>
+                                <span class="time">Wed, Oct 3 / 08Am - 10 AM</span>
+                            </div>
+                            </div>
+                            <div class="more">
+                                <img src="icons/dots.png" alt="more" class="dots">
+                                <ul class="more-list">
+                                    <li>Mute(Unmute)</li>
+                                <li>Hide</li>
+                                <li>Delete</li>
+                                <li>Mark as read</li>
+                                </ul>
+                            </div>
+                    </div>
+                    <div class="chathead player-chathead">
+                        <div class="chathead-content">
+                            <img src="players/player3.png" alt="player">
+                            <div class="info">
+                                <h6 class="span-black chathead-name">Michael Fareland</h6>
+                                <span class="last-message"> You: last message text here<br>
+                                <span class="last-message-time">20:45</span></span>
+                            </div>
+                        </div>
+                        <div class="more">
+                            <img src="icons/dots.png" alt="more" class="dots">
+                            <ul class="more-list">
+                                <li>Mute(Unmute)</li>
+                                <li>Hide</li>
+                                <li>Delete</li>
+                                <li>Mark as read</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="chathead">
+                        <div class="chathead-content">
+                            <img src="players/player3.png" alt="player">
+                            <div class="info">
+                                <h6 class="span-black chathead-name">Court Owner name - I'm player</h6>
+                                <span class="status"><span class="span-green">CONFIRMED </span><span class="court-name">/ Super Sports Court Basketball 1</span></span>
+                                <span class="time">Wed, Oct 3 / 08Am - 10 AM</span>
+                            </div>
+                        </div>
+                        <div class="more">
+                            <img src="icons/dots.png" alt="more" class="dots">
+                            <ul class="more-list">
+                                <li>Mute(Unmute)</li>
+                                <li>Hide</li>
+                                <li>Delete</li>
+                                <li>Mark as read</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="chathead">
+                        <div class="chathead-content">
+                            <img src="players/player3.png" alt="player">
+                            <div class="info">
+                                <h6 class="span-black chathead-name">Super Sports Court Basketball 1</h6>
+                                <span class="status"><span class="span-green">CONFIRMED </span><span class="player-number"> / 7 other players</span></span>
+                                <span class="time">Wed, Oct 3 / 08Am - 10 AM</span>
+                            </div>
+                        </div>
+                        <div class="more">
+                            <img src="icons/dots.png" alt="more" class="dots">
+                            <ul class="more-list">
+                                <li>Mute(Unmute)</li>
+                                <li>Hide</li>
+                                <li>Delete</li>
+                                <li>Mark as read</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="chathead">
+                        <div class="chathead-content">
+                            <img src="players/player3.png" alt="player">
+                            <div class="info">
+                                <h6 class="span-black chathead-name">Court Owner name - I'm owner</h6>
+                                <span class="status"><span class="span-green">CONFIRMED </span><span class="court-name">/ Super Sports Court Basketball 1</span></span>
+                                <span class="time">Wed, Oct 3 / 08Am - 10 AM</span>
+                            </div>
+                        </div>
+                        <div class="more">
+                            <img src="icons/dots.png" alt="more" class="dots">
+                            <ul class="more-list">
+                                <li>Mute(Unmute)</li>
+                                <li>Hide</li>
+                                <li>Delete</li>
+                                <li>Mark as read</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="chathead player-chathead">
+                        <div class="chathead-content">
+                            <img src="players/player3.png" alt="player">
+                            <div class="info">
+                                <h6 class="span-black chathead-name">Michael Fareland</h6>
+                                <span class="last-message"> You: last message text here<br>
+                                <span class="last-message-time">20:45</span></span>
+                            </div>
+                        </div>
+                        <div class="more">
+                            <img src="icons/dots.png" alt="more" class="dots">
+                            <ul class="more-list">
+                                <li>Mute(Unmute)</li>
+                                <li>Hide</li>
+                                <li>Delete</li>
+                                <li>Mark as read</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="chathead player-chathead">
+                        <div class="chathead-content">
+                            <img src="players/player3.png" alt="player">
+                            <div class="info">
+                                <h6 class="span-black chathead-name">Michael Fareland</h6>
+                                <span class="last-message"> You: last message text here<br>
+                                <span class="last-message-time">20:45</span></span>
+                            </div>
+                        </div>
+                        <div class="more">
+                            <img src="icons/dots.png" alt="more" class="dots">
+                            <ul class="more-list">
+                                <li>Mute(Unmute)</li>
+                                <li>Hide</li>
+                                <li>Delete</li>
+                                <li>Mark as read</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="chathead player-chathead">
+                        <div class="chathead-content">
+                            <img src="players/player3.png" alt="player">
+                            <div class="info">
+                                <h6 class="span-black chathead-name">Michael Fareland</h6>
+                                <span class="last-message"> You: last message text here<br>
+                                <span class="last-message-time">20:45</span></span>
+                            </div>
+                        </div>
+                        <div class="more">
+                            <img src="icons/dots.png" alt="more" class="dots">
+                            <ul class="more-list">
+                                <li>Mute(Unmute)</li>
+                                <li>Hide</li>
+                                <li>Delete</li>
+                                <li>Mark as read</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="chathead player-chathead">
+                        <div class="chathead-content">
+                            <img src="players/player3.png" alt="player">
+                            <div class="info">
+                                <h6 class="span-black chathead-name">Michael Fareland</h6>
+                                <span class="last-message"> You: last message text here<br>
+                                <span class="last-message-time">20:45</span></span>
+                            </div>
+                        </div>
+                        <div class="more">
+                            <img src="icons/dots.png" alt="more" class="dots">
+                            <ul class="more-list">
+                                <li>Mute(Unmute)</li>
+                                <li>Hide</li>
+                                <li>Delete</li>
+                                <li>Mark as read</li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+                <p class="load-more">Load more</p>
+            </div>
+            
+        </aside>
+        <section class="messages">
+            <div class="header-messages">
+                <div class="upper-header-messages">
+                    <h4 class="span-black chat-name">3x3 Pro Ball<img src="icons/arrow.png" alt="arrow" class="expand-chat"></h4>
+                    <p class="time">Wed, Oct 3 / 08Am - 10AM</p>
+                    <img src="icons/dots.png" alt="" class="dots">
+                </div>
+                <div class="lower-header-messages">
+                    <div class="left-side">
+                        <span class="span-green">CONFIRMED</span>
+                        <span class="number-of-players">12 players</span>
+                        <br>
+                        <span class="total-price">&#36;64</span>
+                        <span class="player-price">
+                            <img src="icons/player_stamp.png" alt="">
+                            <span>&#36;6.5</span>
+                        </span>
+                    </div>
+                    <div class="right-side">
+                        <p class="span-green">Slot details</p>
+                        <p class="span-green">Contact owner</p>
+                    </div>
+                </div>
+            </div>
+            <div class="messages-content">
+                <div class="message-recieved">
+                    <img src="players/player3.png" alt="">
+                    <div>
+                        <div class="message-content">
+                            <h6 class="player-name">Maximillian Jefferson</h6>
+                            <p class="message-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro ea sint vitae totam possimus sed officiis sit deserunt illum? Corrupti repellendus ratione at.</p>
+                        </div>
+                        <div class="message-time">
+                            <span class="date">11/11/2019</span>
+                            <span class="time">09:32 PM</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="message-notification">
+                    <img src="players/player3.png" alt="">
+                    <div>
+                        <p><span class="player-name">Kyle Larsson </span><span class="span-black">accepted the invitation!</span></p>
+                        <div class="message-time">
+                            <span class="date">11/11/2019</span>
+                            <span class="time">09:32 PM</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="message-sent">
+                    <img src="players/player3.png" alt="">
+                    <div>
+                        <div class="message-content">
+                            <p class="message-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro ea sint vitae totam possimus sed officiis sit deserunt illum? Corrupti repellendus ratione at.</p>
+                        </div>
+                        <div class="message-time">
+                            <span class="date">11/11/2019</span>
+                            <span class="time">09:32 PM</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="message-notification">
+                    <img src="players/player2.png" alt="">
+                    <div>
+                        <p><span class="player-name">Anna-Marie Vojinovski </span><span class="span-black">became group admin!</span></p>
+                        <div class="message-time">
+                            <span class="date">11/11/2019</span>
+                            <span class="time">09:32 PM</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="message-notification">
+                    <img src="players/player4.png" alt="">
+                    <div>
+                        <p><span class="player-name">Payton Chandler Vojinovski </span><span class="span-black">left the group!</span></p>
+                        <div class="message-time">
+                            <span class="date">11/11/2019</span>
+                            <span class="time">09:32 PM</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="message-notification message-rescheduled">
+                    <img src="players/player2.png" alt="">
+                    <div>
+                        <p><span class="player-name">Anna-Marie Vojinovski </span><span class="span-black">rescheduled the game!</span></p>
+                        
+                        <div class="game-info">
+                            <p class="court">Court: 3x3 Pro Ball</p>
+                            <p class="adress">Adress: Lorem Ipsum Street 534, Brooklyn Ny</p>
+                            <p class="date">Date: Wed, Oct 3</p>
+                            <p class="time">Time: 08AM - 10AM</p>
+                            <p class="price">Price: &#36; per person</p>
+                            <p class="needed">Players needed: 11</p>
+                        </div>
+                        <div class="message-time">
+                            <span class="date">11/11/2019</span>
+                            <span class="time">09:32 PM</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="message-notification">
+                    <img src="players/player2.png" alt="">
+                    <div>
+                        <p><span class="player-name">Anna-Marie Vojinovski </span><span class="span-green">is the new player added!</span></p>
+                        <div class="message-time">
+                            <span class="date">11/11/2019</span>
+                            <span class="time">09:32 PM</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="message-notification">
+                    <img src="players/player4.png" alt="">
+                    <div>
+                        <p><span class="player-name">Payton Chandler </span><span class="span-black">is excluded from the slot!</span></p>
+                        <div class="message-time">
+                            <span class="date">11/11/2019</span>
+                            <span class="time">09:32 PM</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="message-notification">
+                    <img src="players/player2.png" alt="">
+                    <div>
+                        <p><span class="player-name">Anna-Marie Vojinovski </span><span class="span-orange">cancelled the slot!</span></p>
+                        <div class="message-time">
+                            <span class="date">11/11/2019</span>
+                            <span class="time">09:32 PM</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="message-recieved">
+                    <img src="players/player3.png" alt="">
+                    <div>
+                        <div class="message-content">
+                            <h6 class="player-name">Maximillian Jefferson</h6>
+                            <p class="message-text"><span class="span-black">https://www.loremipsumdfgdfgdfsite1241251.site/321231231422r13</span></p>
+                        </div>
+                        <div class="message-time">
+                            <span class="date">11/11/2019</span>
+                            <span class="time">09:32 PM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="write-message">
+                <div class="write-message-input">
+                    <textarea name="" id="" placeholder="Write a message"></textarea>
+                    <div class="add">+</div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!--**************************************** MESSAGEs END ***********************************-->
+    <!--************************************ MOBILE FOOTER START ************************************-->
+    <div class="footer-container">
+        <div class="footer-content">
+            <div class="my-games" id="myGamesFooter">
+                <img src="icons/mygames-bottom.png" alt="my games">
+                <p>My games</p>
+            </div>
+            <div class="new-game"  onclick="location.href='create-game-1.html'">
+                <img src="icons/newgame-bottom.png" alt="new game">
+                <p>New game</p>
+            </div>
+            <div class="messages-footer"  onclick="location.href='messages.html'">
+                <img src="icons/msg-bottom-orange.png" alt="messages">
+                <p>Messages</p>
+            </div>
+            <div class="profile">
+                <img src="icons/profileicon.png" alt="profile" id="profileFooter">
+                <p>Profile</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--************************************ MOBILE FOOTER END************************************-->
+
+
+
+
+
+    <!--************************************ SCRIPTS *****************************************-->
+                    <!-- The core Firebase JS SDK is always required and must be listed first -->
+                    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+                    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-firestore.js"></script>
+                    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-auth.js"></script>
+
+                    <!-- TODO: Add SDKs for Firebase products that you want to use
+                        https://firebase.google.com/docs/web/setup#available-libraries -->
+
+                    <script>
+                    // Your web app's Firebase configuration
+                    var firebaseConfig = {
+                        apiKey: "AIzaSyAOer4uBO05vpedXG0S68_TC_gDuylFVVU",
+                        authDomain: "sportslots-f03b9.firebaseapp.com",
+                        databaseURL: "https://sportslots-f03b9.firebaseio.com",
+                        projectId: "sportslots-f03b9",
+                        storageBucket: "sportslots-f03b9.appspot.com",
+                        messagingSenderId: "486189809343",
+                        appId: "1:486189809343:web:40b83e90bfe895d053100a"
+                    };
+                    // Initialize Firebase
+                    firebase.initializeApp(firebaseConfig);
+
+                    </script>
+                    <!-- jquery -->
+                    <script src="js/jquery-3.4.1.slim.min.js"></script>
+                    <!-- Bootstrap -->
+                    <script src="js/popper.min.js"></script>
+                    <script src="js/bootstrap.min.js"></script>
+                    <script src="js/waypoints.min.js"></script>
+                    <script src="js/slick.min.js"></script>
+                    <script src="js/jquery.ajaxchimp.min.js"></script>
+
+                     <!-- Custom Scripts -->
+                     <script>
+                         let chathead = document.querySelectorAll('.chathead');
+                         let messages = document.querySelector('.messages')
+                         let messageList = document.querySelector('.message-list')
+                         let expandChat = document.querySelector('.expand-chat');
+                         let messagesContent = document.querySelector('.messages-content')
+                         chathead.forEach(elem => {
+                             elem.addEventListener('click', () => {
+                                messages.classList.add('messages-show');
+                                messageList.classList.add('message-list-hide');
+                             })
+                         })
+                         expandChat.addEventListener('click', () => {
+                            messagesContent.classList.toggle('show-messages-content')
+                         })
+                     </script>
+                     <script src="js/menu.js"></script>
+                     <script src="js/main.js"></script>
+                    <!-- Font Awesome  -->
+
+                    <script src="js/all.min.js"></script>
+                    <!--<script src="https://use.fontawesome.com/b9733a5df8.js"></script>-->
+
+
+                    <!-- Bootstrap ONLINE LINK -->
+
+
+
+                    <!--
+                    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+                    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+                    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> 
+                    -->
+
+</body>
+</html>

@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+
+<html lang="zxx">
+<head>
+    <!-- TITLE OF SITE -->
+    <title>SportSlots</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="SportSlots" />
+    <meta name="keywords" content="SportSlots, Basketball, Sport, Basket, Kosarka " />
+    <meta name="author" content="SportSlots">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- FAVICON -->
+    <link rel="apple-touch-icon" sizes="57x57" href="favi/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favi/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favi/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favi/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favi/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favi/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favi/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favi/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favi/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="favi/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favi/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favi/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favi/favicon-16x16.png">
+    <link rel="manifest" href="favi/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favi/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- =============================================   CSS Begins   ================================================== -->
+
+    <!-- Bootstrap -->
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-reboot.min.css" rel="stylesheet">
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-
+    Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> --> 
+    
+        
+    <!-- =============================================   FONTS & ICONS  ================================================== -->
+
+    <!-- Font Awesome -->
+
+    <link href="css/all.min.css" rel="stylesheet">
+
+    <!-- FONTS -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900" rel="stylesheet">
+
+
+    <!-- Main Style -->
+
+    <link href="css/style.css" rel="stylesheet">
+
+
+</head>
+<body>
+    <div class="request-sent-container">
+        <div class="request-sent-content">
+            <h4 class="span-green">Your request has been sent!</h4>
+            <p>We will send you a notification when the group admin accepts your request</p>
+            <button class="green-button done-btn">Done</button>
+            <dix class="x-button exit-request">X</dix>
+        </div>
+        
+    </div>
+    <div class="sign-in-overlay">
+        <div class="sign-in-content">
+            <p class="sign-in-p">Sign up</p>
+            <form id="create-acc-form">
+              <input type="text" id="fName" name="fName" placeholder="First name"><br>
+              <input type="text" id="lName" name="lName" placeholder="Last name"><br>
+              <input type="text" id="bDay"placeholder="Birthday"
+              onfocus="(this.type='date')"
+              onblur="(this.type='text')" name="bDay"><br>
+              <input type="email" id="email" name="email" placeholder="Email adress"><br>
+              <input type="password" id="pass" name="pass" placeholder="Password"><br>
+              <input type="submit" value="Sign up">
+            </form> 
+            <p  class="sign-in-p">sign up with</p>
+            <button class="sign-in-facebok">
+                <img src="icons/fb-icon-colored.png" alt="facebook">
+                <p>Facebook</p>
+            </button>
+            <button class="sign-in-google">
+                <img src="icons/google-icon-colored.png" alt="google">
+                <p>Google</p>
+            </button>
+            <p class="log-in-text">Already have an account?<a href="#">Log in</a></p>
+            <span class="x-button exit-signin">x</span>
+        </div>
+    </div>
+    <div class="searching-overlay">
+        <div class="pop-up-search">
+            <h3>Searching...</h3>
+        </div>
+    </div>
+    
+    <!--**************************************** HEADER AND NAVIGATION START ***********************************-->
+    <header class="header">
+        <div class="header-content">
+            <img src="logo/logo-mobile.png" alt="logo"  onclick="location.href='index.html'" class="logo-mobile">
+            <img src="logo/sslogo.png" alt="logo"  onclick="location.href='index.html'" class="logo-desktop">
+            <nav class="header-nav nav-desktop">
+                <div class="login-signup">
+                            <form id="signin-form">
+                                <label for="email">Email:</label>
+                                <input type="email" name="" id="emailLogin">
+                                <label for="password">Password:</label>
+                                <input type="password" name="" id="passLogin">
+                                <input type="submit" value="Log in">
+                            </form>
+                            <p>Don't have an account? <span class="sign-up-header-btn">Sign up!</span></p>
+                </div>
+                <div class="signed-in-content-nav">
+                    <ul class="nav-content">
+                        <li class="nav-item"><a href="#">My games</a>
+                            <ul class="nav-dropdown">
+                                <li><a href="upcoming-games.html">Coming up</a></li>
+                                <li><a href="games-history.html">History</a></li>
+                                <li><a href="create-game-1.html">Create a game</a></li>
+                                <li><a href="find-game.html">Find a game</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a href="#">Courts</a>
+                            <ul class="nav-dropdown">
+                                <li><a href="add-court.html">Add a court</a></li>
+                                <li><a href="my-courts.html">My courts</a></li>
+                                <li><a href="find-court.html">Find a court</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a href="messages.html">Messages</a></li>
+                        <li class="nav-item"><a href="#">Help</a></li>
+                        <li class="nav-profile sign-up-button nav-item"><a href="#"><span class="nameOfUser"></span><img alt="Profile picture" id="playerAvatar"></a>
+                            <div class="notification-bubble"><span>12</span></div>
+                            <ul class="nav-dropdown">
+                                <li><a href="notifications.html">Notifications</a></li>
+                                <li><a href="account-edit-profile.html">Edit profile</a></li>
+                                <li><a href="account.html">Account</a></li>
+                                <hr>
+                                <li><a href="reservations.html">Reservations</a></li>
+                                <li><a href="manage-slots.html">Manage slots</a></li>
+                                <hr>
+                                <li class="logout-btn"><a href="">Log out</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <nav class="nav mobile-nav">
+                <div class="notification-div">
+                    <img src="icons/notification.png" alt="notifications">
+                    <div class="notification-bubble"><span>12</span></div>
+                </div>
+                <img src="icons/ham.png" alt="ham" class="hambtn">
+            </nav>
+            <div class="side-menu">
+                <div class="new-to-ss">
+                    <div class="create-acc">
+                        <p>New to sportslots?</p>
+                        <button class="green-button mobile-create-acc-btn">Create account</button>
+                    </div>
+                    <div class="sign-in-side-menu">
+                        <p>Already have an account?</p>
+                        <button class="green-button login-mobile">Sign in</button>
+                        <p class="forgot-password">Forgot password?</p>
+                    </div>
+                    <form id="signin-form-mobile" class="side-menu-form">
+                        <label for="email">Email:</label>
+                        <br>
+                        <input type="email" name="" id="emailLoginMobile">
+                        <br>
+                        <br>
+                        <label for="password">Password:</label>
+                        <br>
+                        <input type="password" name="" id="passLoginMobile">
+                        <br>
+                        <br>
+                        <input type="submit" value="Log in">
+                    </form>
+
+                </div>
+                <div class="signed-in-menu">
+                    <p class="expand-list expandGames" listTarget="expand-games">My games</p>
+                    <ul class="my-games-mobile-nav">
+                        <li><a href="upcoming-games.html">Coming up</a></li>
+                        <li><a href="games-history.html">History</a></li>
+                        <li><a href="create-game-1.html">Create a game</a></li>
+                        <li><a href="find-game.html">Find a game</a></li>
+                    </ul>
+                    <hr>
+                    <p class="expand-list expandCourts" listTarget="expand-courts">Courts</p>
+                    <ul class="courts-mobile-nav">
+                        <li><a href="add-court.html">Add a court</a></li>
+                        <li><a href="my-courts.html">My courts</a></li>
+                        <li><a href="find-court.html">Find a court</a></li>
+                    </ul>
+                    <hr>
+                    <p class="message-p"><a href="messages.html">Messages</a></p>
+                    <hr>
+                    <p class="expand-list expandProfile" listTarget="expand-profile">Profile</p>
+                    <ul class="profile-mobile-nav">
+                        <li><a href="notifications.html">Notifications</a></li>
+                        <li><a href="account-edit-profile.html">Edit profile</a></li>
+                        <li><a href="account.html">Account</a></li>
+                        <hr>
+                        <li><a href="reservations.html">Reservations</a></li>
+                        <li><a href="manage-slots.html">Manage slots</a></li>
+                        <hr>
+                        <li class="logout-btn"><a href="">Log out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--**************************************** HEADER AND NAVIGATION END ***********************************-->
+    <!--***********************************COURT CAROUSEL START********************************************-->
+    <div class="create-game-2">
+        <div class="carousel-create-game text-center my-3">
+            <div class="row my-auto">
+                <div id="recipeCarousel" class="carousel slide w-100" data-ride="carousel">
+                    <div class="carousel-inner w-100" role="listbox">
+                        <div class="carousel-item active">
+                            <div class="col-md-4">
+                                    <img class="img-fluid" src="court_images/super-court-img1.png">
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="col-md-4">
+                                    <img class="img-fluid" src="court_images/super-court-img2.png">
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="col-md-4">
+                                    <img class="img-fluid" src="court_images/super-court-img3.png">
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="col-md-4">
+                                    <img class="img-fluid" src="court_images/super-court-img1.png">
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="col-md-4">
+                                    <img class="img-fluid" src="court_images/super-court-img2.png">
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="col-md-4">
+                                    <img class="img-fluid" src="court_images/super-court-img3.png">
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev indication-width" href="#recipeCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon bg-dark border border-dark rounded-circle" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next indication-width" href="#recipeCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon bg-dark border border-dark rounded-circle" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--***********************************COURT CAROUSEL END********************************************-->
+        <div class="court-details-create">
+            <div class="court-details">
+                <div class="court-name-adress">
+                    <h4>
+                    Super Sport Court
+                    </h4>
+                    <p>Lorem ipsum street. 812b. New York, US</p>
+                    <div class="star-rating-step2">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <p>5.0</p>
+                        <p class="review-number">83 reviews</p>
+                    </div>
+                    <div class="court-features">
+                        <span><i class="fa fa-check" aria-hidden="true"></i>Balls</span>
+                        <span><i class="fa fa-check" aria-hidden="true"></i>Showers</span>
+                        <span><i class="fa fa-check" aria-hidden="true"></i>Toilettes</span>
+                        <span><i class="fa fa-check" aria-hidden="true"></i>Bar/Caffe</span>
+                    </div>
+                </div>
+                <div class="owner-picture">
+                    <img src="images/avatar.png" alt="Profile picture">
+                    <h6 class="owner-name">Peter Johnson</h6>
+                </div>
+            </div>
+            <div class="court-create">
+                <div class="court-create-price">                   
+                        <img src="icons/stopwatch_icon.png" alt="time">
+                        <h4 class="price-dollars">&#36;32</h4>
+                        <p>2 hours</p>
+                        <p class="save">Save <img src="icons/save-small.png" alt="save"></p>
+                </div>
+                <div class="court-create-choose-details">
+                    <form action="">
+                        <select id="sport" placeholder="Sport" name="sport" class="sport noselect" required>
+                            <option value="" disabled selected hidden>Sport</option>
+                            <option value="football">Football</option>
+                            <option value="basketball">Basketball</option>
+                        </select>
+                        <input type="text" id="date"placeholder="Date"
+                        onfocus="(this.type='date')"
+                        onblur="(this.type='text')" name="date" class="date noselect">
+                        <input type="number" id="totalPlayersNeeded" placeholder="Total player needed" class="total-players-needed">
+                        <input type="text" id="time" placeholder="Time"
+                        onfocus="(this.type='time')"
+                        onblur="(this.type='text')" name="time" class="time noselect">
+                        <div class="countrol-group">
+                            <label class="control control-radio">
+                                Half court
+                                <input type="radio" name="radio" checked="checked" />
+                                <div class="control_indicator noselect"></div>
+                            </label>
+                            <label class="control control-radio">
+                                Full court
+                                <input type="radio" name="radio" />
+                                <div class="control_indicator noselect"></div>
+                            </label>
+                        </div>
+                        <button class="next-btn noselect">Browse slots</button>  
+                    </form>
+                </div>
+            </div> 
+        </div>
+    </div>
+
+    <!--************************************ OTHER AVAIlABLE SLOTS START ************************************-->
+    <section>
+        <div class="other-slots-container">
+            <div class="other-slots-content">
+                <h4 class="other-slots-content-header">Other available slots</h4>
+                <div class="available-slots-step2">
+                    <div class="available-slot-box-step2 game-indoor">
+                        <p class="available-slot-time-info">Wednesday 22 MAY</p>
+                        <p class="available-slot-time-info">11AM-01PM</p>
+                        <div class="closer-info"><p><span class="trying-to-book">4</span>players trying to book</p></div>
+                        <p>Half court</p>
+                        <div class="price-system-step2">
+                            <div>
+                                <img src="icons/player_stamp.png" alt="player">
+                                <h4 class="price-dollars">&#36;12</h4>
+                            </div> 
+                                <span class="payment-type-person">per person</span>
+                        </div>
+                        <button class="ask-to-join-btn">Ask to join</button>
+                    </div>
+                    <div class="available-slot-box-step2 game-indoor-available">
+                        <p class="available-slot-time-info">Wednesday 22 MAY</p>
+                        <p class="available-slot-time-info">11AM-01PM</p>
+                        <span class="available-text">AVAILABLE</span>
+                        <p>Full court</p>
+                        <div class="price-system-step2">
+                            <div>
+                                <img src="icons/player_stamp.png" alt="player">
+                                <h4 class="price-dollars">&#36;42</h4>
+                            </div> 
+                                <span class="payment-type-person">per person</span>
+                        </div>
+                        <button>Book</button>
+                    </div>
+                    <div class="available-slot-box-step2 game-indoor-available">
+                        <p class="available-slot-time-info">Wednesday 22 MAY</p>
+                        <p class="available-slot-time-info">11AM-01PM</p>
+                        <span class="promo-text">GET 30% OFF</span>
+                        <p>Full court</p>
+                        <div class="price-system-step2">
+                            <div>
+                                <img src="icons/player_stamp.png" alt="player">
+                                <h4 class="price-dollars">&#36;42</h4>
+                            </div> 
+                                <span class="payment-type-person">per person</span>
+                        </div>
+                        <button>Book</button>
+                    </div>
+                    <div class="available-slot-box-step2 game-indoor">
+                        <p class="available-slot-time-info">Wednesday 22 MAY</p>
+                        <p class="available-slot-time-info">11AM-01PM</p>
+                        <div class="closer-info"><p><span class="trying-to-book">4</span>players trying to book</p></div>
+                        <p>Half court</p>
+                        <div class="price-system-step2">
+                            <div>
+                                <img src="icons/player_stamp.png" alt="player">
+                                <h4 class="price-dollars">&#36;12</h4>
+                            </div> 
+                                <span class="payment-type-person">per person</span>
+                        </div>
+                        <button class="ask-to-join-btn">Ask to join</button>
+                    </div>
+                    <div class="available-slot-box-step2 game-indoor-available">
+                        <p class="available-slot-time-info">Wednesday 22 MAY</p>
+                        <p class="available-slot-time-info">11AM-01PM</p>
+                        <span class="available-text">AVAILABLE</span>
+                        <p>Full court</p>
+                        <div class="price-system-step2">
+                            <div>
+                                <img src="icons/player_stamp.png" alt="player">
+                                <h4 class="price-dollars">&#36;42</h4>
+                            </div> 
+                                <span class="payment-type-person">per person</span>
+                        </div>
+                        <button>Book</button>
+                    </div>
+                    <div class="available-slot-box-step2 game-indoor-available">
+                        <p class="available-slot-time-info">Wednesday 22 MAY</p>
+                        <p class="available-slot-time-info">11AM-01PM</p>
+                        <span class="promo-text">GET 30% OFF</span>
+                        <p>Full court</p>
+                        <div class="price-system-step2">
+                            <div>
+                                <img src="icons/player_stamp.png" alt="player">
+                                <h4 class="price-dollars">&#36;42</h4>
+                            </div> 
+                                <span class="payment-type-person">per person</span>
+                        </div>
+                        <button>Book</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--************************************ OTHER AVAIlABLE SLOTS END ************************************-->
+    <!--************************************ REVIEWS AND COMMENTS START ************************************-->
+    <section>
+        <div class="reviews-n-comments-container">
+            <div class="reviews-n-comments-content">
+                <h4>Reviews and comments</h4>
+                <div class="review">
+                    <img src="players/player4.png" alt="avatar" class="avatar">
+                    <div class="comment-content">
+                        <h5 class="player-name">
+                            Smoke Mardeljano
+                        </h5>
+                        <p class="date-of-comment">July 2020</p>
+                        <p class="comment">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam commodi optio ullam voluptates eveniet, vero quaerat, id, accusamus delectus quod totam. Repudiandae reprehenderit cumque harum dolorum quis veniam quaerat quod, ab impedit, saepe quisquam, nihil fugiat. Illum eligendi nihil cumque?
+                        </p>
+                        <div class="rating-read-more">
+                        <div class="star-rating-step2">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span>5.0</span>
+                        </div>
+                        <p class="read-more-button">Read more</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="review">
+                    <img src="players/player4.png" alt="avatar" class="avatar">
+                    <div class="comment-content">
+                        <h5 class="player-name">
+                            Smoke Mardeljano
+                        </h5>
+                        <p class="date-of-comment">July 2020</p>
+                        <p class="comment">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur eligendi distinctio illum earum, cumque? Laudantium odio illum ullam.
+                        </p>
+                        <div class="rating-read-more">
+                        <div class="star-rating-step2">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span>5.0</span>
+                        </div>
+                        <p class="read-more-button"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--************************************ REVIEWS AND COMMENTS END ************************************-->
+    <div class="footer-container">
+        <div class="footer-content">
+            <div class="my-games" id="myGamesFooter">
+                <img src="icons/mygames-bottom.png" alt="my games">
+                <p>My games</p>
+            </div>
+            <div class="new-game"  onclick="location.href='create-game-1.html'">
+                <img src="icons/newgame-bottom-orange.png" alt="new game">
+                <p>New game</p>
+            </div>
+            <div class="messages-footer"  onclick="location.href='messages.html'">
+                <img src="icons/msg-bottom.png" alt="messages">
+                <p>Messages</p>
+            </div>
+            <div class="profile">
+                <img src="icons/profileicon.png" alt="profile" id="profileFooter">
+                <p>Profile</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!--************************************ SCRIPTS *****************************************-->
+                    <!-- The core Firebase JS SDK is always required and must be listed first -->
+                    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+                    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-firestore.js"></script>
+                    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-auth.js"></script>
+
+                    <!-- TODO: Add SDKs for Firebase products that you want to use
+                        https://firebase.google.com/docs/web/setup#available-libraries -->
+
+                    <script>
+                    // Your web app's Firebase configuration
+                    var firebaseConfig = {
+                        apiKey: "AIzaSyAOer4uBO05vpedXG0S68_TC_gDuylFVVU",
+                        authDomain: "sportslots-f03b9.firebaseapp.com",
+                        databaseURL: "https://sportslots-f03b9.firebaseio.com",
+                        projectId: "sportslots-f03b9",
+                        storageBucket: "sportslots-f03b9.appspot.com",
+                        messagingSenderId: "486189809343",
+                        appId: "1:486189809343:web:40b83e90bfe895d053100a"
+                    };
+                    // Initialize Firebase
+                    firebase.initializeApp(firebaseConfig);
+
+                    </script>
+                    <!-- jquery -->
+                    <script src="js/jquery-3.4.1.slim.min.js"></script>
+                    <script>
+                    let otherGamesIndoor=document.querySelectorAll('.game-indoor')
+                    let otherGamesIndoorAvailable=document.querySelectorAll('.game-indoor-available')
+                    let askToJoinBtn=document.querySelectorAll('.ask-to-join-btn')
+                    let doneBtn=document.querySelector('.done-btn')
+                    let cancelReq = document.querySelector('.exit-request')
+                    otherGamesIndoor.forEach(game => {
+                        game.addEventListener('click', function(event) {
+                            event.preventDefault();
+                            if(event.target.type != 'submit') {
+                                window.location="confirmed-players-list.html"
+                            } 
+                        })
+                    })
+                    otherGamesIndoorAvailable.forEach(game => {
+                        game.addEventListener('click', function(event) {
+                            event.preventDefault();
+                                window.location="create-game-2.html"
+                        })
+                    })
+                    askToJoinBtn.forEach(btn => {
+                        btn.addEventListener('click', function(event) {
+                            event.preventDefault();
+                            document.querySelector('.request-sent-container').style.display="block"
+                            $(this).addClass('invite-nonavailable').text("Asked to join").css('color', '#fff');
+                            $(this).removeClass('hover-class')
+                        })
+                    })
+                    doneBtn.addEventListener('click', function(event) {
+                            event.preventDefault();
+                            document.querySelector('.request-sent-container').style.display="none"
+                    })
+                    cancelReq.addEventListener('click', function(event) {
+                        event.preventDefault();
+                        document.querySelector('.request-sent-container').style.display="none"
+                    })
+
+                    </script>
+
+                    <!-- Bootstrap -->
+                    <script src="js/popper.min.js"></script>
+                    <script src="js/bootstrap.min.js"></script>
+                    <script src="js/waypoints.min.js"></script>
+                    <script src="js/slick.min.js"></script>
+                    <script src="js/jquery.ajaxchimp.min.js"></script>
+
+                     <!-- Custom Scripts -->
+                     <script src="js/menu.js"></script>
+                    <script src="js/main.js"></script>
+                    <!-- Font Awesome  -->
+
+                    <script src="js/all.min.js"></script>
+                    <!--<script src="https://use.fontawesome.com/b9733a5df8.js"></script>-->
+
+
+                    <!-- Bootstrap ONLINE LINK -->
+
+
+
+                    <!--
+                    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+                    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+                    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> 
+                    -->
+
+</body>
+</html>
