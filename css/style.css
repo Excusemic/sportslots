@@ -7162,8 +7162,25 @@ header nav {
 	.notification-box .notification-info {
 		width: 70%;
 	}
+	.notification-box .buttons .accept {
+		width: 45%;
+		padding: 0em;
+	}
+	.notification-box .buttons .decline {
+		width: 45%;
+		padding: 0em;
+	}
 	.notification-box h5 {
-		font-size: .8em;
+		font-size: 1em;
+	}
+	.notification-box .court-available-time {
+		font-size: .7em;
+	}
+	.notification-box span {
+		font-size: .9em;
+	}
+	.notification-box p  {
+		font-size: .7em;
 	}
 	.notification-box {
 		height: auto;
@@ -7178,24 +7195,53 @@ header nav {
 		right: 10px;
 		
 	}
+	.asked-to-join-groups .price-system p {
+		display: inline-block;
+		margin: 0em;
+		margin-right: .6em;
+	}
 	.accepted-invitation .buttons a {
 		display: block;
-		width: 30%;
+		width: 80%;
 		margin: auto;
+
+	}
+	.someone-booked-slot .buttons .price-info span {
+		font-size: 1.1em;
+		font-weight: bold;
+		vertical-align: sub;
+	}
+	.notification-box .price-info {
+		width: 50%;
+		
+	}
+	.notification-box .go-to-chat{
+		width: 50%;
+	}
+	.someone-booked-slot .buttons a {
+		margin-left: 0em;
+		margin-right: 0em;
+		font-size: 1em;
+	}
+	.someone-booked-slot .buttons .go-to-chat {
+		text-align: right;
+	}
+	.someone-booked-slot .buttons .price-info{
+		text-align: right;
 	}
 	.join-groups-accepted .buttons a {
 		display: block;
-		width: 30%;
+		width: 80%;
 		margin: auto;
 	}
 	.paid-for-slot .buttons a {
 		display: block;
-		width: 30%;
+		width: 70%;
 		margin: auto;
 	}
 	.canceled-slot .buttons a {
 		display: block;
-		width: 30%;
+		width: 70%;
 		margin: auto;
 	}
 	.card-charged .buttons a {
@@ -7203,6 +7249,9 @@ header nav {
 		text-align: center;
 		width: 80%;
 		margin: auto;
+	}
+	.canceled-slot-admin .buttons a {
+		margin-right: 0em;
 	}
 	.ask-to-join-group .buttons .join-groups-button {
 		padding: .1em 2em;

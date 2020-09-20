@@ -35,6 +35,10 @@ let logOutBtn = document.querySelectorAll('.logout-btn')
 let nameOfUser = document.querySelector('.nameOfUser')
 let loginMobileBtn = document.querySelector('.login-mobile')
 let playerAvatar = document.getElementById('playerAvatar');
+let notificationBtn = document.querySelector('.notification-div');
+notificationBtn.addEventListener('click', () => {
+  window.location="notifications.html"
+})
 
 
 
