@@ -148,6 +148,7 @@ auth.onAuthStateChanged(function(user){
     document.querySelector('.new-to-ss').style.display="none";
     document.querySelector('.signed-in-menu').style.display="block";
     document.querySelector('.footer-container').classList.remove('side-menu')
+    document.querySelector('.notification-div').classList.remove('notification-div-hide')
     db.collection("users")
     .where('email', '==', user.email)
     .get()
@@ -167,6 +168,7 @@ auth.onAuthStateChanged(function(user){
     
   }else{
     document.querySelector('.footer-container').classList.add('side-menu')
+    document.querySelector('.notification-div').classList.add('notification-div-hide')
     document.querySelector('.footer-container').style.display="none";
     document.querySelector('.signed-in-content-nav').style.display="none";
     document.querySelector('.login-signup').style.display="block";

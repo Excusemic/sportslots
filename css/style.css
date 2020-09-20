@@ -474,6 +474,9 @@ header nav {
 .notification-div {
 	position: relative;
 }
+.notification-div-hide {
+	display: none;
+}
 
 
 
