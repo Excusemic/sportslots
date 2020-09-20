@@ -23,6 +23,7 @@ searchBtn.addEventListener('click', (event) => {
         if (block.getAttribute('inOut') != indoorOutdoor.value || block.getAttribute('type') != freePaid.value) {
             block.style.display="none";
         } else {
+            document.querySelector('.load-more').style.display="none"
             block.style.display="block";
         }
        
