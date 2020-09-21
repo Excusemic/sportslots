@@ -273,13 +273,13 @@
                             <p class="adress">Brooklyn, NY</p>
                             <p class="years-height">33 years, height 187cm</p>
                             <p class="gender">Male</p>
-                            <span class="span-green">Preview profile</span>
+                            <span class="span-green preview-profile" onclick="location.href='selected-profile.html'">Preview profile</span>
                         </div>
                         <div class="about-player about-player-edit">
                             <h6>About</h6>
-                            <p class="about-text edit-enabled">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati nemo sequi inventore nesciunt, dolore dolor doloremque reiciendis consequuntur voluptatum dolorum quas perferendis? At beatae modi vitae veritatis repellat, nobis voluptatem dolore molestiae necessitatibus accusantium numquam reprehenderit accusamus rem, ducimus blanditiis.</p>
-                            <span class="span-orange">Cancel</span>
-                            <button class="save-button">Save</button>
+                            <textarea disabled class="about-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati nemo sequi inventore nesciunt, dolore dolor doloremque reiciendis consequuntur voluptatum dolorum quas perferendis? At beatae modi vitae veritatis repellat, nobis voluptatem dolore molestiae necessitatibus accusantium numquam reprehenderit accusamus rem, ducimus blanditiis.</textarea>
+                            <span class="span-green edit">Edit</span>
+                            <button class="save-button save-button-edit">Save</button>
                         </div>
                         <div class="hide-for-desktop">
                             <div class="achievements">
@@ -334,7 +334,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <button class="save-button">Manage courts</button>
+                            <button class="save-button" onclick="location.href='my-courts.html'">Manage courts</button>
                         </div>
                         <div class="player-whishlist">
                             <h6>Maximilian's courts</h6>
@@ -440,7 +440,35 @@
                     <script src="js/jquery.ajaxchimp.min.js"></script>
 
                      <!-- Custom Scripts -->
-                     <script src="js/menu.js"></script>
+                     <script>
+                         let editAbout = document.querySelector('.edit');
+                         let saveButton = document.querySelector('.save-button-edit');
+                         let aboutText = document.querySelector('.about-text')
+                         editAbout.addEventListener('click', () => {
+                             editAbout.classList.toggle('span-orange')
+                             editAbout.classList.toggle('span-green')
+                             aboutText.classList.toggle('edit-enabled');
+                             if (editAbout.classList.contains('span-orange')) {
+                                 editAbout.innerHTML="Cancel";
+                                 saveButton.style.display="block";
+                                 aboutText.disabled=false;
+    
+                             } else{
+                                 editAbout.innerHTML="Edit";
+                                 saveButton.style.display="none";
+                                 aboutText.disabled=true;
+                             }
+                         })
+                         saveButton.addEventListener('click', () => {
+                            editAbout.classList.remove('span-orange');
+                            editAbout.classList.add('span-green');
+                            editAbout.innerHTML="Edit";
+                            aboutText.classList.remove('edit-enabled');
+                            saveButton.style.display="none";
+                            aboutText.disabled=true;
+                         })
+                     </script>
+                    <script src="js/menu.js"></script>
                     <script src="js/main.js"></script>
                     <!-- Font Awesome  -->
 

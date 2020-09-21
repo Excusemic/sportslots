@@ -3794,7 +3794,7 @@ header nav {
 }
 .settings-content .user-profile-main .about-player .about-text {
 	width: 100%;
-	padding: 1em 2em;
+
 }
 .settings-content .user-profile-main .player-info .span-green {
 	font-weight: 400;
@@ -3804,10 +3804,7 @@ header nav {
 	font-weight: 600;
 	font-size: .8em;
 }
-.edit-enabled {
-	border-radius: 15px;
-	border: 3px solid #ececec;
-}
+
 .user-profile-main .save-button {
 	background: rgba(55, 179, 74, 1);
 	color: #fff;
@@ -3819,6 +3816,13 @@ header nav {
 	margin-right: 1.2em;
 	font-size: .8em;
 	width: 200px;
+	
+}
+.user-profile-main .save-button-edit {
+	display: none;
+}
+.user-profile-main .preview-profile {
+	cursor: pointer;
 }
 .user-profile-main .added-courts {
 	margin-bottom: 2em;
@@ -3829,7 +3833,8 @@ header nav {
 .user-profile-main .about-player p  {
 	margin-bottom: .2em;
 }
-.settings-content .user-profile-main .about-player .span-orange {
+.settings-content .user-profile-main .about-player .edit {
+	cursor: pointer;
 	font-weight: 400;
 	position: absolute;
 	top: 10px;
@@ -3987,13 +3992,17 @@ header nav {
 	font-weight: 700;
 	margin-bottom: 1.4em;
 }
-.player-profile-content .user-profile-main .about-player p {
+.player-profile-content .user-profile-main .about-player textarea {
 	font-size: .8em;
 	width: 60%;
+	height: 100px;
 	line-height: 1.2em;
 	margin-bottom: 2.8em;
+	border: none;
+	background: none;
 
 }
+
 .player-profile-content .user-profile-main .player-courts {
 	margin-bottom: 2em;
 }
@@ -4006,6 +4015,11 @@ header nav {
 	font-size: 1.2em;
 	font-weight: 700;
 	margin-bottom: 1.4em;
+}
+.edit-enabled {
+	border-radius: 15px !important;
+	border: 3px solid #ececec !important;
+	padding: 1em 2em;
 }
 .player-profile-content .user-profile-main .star-rating {
 	position: absolute;

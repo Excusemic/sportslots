@@ -58,6 +58,32 @@
 
 </head>
 <body>
+    <div class="send-message-container">
+        <div class="send-message-content">
+            <h4 class="span-green">Send a message to</h4>
+            <div class="player">
+                <img src="players/player1.png" alt="">
+                <p class="player-name">Smoke Mardeljano</p>
+            </div>
+            <textarea name="" id="" placeholder="Write a message"></textarea>
+            <button class="green-button send-msg-btn-popup">Send</button>
+            <div class="x-button cancel-msg">X</div>
+        </div>
+    </div>
+    <div class="create-acc-popup-container">
+        <div class="create-acc-popup-content">
+            <h4 class="span-green">Jump in</h4>
+            <div>
+                <p class="span-black">New to sportslots?</p>
+                <button class="green-button" id="step2-create-acc">Create account</button>
+            </div>
+            <div>
+                <p class="span-black">Already have an account?</p>
+                <button class="green-button" id="signInStepTwo">Sign in</button>
+            </div>
+            <p class="forgot-password">Forgot password?</p>
+        </div>
+    </div>
     <div class="request-sent-container">
         <div class="request-sent-content">
             <h4 class="span-green">Your request has been sent!</h4>
@@ -303,18 +329,18 @@
                 </div>
                 <div class="court-create-choose-details">
                     <form action="">
-                        <select id="sport" placeholder="Sport" name="sport" class="sport noselect" required>
-                            <option value="" disabled selected hidden>Sport</option>
+                        <select id="sport" placeholder="Sport" name="sport" class="sport noselect" disabled>
+                            <option value="" disabled selected hidden>Sport: Basketball</option>
                             <option value="football">Football</option>
                             <option value="basketball">Basketball</option>
                         </select>
-                        <input type="text" id="date"placeholder="Date"
+                        <input type="text" id="date"placeholder="Date: 22. August"
                         onfocus="(this.type='date')"
-                        onblur="(this.type='text')" name="date" class="date noselect">
-                        <input type="number" id="totalPlayersNeeded" placeholder="Total player needed" class="total-players-needed">
-                        <input type="text" id="time" placeholder="Time"
+                        onblur="(this.type='text')" name="date" class="date noselect" disabled>
+                        <input  type="number" id="totalPlayersNeeded" placeholder="Players needed: 12" class="total-players-needed" disabled>
+                        <input type="text" id="time" placeholder="Time: 6 PM"
                         onfocus="(this.type='time')"
-                        onblur="(this.type='text')" name="time" class="time noselect">
+                        onblur="(this.type='text')" name="time" class="time noselect" disabled>
                         <div class="countrol-group">
                             <label class="control control-radio">
                                 Half court
@@ -323,11 +349,11 @@
                             </label>
                             <label class="control control-radio">
                                 Full court
-                                <input type="radio" name="radio" />
+                                <input type="radio" name="radio" disabled/>
                                 <div class="control_indicator noselect"></div>
                             </label>
                         </div>
-                        <button class="next-btn noselect">Ask to join</button>  
+                        <button class="next-btn noselect ask-to-join-btn">Ask to join</button>  
                     </form>
                 </div>
             </div> 
@@ -344,8 +370,8 @@
 
 
                     <div class="player-box-invite">
-                        <img src="players/player1.png" alt="player">
-                        <div class="player-info-invite">
+                        <img src="players/player1.png" alt="player" onclick="window.location.href='selected-profile.html'">
+                        <div class="player-info-invite" onclick="window.location.href='selected-profile.html'">
                             <h5>Smoke Mardeljano</h5>
                             <p>Belgrade, Serbia</p>
                         </div>
@@ -361,12 +387,12 @@
                                 <span class="fa fa-star checked"></span>
                                 <span>5.0</span>
                         </div>
-                        <button class="message-button-fp">Message</button>
+                        <button class="message-button-fp send-msg-btn" >Message</button>
                     </div>
 
                     <div class="player-box-invite">
-                        <img src="players/player1.png" alt="player">
-                        <div class="player-info-invite">
+                        <img src="players/player1.png" alt="player" onclick="window.location.href='selected-profile.html'">
+                        <div class="player-info-invite" onclick="window.location.href='selected-profile.html'">
                             <h5>Smoke Mardeljano</h5>
                             <p>Belgrade, Serbia</p>
                         </div>
@@ -382,12 +408,12 @@
                                 <span class="fa fa-star checked"></span>
                                 <span>5.0</span>
                         </div>
-                        <button class="message-button-fp">Message</button>
+                        <button class="message-button-fp send-msg-btn">Message</button>
                     </div>
 
                     <div class="player-box-invite">
-                        <img src="players/player1.png" alt="player">
-                        <div class="player-info-invite">
+                        <img src="players/player1.png" alt="player" onclick="window.location.href='selected-profile.html'">
+                        <div class="player-info-invite" onclick="window.location.href='selected-profile.html'">
                             <h5>Smoke Mardeljano</h5>
                             <p>Belgrade, Serbia</p>
                         </div>
@@ -403,12 +429,12 @@
                                 <span class="fa fa-star checked"></span>
                                 <span>5.0</span>
                         </div>
-                        <button class="message-button-fp">Message</button>
+                        <button class="message-button-fp send-msg-btn">Message</button>
                     </div>
 
                     <div class="player-box-invite">
-                        <img src="players/player1.png" alt="player">
-                        <div class="player-info-invite">
+                        <img src="players/player1.png" alt="player" onclick="window.location.href='selected-profile.html'">
+                        <div class="player-info-invite" onclick="window.location.href='selected-profile.html'">
                             <h5>Smoke Mardeljano</h5>
                             <p>Belgrade, Serbia</p>
                         </div>
@@ -424,12 +450,12 @@
                                 <span class="fa fa-star checked"></span>
                                 <span>5.0</span>
                         </div>
-                        <button class="message-button-fp">Message</button>
+                        <button class="message-button-fp send-msg-btn">Message</button>
                     </div>
 
                     <div class="player-box-invite">
-                        <img src="players/player1.png" alt="player">
-                        <div class="player-info-invite">
+                        <img src="players/player1.png" alt="player" onclick="window.location.href='selected-profile.html'">
+                        <div class="player-info-invite" onclick="window.location.href='selected-profile.html'">
                             <h5>Smoke Mardeljano</h5>
                             <p>Belgrade, Serbia</p>
                         </div>
@@ -445,12 +471,12 @@
                                 <span class="fa fa-star checked"></span>
                                 <span>5.0</span>
                         </div>
-                        <button class="message-button-fp">Message</button>
+                        <button class="message-button-fp send-msg-btn">Message</button>
                     </div>
 
                     <div class="player-box-invite">
-                        <img src="players/player1.png" alt="player">
-                        <div class="player-info-invite">
+                        <img src="players/player1.png" alt="player" onclick="window.location.href='selected-profile.html'">
+                        <div class="player-info-invite" onclick="window.location.href='selected-profile.html'">
                             <h5>Smoke Mardeljano</h5>
                             <p>Belgrade, Serbia</p>
                         </div>
@@ -466,7 +492,7 @@
                                 <span class="fa fa-star checked"></span>
                                 <span>5.0</span>
                         </div>
-                        <button class="message-button-fp">Message</button>
+                        <button class="message-button-fp send-msg-btn">Message</button>
                     </div>
                     <span class="load-more-players">Load more</span>
             </div>
@@ -686,6 +712,19 @@
                     let askToJoinBtn=document.querySelectorAll('.ask-to-join-btn')
                     let doneBtn=document.querySelector('.done-btn')
                     let cancelReq = document.querySelector('.exit-request')
+                    let authTest = firebase.auth()
+                    let loggedIn = false;
+                    let sendMessageBtn = document.querySelectorAll('.send-msg-btn')
+                    let sendMessageBtnPopUp = document.querySelector('.send-msg-btn-popup')
+                    let cancelMessage = document.querySelector('.cancel-msg')
+                        authTest.onAuthStateChanged(function(user){
+                                if(user) {
+                                    loggedIn = true;
+                                } else {
+                                    loggedIn = false;
+                                }
+                            
+                        });
                     otherGamesIndoor.forEach(game => {
                         game.addEventListener('click', function(event) {
                             event.preventDefault();
@@ -701,12 +740,34 @@
                         })
                     })
                     askToJoinBtn.forEach(btn => {
-                        btn.addEventListener('click', function(event) {
-                            event.preventDefault();
-                            document.querySelector('.request-sent-container').style.display="block"
-                            $(this).addClass('invite-nonavailable').text("Asked to join").css('color', '#fff');
-                            $(this).removeClass('hover-class')
+                            btn.addEventListener('click', function(event) {
+                                event.preventDefault();
+                                if(loggedIn == true) {
+                                    document.querySelector('.request-sent-container').style.display="block"
+                                    $(this).addClass('invite-nonavailable').text("Asked to join").css('color', '#fff');
+                                    $(this).removeClass('hover-class')
+                                } else {
+                                    document.querySelector('.create-acc-popup-container').style.display="block";
+                                }
+
+                            })
                         })
+                    let step3createAccBtn = document.querySelector('#step2-create-acc');
+                        step3createAccBtn.addEventListener('click', () => {
+                        document.querySelector('.create-acc-popup-container').style.display="none";
+                            document.querySelector('.sign-in-overlay').style.display="block"
+                        })
+                        let exitSignin = document.querySelector('.exit-signin')
+                        exitSignin.addEventListener('click', () => {
+                        document.querySelector('.sign-in-overlay').style.display = "none";
+                    })
+                    let signInStepTwo = document.querySelector('#signInStepTwo')
+                    signInStepTwo.addEventListener('click', () => {
+                        document.querySelector('.create-acc-popup-container').style.display="none";
+                        document.documentElement.scrollTop = 0;
+                        document.querySelector('.side-menu').classList.add('toggle-menu');
+                        document.querySelector('.login-mobile').click()
+                    
                     })
                     doneBtn.addEventListener('click', function(event) {
                             event.preventDefault();
@@ -716,6 +777,22 @@
                         event.preventDefault();
                         document.querySelector('.request-sent-container').style.display="none"
                     })
+                    sendMessageBtn.forEach(btn => {
+                            btn.addEventListener('click', () => {
+                                if(loggedIn==true) {
+                                document.querySelector('.send-message-container').style.display="block"
+                             } else {
+                                 document.querySelector('.create-acc-popup-container').style.display="block";
+                             }
+                            })
+
+                         });
+                        sendMessageBtnPopUp.addEventListener('click', () => {
+                            document.querySelector('.send-message-container').style.display="none"
+                        })
+                        cancelMessage.addEventListener('click', () => {
+                            document.querySelector('.send-message-container').style.display="none"
+                        })
                      </script>
                      <script src="js/menu.js"></script>
                     <script src="js/main.js"></script>
