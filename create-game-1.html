@@ -227,7 +227,7 @@
                 onfocus="(this.type='time')"
                 onblur="(this.type='text')" name="time" class="time noselect">
                 <input type="text" id="location" placeholder="Location" name="location" class="location noselect">
-                <button class="search noselect">Search <i class="fa fa-search" aria-hidden="true"></i></button>
+                <button class="search noselect" id="search">Search <i class="fa fa-search" aria-hidden="true"></i></button>
             </form>
         </div>
         <div class="filters">
@@ -238,22 +238,22 @@
                 <div class="control-column">
                     <label class="control control-radio">
                         Indoor
-                        <input type="radio" name="indoor/outdoor" checked="checked" />
+                        <input type="radio" name="indoor/outdoor" checked="checked" value="indoor"/>
                         <div class="control_indicator noselect"></div>
                     </label>
                     <label class="control control-radio">
                         Outdoor
-                        <input type="radio" name="indoor/outdoor"/>
+                        <input type="radio" name="indoor/outdoor" value="outdoor"/>
                         <div class="control_indicator noselect"></div>
                     </label>
                     <label class="control control-radio noselect">
                         Free
-                        <input type="radio" name="free/paid"/>
+                        <input type="radio" name="free/paid"/ value="free">
                         <div class="control_indicator noselect"></div>
                     </label>
                     <label class="control control-radio"checked="checked">
                         Paid
-                        <input type="radio" name="free/paid" checked="checked"/>
+                        <input type="radio" name="free/paid" checked="checked" value="paid"/>
                         <div class="control_indicator noselect"></div>
                     </label>
                 </div>
@@ -288,8 +288,7 @@
     <div>
         <section class="court-choose">
             <div class="court-blocks-step1">
-
-                <div class="court-block">
+                <div class="court-block court-block-players-needed" type="paid" inOut="indoor" onclick="location.href='selected-players-needed-slot.html'">
                     <div class="court-block-content">
                         <img src="court_images/court1.png" alt="court" class="court-image">
                         <div class="court-info">
@@ -322,7 +321,7 @@
                     </div>
                 </div>
 
-                <div class="court-block court-block-promo">
+                <div class="court-block court-block-promo" type="paid" inOut="indoor" onclick="location.href='selected-indoor-court.html'">
                     <div class="court-block-content">
                         <img src="court_images/court2.png" alt="court" class="court-image">
                         <div class="court-info">
@@ -355,7 +354,7 @@
                     </div>
                 </div>
 
-                <div class="court-block court-block-available">
+                <div class="court-block court-block-available" type="paid" inOut="indoor" onclick="location.href='selected-indoor-court.html'">
                     <div class="court-block-content">
                         <img src="court_images/court4.png" alt="court" class="court-image">
                         <div class="court-info">
@@ -388,7 +387,7 @@
                     </div>
                 </div>
                 <p class="load-more">Load more</p>
-                <div class="court-block court-block-outdoor-scheduled">
+                <div class="court-block court-block-outdoor-scheduled court-block-players-needed" type="free" inOut="outdoor" onclick="location.href='selected-players-needed-slot.html'">
                     <div class="court-block-content">
                         <img src="court_images/court6.png" alt="court" class="court-image">
                         <div class="court-info">
@@ -410,7 +409,7 @@
                     </div>
                 </div>
 
-                <div class="court-block court-block-promo">
+                <div class="court-block court-block-promo" type="paid" inOut="indoor" onclick="location.href='selected-indoor-court.html'">
                     <div class="court-block-content">
                         <img src="court_images/court2.png" alt="court" class="court-image">
                         <div class="court-info">
@@ -442,7 +441,7 @@
                     </div>
                 </div>
 
-                <div class="court-block court-block-outdoor-nonscheduled">
+                <div class="court-block court-block-outdoor-nonscheduled" type="free" inOut="outdoor" onclick="location.href='selected-outdoor-court.html'">
                     <div class="court-block-content">
                         <img src="court_images/court6.png" alt="court" class="court-image">
                         <div class="court-info">
@@ -460,7 +459,7 @@
                     </div>
                 </div>
 
-                <div class="court-block court-block-indoor-nonscheduled">
+                <div class="court-block court-block-indoor-nonscheduled" type="paid" inOut="indoor" onclick="location.href='selected-indoor-court.html'">
                     <div class="court-block-content">
                         <img src="court_images/court6.png" alt="court" class="court-image">
                         <div class="court-info">
@@ -488,7 +487,7 @@
                     </div>
                 </div>
                 
-                <div class="court-block">
+                <div class="court-block  court-block-players-needed" type="paid" inOut="indoor" onclick="location.href='selected-players-needed-slot.html'">
                     <div class="court-block-content">
                         <img src="court_images/court1.png" alt="court" class="court-image">
                         <div class="court-info">
@@ -521,7 +520,7 @@
                     </div>
                 </div>
 
-                <div class="court-block court-block-available">
+                <div class="court-block court-block-available" type="paid" inOut="indoor" onclick="location.href='selected-indoor-court.html'">
                     <div class="court-block-content">
                         <img src="court_images/court4.png" alt="court" class="court-image">
                         <div class="court-info">
@@ -554,7 +553,7 @@
                 </div>
 
 
-                <div class="court-block court-block-available">
+                <div class="court-block court-block-available" type="paid" inOut="indoor" onclick="location.href='selected-indoor-court.html'">
                     <div class="court-block-content">
                         <img src="court_images/court4.png" alt="court" class="court-image">
                         <div class="court-info">
@@ -587,7 +586,7 @@
                     </div>
                 </div>
 
-                <div class="court-block court-block-outdoor-scheduled">
+                <div class="court-block court-block-outdoor-scheduled  court-block-players-needed" type="paid" inOut="indoor" onclick="location.href='selected-players-needed-slot.html'">
                     <div class="court-block-content">
                         <img src="court_images/court6.png" alt="court" class="court-image">
                         <div class="court-info">
@@ -609,7 +608,7 @@
                     </div>
                 </div>
 
-                <div class="court-block court-block-promo">
+                <div class="court-block court-block-promo" type="paid" inOut="indoor" onclick="location.href='selected-indoor-court.html'">
                     <div class="court-block-content">
                         <img src="court_images/court2.png" alt="court" class="court-image">
                         <div class="court-info">
@@ -641,7 +640,7 @@
                     </div>
                 </div>
 
-                <div class="court-block court-block-outdoor-nonscheduled">
+                <div class="court-block court-block-outdoor-nonscheduled" type="free" inOut="outdoor" onclick="location.href='selected-outdoor-court.html'">
                     <div class="court-block-content">
                         <img src="court_images/court6.png" alt="court" class="court-image">
                         <div class="court-info">
@@ -659,7 +658,7 @@
                     </div>
                 </div>
 
-                <div class="court-block court-block-indoor-nonscheduled">
+                <div class="court-block court-block-indoor-nonscheduled" type="paid" inOut="indoor" onclick="location.href='selected-indoor-court.html'">
                     <div class="court-block-content">
                         <img src="court_images/court6.png" alt="court" class="court-image">
                         <div class="court-info">
@@ -687,7 +686,7 @@
                     </div>
                 </div>
 
-                <div class="court-block court-block-promo">
+                <div class="court-block court-block-promo" type="paid" inOut="indoor" onclick="location.href='selected-indoor-court.html'">
                     <div class="court-block-content">
                         <img src="court_images/court2.png" alt="court" class="court-image">
                         <div class="court-info">
@@ -789,8 +788,18 @@
                     <script src="js/waypoints.min.js"></script>
                     <script src="js/slick.min.js"></script>
                     <script src="js/jquery.ajaxchimp.min.js"></script>
-
+                    <script>
+                        let loadMore = document.querySelector('.load-more');
+                        loadMore.addEventListener('click', e => {
+                            loadMore.style.display="none"
+                            document.querySelectorAll('.court-blocks-step1 .court-block:nth-child(n+4)').forEach(elem =>{
+                                elem.style.display="block";
+                                
+                            })
+                        })
+                    </script>
                      <!-- Custom Scripts -->
+                     <script src="js/courtblocks.js"></script>
                     <script src="js/menu.js"></script>
                     <script src="js/main.js"></script>
                     <!-- Font Awesome  -->

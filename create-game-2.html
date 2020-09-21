@@ -73,6 +73,15 @@
             <p class="forgot-password">Forgot password?</p>
         </div>
     </div>
+    <div class="request-sent-container">
+        <div class="request-sent-content">
+            <h4 class="span-green">Your request has been sent!</h4>
+            <p>We will send you a notification when the group admin accepts your request</p>
+            <button class="green-button done-btn">Done</button>
+            <dix class="x-button exit-request">X</dix>
+        </div>
+        
+    </div>
     <div class="sign-in-overlay">
         <div class="sign-in-content">
             <p class="sign-in-p">Sign up</p>
@@ -727,7 +736,7 @@
 
                     </script>
                     <!-- jquery -->
-                    <script src="js/jquery-3.4.1.slim.min.js"></script>
+                    <script src="js/jquery-3.4.1.js"></script>
                     <!-- Bootstrap -->
                     <script src="js/popper.min.js"></script>
                     <script src="js/bootstrap.min.js"></script>
@@ -796,15 +805,33 @@
                             })
                             
                         });
-                        $(".ask-to-join-btn").click(function(event) {
+                        let askToJoinBtn=document.querySelectorAll('.ask-to-join-btn')
+                        let doneBtn=document.querySelector('.done-btn')
+                        let cancelReq = document.querySelector('.exit-request')
+                        askToJoinBtn.forEach(btn => {
+                            btn.addEventListener('click', function(event) {
+                                event.preventDefault();
+                                if(loggedIn == true) {
+                                    document.querySelector('.request-sent-container').style.display="block"
+                                    $(this).addClass('invite-nonavailable').text("Asked to join").css('color', '#fff');
+                                    $(this).removeClass('hover-class')
+                                } else {
+                                    document.querySelector('.create-acc-popup-container').style.display="block";
+                                }
+
+                            })
+                        })
+                        doneBtn.addEventListener('click', function(event) {
                             event.preventDefault();
-                            $(this).addClass('invite-nonavailable').text("Asked to join").css('color', '#fff');
-                            $(this).removeClass('hover-class')
-                        });
+                            document.querySelector('.request-sent-container').style.display="none"
+                        })
+                        cancelReq.addEventListener('click', function(event) {
+                            event.preventDefault();
+                            document.querySelector('.request-sent-container').style.display="none"
+                        })
                         $(".book-btn").click(function(event) {
                             event.preventDefault();
-                            $(this).addClass('invite-nonavailable').text("Booked").css('color', '#fff');
-                            $(this).removeClass('hover-class')
+                            window.location="create-game-2.html"
                         });
                      </script>
                     <script src="js/menu.js"></script>

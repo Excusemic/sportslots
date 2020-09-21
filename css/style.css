@@ -1012,6 +1012,9 @@ header nav {
 	color: #f07030;
 
 }
+.find-players-header a:hover {
+	text-decoration: none;
+}
 
 .search-players {
 	background-image: url("../icons/search_icon_grey.png");
@@ -1021,6 +1024,7 @@ header nav {
 	border-width: 1px;
 	border-style: solid;
 	border-radius: 15px;
+	border-color: #bbbb;
 	width: 40%;
 	padding-top: 0.4em;
 	padding-bottom: 0.4em;
@@ -1129,6 +1133,10 @@ header nav {
 	margin-top: 5%;
 	padding: 1.2em 0em;
 }
+.sign-in-content input[type=submit] {
+	background-color: #f07030;
+	color: #fff;
+}
 .login-signup label {
 	font-size: .8em;
 	color: #fff;
@@ -1148,6 +1156,7 @@ header nav {
 	font-size: .8em;
 	padding: .4em 0em;
 	margin-left: .4em;
+	color: #fff;
 	cursor: pointer;
 }
 .signed-in-content-nav {
@@ -1185,9 +1194,9 @@ header nav {
 .sign-in-content input {
 	width: 80%;
 	border-style: solid;
-	border-width: 2px;
-	border-radius: 25px;
-	border-color: #d0d0d0;
+	border-width: 1px;
+	border-radius: 15px;
+	border-color: #bbbbbb;
 	padding: .5em;
 	margin: .4em 0em;
 }
@@ -1278,7 +1287,8 @@ header nav {
 	border-width: 1px;
 	background-color: #f9f9f9;
 	border-style: solid;
-	border-radius: 20px;
+	border-radius: 15px;
+	border-color: #bbbb;
 	width: 40%;
 	padding-top: 0.4em;
 	padding-bottom: 0.4em;
@@ -1895,6 +1905,7 @@ header nav {
 	border: solid 2px #ececec;
 	padding: 0.8em 1em;
 	margin: 0.4em 0em;
+	cursor: pointer;
 
 
 }

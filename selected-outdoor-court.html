@@ -58,6 +58,20 @@
 
 </head>
 <body>
+    <div class="create-acc-popup-container">
+        <div class="create-acc-popup-content">
+            <h4 class="span-green">Jump in</h4>
+            <div>
+                <p class="span-black">New to sportslots?</p>
+                <button class="green-button" id="step2-create-acc">Create account</button>
+            </div>
+            <div>
+                <p class="span-black">Already have an account?</p>
+                <button class="green-button" id="signInStepTwo">Sign in</button>
+            </div>
+            <p class="forgot-password">Forgot password?</p>
+        </div>
+    </div>
     <div class="request-sent-container">
         <div class="request-sent-content">
             <h4 class="span-green">Your request has been sent!</h4>
@@ -411,8 +425,8 @@
 
 
                     <div class="player-box-invite">
-                        <img src="players/player1.png" alt="player">
-                        <div class="player-info-invite">
+                        <img src="players/player1.png" alt="player" onclick="window.location.href='selected-profile.html'">
+                        <div class="player-info-invite" onclick="window.location.href='selected-profile.html'">
                             <h5>Smoke Mardeljano</h5>
                             <p>Belgrade, Serbia</p>
                         </div>
@@ -432,8 +446,8 @@
                     </div>
 
                     <div class="player-box-invite">
-                        <img src="players/player1.png" alt="player">
-                        <div class="player-info-invite">
+                        <img src="players/player1.png" alt="player" onclick="window.location.href='selected-profile.html'">
+                        <div class="player-info-invite" onclick="window.location.href='selected-profile.html'">
                             <h5>Smoke Mardeljano</h5>
                             <p>Belgrade, Serbia</p>
                         </div>
@@ -453,8 +467,8 @@
                     </div>
 
                     <div class="player-box-invite">
-                        <img src="players/player1.png" alt="player">
-                        <div class="player-info-invite">
+                        <img src="players/player1.png" alt="player" onclick="window.location.href='selected-profile.html'">
+                        <div class="player-info-invite" onclick="window.location.href='selected-profile.html'">
                             <h5>Smoke Mardeljano</h5>
                             <p>Belgrade, Serbia</p>
                         </div>
@@ -474,8 +488,8 @@
                     </div>
 
                     <div class="player-box-invite">
-                        <img src="players/player1.png" alt="player">
-                        <div class="player-info-invite">
+                        <img src="players/player1.png" alt="player" onclick="window.location.href='selected-profile.html'">
+                        <div class="player-info-invite" onclick="window.location.href='selected-profile.html'">
                             <h5>Smoke Mardeljano</h5>
                             <p>Belgrade, Serbia</p>
                         </div>
@@ -495,8 +509,8 @@
                     </div>
 
                     <div class="player-box-invite">
-                        <img src="players/player1.png" alt="player">
-                        <div class="player-info-invite">
+                        <img src="players/player1.png" alt="player" onclick="window.location.href='selected-profile.html'">
+                        <div class="player-info-invite" onclick="window.location.href='selected-profile.html'">
                             <h5>Smoke Mardeljano</h5>
                             <p>Belgrade, Serbia</p>
                         </div>
@@ -516,8 +530,8 @@
                     </div>
 
                     <div class="player-box-invite">
-                        <img src="players/player1.png" alt="player">
-                        <div class="player-info-invite">
+                        <img src="players/player1.png" alt="player" onclick="window.location.href='selected-profile.html'">
+                        <div class="player-info-invite" onclick="window.location.href='selected-profile.html'">
                             <h5>Smoke Mardeljano</h5>
                             <p>Belgrade, Serbia</p>
                         </div>
@@ -536,7 +550,7 @@
                         <button class="invite-available">Invite</button>
                     </div>
                 <div class="next-button-invite-div">
-                    <button  class="next-button-invite">Done</button>
+                    <button  class="next-button-invite" onclick="window.location.href='messages.html'">Done</button>
                     <p>You will be redirected to MESSAGES group</p>
                 </div>
             </div>
@@ -669,13 +683,35 @@
                             })
                         })
                         askToJoinBtn.forEach(btn => {
-                        btn.addEventListener('click', function(event) {
-                            event.preventDefault();
-                            document.querySelector('.request-sent-container').style.display="block"
-                            $(this).addClass('invite-nonavailable').text("Asked to join").css('color', '#fff');
-                            $(this).removeClass('hover-class')
+                            btn.addEventListener('click', function(event) {
+                                event.preventDefault();
+                                if(loggedIn == true) {
+                                    document.querySelector('.request-sent-container').style.display="block"
+                                    $(this).addClass('invite-nonavailable').text("Asked to join").css('color', '#fff');
+                                    $(this).removeClass('hover-class')
+                                } else {
+                                    document.querySelector('.create-acc-popup-container').style.display="block";
+                                }
+
+                            })
                         })
+                         let step3createAccBtn = document.querySelector('#step2-create-acc');
+                         step3createAccBtn.addEventListener('click', () => {
+                            document.querySelector('.create-acc-popup-container').style.display="none";
+                             document.querySelector('.sign-in-overlay').style.display="block"
                          })
+                         let exitSignin = document.querySelector('.exit-signin')
+                         exitSignin.addEventListener('click', () => {
+                            document.querySelector('.sign-in-overlay').style.display = "none";
+                        })
+                        let signInStepTwo = document.querySelector('#signInStepTwo')
+                        signInStepTwo.addEventListener('click', () => {
+                            document.querySelector('.create-acc-popup-container').style.display="none";
+                            document.documentElement.scrollTop = 0;
+                            document.querySelector('.side-menu').classList.add('toggle-menu');
+                            document.querySelector('.login-mobile').click()
+                        
+                        })
                         doneBtn.addEventListener('click', function(event) {
                                 event.preventDefault();
                                 document.querySelector('.request-sent-container').style.display="none"

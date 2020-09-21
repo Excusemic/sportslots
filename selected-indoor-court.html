@@ -58,6 +58,20 @@
 
 </head>
 <body>
+    <div class="create-acc-popup-container">
+        <div class="create-acc-popup-content">
+            <h4 class="span-green">Jump in</h4>
+            <div>
+                <p class="span-black">New to sportslots?</p>
+                <button class="green-button" id="step2-create-acc">Create account</button>
+            </div>
+            <div>
+                <p class="span-black">Already have an account?</p>
+                <button class="green-button" id="signInStepTwo">Sign in</button>
+            </div>
+            <p class="forgot-password">Forgot password?</p>
+        </div>
+    </div>
     <div class="request-sent-container">
         <div class="request-sent-content">
             <h4 class="span-green">Your request has been sent!</h4>
@@ -544,6 +558,16 @@
                     let askToJoinBtn=document.querySelectorAll('.ask-to-join-btn')
                     let doneBtn=document.querySelector('.done-btn')
                     let cancelReq = document.querySelector('.exit-request')
+                    let authTest = firebase.auth()
+                    let loggedIn = false;
+                        authTest.onAuthStateChanged(function(user){
+                                if(user) {
+                                    loggedIn = true;
+                                } else {
+                                    loggedIn = false;
+                                }
+                            
+                        });
                     otherGamesIndoor.forEach(game => {
                         game.addEventListener('click', function(event) {
                             event.preventDefault();
@@ -559,12 +583,34 @@
                         })
                     })
                     askToJoinBtn.forEach(btn => {
-                        btn.addEventListener('click', function(event) {
-                            event.preventDefault();
-                            document.querySelector('.request-sent-container').style.display="block"
-                            $(this).addClass('invite-nonavailable').text("Asked to join").css('color', '#fff');
-                            $(this).removeClass('hover-class')
+                            btn.addEventListener('click', function(event) {
+                                event.preventDefault();
+                                if(loggedIn == true) {
+                                    document.querySelector('.request-sent-container').style.display="block"
+                                    $(this).addClass('invite-nonavailable').text("Asked to join").css('color', '#fff');
+                                    $(this).removeClass('hover-class')
+                                } else {
+                                    document.querySelector('.create-acc-popup-container').style.display="block";
+                                }
+
+                            })
                         })
+                    let step3createAccBtn = document.querySelector('#step2-create-acc');
+                        step3createAccBtn.addEventListener('click', () => {
+                        document.querySelector('.create-acc-popup-container').style.display="none";
+                            document.querySelector('.sign-in-overlay').style.display="block"
+                        })
+                        let exitSignin = document.querySelector('.exit-signin')
+                        exitSignin.addEventListener('click', () => {
+                        document.querySelector('.sign-in-overlay').style.display = "none";
+                    })
+                    let signInStepTwo = document.querySelector('#signInStepTwo')
+                    signInStepTwo.addEventListener('click', () => {
+                        document.querySelector('.create-acc-popup-container').style.display="none";
+                        document.documentElement.scrollTop = 0;
+                        document.querySelector('.side-menu').classList.add('toggle-menu');
+                        document.querySelector('.login-mobile').click()
+                    
                     })
                     doneBtn.addEventListener('click', function(event) {
                             event.preventDefault();

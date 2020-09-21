@@ -58,6 +58,20 @@
 
 </head>
 <body>
+    <div class="create-acc-popup-container">
+        <div class="create-acc-popup-content">
+            <h4 class="span-green">Jump in</h4>
+            <div>
+                <p class="span-black">New to sportslots?</p>
+                <button class="green-button" id="step2-create-acc">Create account</button>
+            </div>
+            <div>
+                <p class="span-black">Already have an account?</p>
+                <button class="green-button" id="signInStepTwo">Sign in</button>
+            </div>
+            <p class="forgot-password">Forgot password?</p>
+        </div>
+    </div>
     <div class="send-message-container">
         <div class="send-message-content">
             <h4 class="span-green">Send a message to</h4>
@@ -865,7 +879,7 @@
         <div class="featured-courts">
 
 
-            <div class="court-block-featured">
+            <div class="court-block-featured" onclick="location.href='selected-players-needed-slot.html'">
                 <div class="court-block-content">
                     <img src="court_images/court1.png" alt="court" class="court-image">
                     <div class="court-info">
@@ -898,7 +912,7 @@
                 </div>
             </div>
 
-                <div class="court-block-featured court-block-promo">
+                <div class="court-block-featured court-block-promo" onclick="location.href='selected-outdoor-court.html'">
                     <div class="court-block-content">
                         <img src="court_images/court2.png" alt="court" class="court-image">
                         <div class="court-info">
@@ -932,7 +946,7 @@
                 </div>
 
 
-                <div class="court-block-featured court-block-available">
+                <div class="court-block-featured court-block-available" onclick="location.href='selected-outdoor-court.html'">
                     <div class="court-block-content">
                         <img src="court_images/court4.png" alt="court" class="court-image">
                         <div class="court-info">
@@ -966,7 +980,7 @@
                 </div>
 
   
-                <div class="court-block-featured">
+                <div class="court-block-featured" onclick="location.href='selected-players-needed-slot.html'">
                     <div class="court-block-content">
                         <img src="court_images/court1.png" alt="court" class="court-image">
                         <div class="court-info">
@@ -999,7 +1013,7 @@
                     </div>
                 </div>
 
-                <div class="court-block-featured court-block-promo">
+                <div class="court-block-featured court-block-promo" onclick="location.href='selected-outdoor-court.html'">
                     <div class="court-block-content">
                         <img src="court_images/court2.png" alt="court" class="court-image">
                         <div class="court-info">
@@ -1032,7 +1046,7 @@
                     </div>
                 </div>
 
-                <div class="court-block-featured court-block-available">
+                <div class="court-block-featured court-block-available" onclick="location.href='selected-outdoor-court.html'">
                     <div class="court-block-content">
                         <img src="court_images/court4.png" alt="court" class="court-image">
                         <div class="court-info">
@@ -1255,6 +1269,16 @@
                         let nextBtn = document.querySelector('.next');
                         let prevBtn = document.querySelector('.prev');
                         let counter = 0;
+                        let authTest = firebase.auth()
+                        let loggedIn = false;
+                        authTest.onAuthStateChanged(function(user){
+                                if(user) {
+                                    loggedIn = true;
+                                } else {
+                                    loggedIn = false;
+                                }
+                            
+                        });
                         loadMore.addEventListener('click', e => {
                             loadMore.style.display="none"
                             document.querySelectorAll('.court-blocks .court-block:nth-child(n+4)').forEach(elem =>{
@@ -1321,15 +1345,29 @@
                         })
                         sendMessageBtn.forEach(btn => {
                             btn.addEventListener('click', () => {
+                                if(loggedIn==true) {
                                 document.querySelector('.send-message-container').style.display="block"
+                             } else {
+                                 document.querySelector('.create-acc-popup-container').style.display="block";
+                             }
                             })
-                        })
+
+                         });
                         sendMessageBtnPopUp.addEventListener('click', () => {
                             document.querySelector('.send-message-container').style.display="none"
                         })
                         cancelMessage.addEventListener('click', () => {
                             document.querySelector('.send-message-container').style.display="none"
                         })
+                        let signInStepTwo = document.querySelector('#signInStepTwo')
+                        signInStepTwo.addEventListener('click', () => {
+                        document.querySelector('.create-acc-popup-container').style.display="none";
+                        document.documentElement.scrollTop = 0;
+                        document.querySelector('.side-menu').classList.add('toggle-menu');
+                        document.querySelector('.login-mobile').click()
+                    
+                        })
+
                         
                     </script>
 
