@@ -1894,6 +1894,7 @@ header nav {
 .other-slots-content-header {
 	font-size: 1.8em;
 	margin-bottom: 1.4em;
+	margin-top: 1em;
 	font-weight: 600;
 	color: #ef6723;
 }
@@ -7665,6 +7666,16 @@ header nav {
 	.pop-up-refunding-content {
 		width: 100%;
 		height: 100%;
+	}
+	.rating-content {
+		width: 95%;
+	}
+	.rating-boxes {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.rating-content .court-rating-box, .rating-content .player-rating-box {
+		flex-wrap: wrap;
 	}
 
 }
