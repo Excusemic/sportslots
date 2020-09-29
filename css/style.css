@@ -352,7 +352,7 @@ header nav {
 	margin: 0em 0em;
 }
 #signin-form {
-	margin-top: 1.2em;
+
 }
 
 .nav-content .nav-item a {
@@ -489,6 +489,10 @@ header nav {
 /*******-----------------------------CAROUSEL------------------------------********/
 
 
+.carousel-desktop .carousel-control-next-icon, .carousel-desktop .carousel-control-prev-icon {
+    opacity: 0;
+    filter:alpha(opacity=0); 
+}
 
 .carousel-mobile {
 	display: none;
@@ -1124,6 +1128,24 @@ header nav {
     place-content: center;
     opacity: 1;
 }
+.log-in-overlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.9);
+    z-index: 998;
+    content: '';
+    display: none;
+    place-content: center;
+    opacity: 1;
+}
+.login-signup-text {
+	color: #fff;
+	font-size: 1em;
+}
+.login-signup {
+	padding: 1.2em;
+}
 .sign-in-content {
 	position: relative;
 	text-align: center;
@@ -1133,31 +1155,64 @@ header nav {
 	margin-top: 5%;
 	padding: 1.2em 0em;
 }
+.log-in-content {
+	position: relative;
+	text-align: center;
+	width: 40%;
+	margin: auto;
+	margin-top: 5%;
+	background-color: #fff;
+}
+.log-in-content form {
+	width: 50%;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.log-in-content form  div {
+	margin: 2em 0em;
+	margin-top: 0em;
+	display: flex;
+	justify-content: space-between;
+}
+.log-in-content form  div:nth-child(2) {
+	margin: 0;
+}
 .sign-in-content input[type=submit] {
 	background-color: #f07030;
 	color: #fff;
+	
+}
+.log-in-content form  div:nth-child(3) {
+	display: block;
+	margin-top: 0em;
+
 }
 .login-signup label {
+	color: #000000;
 	font-size: .8em;
-	color: #fff;
-	margin-left: .4em;
+	margin: 0em;
+	display: flex;
+    align-items: center;
 }
 .login-signup input {
 	width: 150px;
 	border-radius: 15px;
-	border: none;
+	border: 1px solid #bbbbbb;
 	outline: none;
 	
 }
 .login-signup input[type=submit] {
-	width: 60px;
+	width: 80px;
 	background-color: #f07030;
 	color: #fff;
 	font-size: .8em;
-	padding: .4em 0em;
-	margin-left: .4em;
+	padding: .3em 0em;
 	color: #fff;
 	cursor: pointer;
+	margin: auto;
+	margin-top: 1.2em;
 }
 .signed-in-content-nav {
 	display: none;
@@ -1167,17 +1222,13 @@ header nav {
 .signed-in-menu {
 	display: none;
 }
-.login-signup p {
+.login-signup-text p {
 	font-size: .7em;
-	color: #fff;
-	text-align: right;
-	margin-top: .4em;
-}
-.login-signup p span {
 	cursor: pointer;
-	text-decoration: underline;
+	color: #fff;
 }
-.login-signup p span:hover {
+
+.login-signup-text p span:hover {
 	color: #f07030;
 }
 
@@ -1186,6 +1237,7 @@ header nav {
 	font-weight: 700;
 	color: #f07131;
 	margin-bottom: 0.8em;
+	margin-top: 1.4em;
 }
 .sign-in-content form {
 	margin: 0;
@@ -2217,7 +2269,7 @@ header nav {
 }
 .not-selected-step3 {
 	background-color: #fff;
-	border: 2px;
+	border: 1px;
 	border-style: solid;
 	border-color: #ebebeb;
 }
@@ -2303,9 +2355,9 @@ header nav {
 	width: 90%;
 	outline: none;
 	border-radius: 15px;
-	border: 2px;
+	border: 1px;
 	border-style: solid;
-	border-color: #ebebeb;
+	border-color: #bbbbbb;
 	background-color: #f9f9f9;
 	font-size: 0.8em;
 	margin:auto;
@@ -2809,7 +2861,7 @@ header nav {
 	padding: 0em .6em;
 	padding-top: .8em;
 	background-color: #fff;
-	border: 2px solid #ebebeb;
+	border: 1px solid #bbbbbb;
 	border-radius: 5px;
 	position: relative;
 	display: grid;
@@ -2894,7 +2946,7 @@ header nav {
 
 }
 .added-court-block-outdoor span:hover, .added-court-block-indoor span:hover {
-	text-decoration: underline;
+
 
 }
 .added-court-block-outdoor .star-rating, .added-court-block-indoor .star-rating {
@@ -2943,7 +2995,7 @@ header nav {
 	width: 100%;
 	background-color: #fff;
 	margin-bottom: .8em;
-	border: 2px solid #ececec;
+	border: 1px solid #bbbbbb;
 	padding: .6em 1em;
 	box-shadow: 1px 4px 3px 1px #ebebeb;
 }
@@ -2959,7 +3011,7 @@ header nav {
 	list-style-type: none;
 	background-color: #fff;
 	border-radius: 15px;
-	border: 2px solid #ececec;
+	border: 1px solid #bbbbbb;
 	padding: 0em 0em;
 	z-index: 2;
 	
@@ -3262,7 +3314,7 @@ header nav {
 	top: 2;
 	left: 0;
 	z-index: 2;
-	border: 2px solid #ececec;
+	border: 1px solid #bbbbbb;
 	border-radius: 18px;
 	display: none;
 }
@@ -3390,14 +3442,13 @@ header nav {
 	background-color: #f9f9f9;
 }
 .settings-content form input {
-	border: 2px solid #bbbbbb;
+	border: 1px solid #bbbbbb;
 	border-radius: 15px;
 	width: 100%;
 	text-indent: .6em;
 	padding: .3em 0em;
 	margin-bottom: .6em;
 	outline: none;
-	background-color: #f9f9f9;
 }
 .settings-content form input[type=date] {
 	font-size: 1em;
@@ -3405,7 +3456,7 @@ header nav {
 	padding-right: 1em;
 }
 .settings-content form select {
-	border: 2px solid #bbbbbb;
+	border: 1px solid #bbbbbb;
 	border-radius: 15px;
 	width: 100%;
 	text-indent: .3em;
@@ -3419,7 +3470,9 @@ header nav {
 	background-position: 95%;
 	
 }
-
+.settings-content form .editable {
+	display: none;
+}
 .settings-content form .input-container {
 	margin-bottom: .6em;
 }
@@ -3484,7 +3537,7 @@ header nav {
 .onoffswitch-label {
     display: block; overflow: hidden; cursor: pointer;
     height: 43px; padding: 0; line-height: 36px;
-    border: 2px solid #E3E3E3; border-radius: 18px;
+    border: 1px solid #E3E3E3; border-radius: 18px;
     background-color: #FFFFFF;
     transition: background-color 0.3s ease-in;
 }
@@ -3495,7 +3548,7 @@ header nav {
     background: #EF6723;
     position: absolute; top: 0; bottom: 0;
     right: 29px;
-    border: 2px solid #E3E3E3; border-radius: 18px;
+    border: 1px solid #E3E3E3; border-radius: 18px;
 	transition: all 0.3s ease-in 0s; 
 	text-align: center;
 	font-size: .8em;
@@ -3603,7 +3656,7 @@ header nav {
 .payment-settings-container .card-box .card-info img {
 	width: 80px;
 	margin-right: 1em;
-	border: 2px solid #ececec;
+	border: 1px solid #bbbbbb;;
 }
 .payment-settings-container .card-box .card-info p {
 	line-height: 1.2em;
@@ -3630,7 +3683,7 @@ header nav {
 	list-style-type: none;
 	background-color: #fff;
 	border-radius: 15px;
-	border: 2px solid #ececec;
+	border: 1px solid #bbbbbb;
 	padding: 0em 0em;
 	z-index: 2;
 	width: 140px;
@@ -3724,10 +3777,10 @@ header nav {
 .add-card-content .card-images img {
 	margin: auto;
 	width: 60px;
-	border: 2px solid #ececec;
+	border: 1px solid #bbbbbb;
 }
 .add-card-content form input {
-	border: 2px solid #bbbbbb;
+	border: 1px solid #bbbbbb;
 	border-radius: 15px;
 	width: 80%;
 	text-indent: .6em;
@@ -3741,7 +3794,7 @@ header nav {
 	padding-right: 1em;
 }
 .add-card-content form select {
-	border: 2px solid #bbbbbb;
+	border: 1px solid #bbbbbb;
 	border-radius: 15px;
 	width: 80%;
 	text-indent: .3em;
@@ -4190,6 +4243,7 @@ header nav {
 	z-index: 3;
 	text-align: left;
 	display: none;
+	width: 120px;
 }
 .reservations-container .more .more-list {
 	padding: 0em;
@@ -4200,6 +4254,7 @@ header nav {
 	margin: 0em;
 	cursor: pointer;
 }
+
 .reservations-container .more ul li:hover {
 	background-color: #ececec;
 }
@@ -4272,7 +4327,7 @@ header nav {
 	width: 100%;
 	display: block;
 	outline: none;
-	border: 2px solid #ececec;
+	border: 1px solid #bbbbbb;
 	border-radius: 8px;
 	height: 80px;
 	font-size: .6em;
@@ -4300,7 +4355,7 @@ header nav {
 .rating-content .done-rating {
 	background-color: #fff;
 	outline: none;
-	border: 2px solid #e6e6e6;
+	border: 1px solid #bbbbbb;
 
 }
 .rating-content .more {
@@ -4320,7 +4375,7 @@ header nav {
 .rating-content .more .done-rating {
 	background-color: #fff;
 	outline: none;
-	border: 2px solid #ececec;
+	border: 1px solid #bbbbbb;
 	border-radius: 6px;
 	width: 100px;
 	font-size: .6em;
@@ -4365,7 +4420,7 @@ header nav {
 	list-style-type: none;
 	background-color: #fff;
 	border-radius: 10px;
-	border: 2px solid #ececec;
+	border: 1px solid #bbbbbb;
 	padding: 0em 0em;
 	z-index: 2;
 	overflow: hidden;
@@ -4569,7 +4624,7 @@ header nav {
 	list-style-type: none;
 	background-color: #fff;
 	border-radius: 10px;
-	border: 2px solid #ececec;
+	border: 1px solid #bbbbbb;
 	padding: 0em 0em;
 	z-index: 2;
 	overflow: hidden;
@@ -4621,7 +4676,7 @@ header nav {
 
 }
 .slot-invitation .invitaion-link{
-	border: 2px solid #ececec;
+	border: 1px solid #bbbbbb;
 	width: 200px;
 	padding: .3em .1em;
 	background-color: #f5f5f5;
@@ -4751,7 +4806,7 @@ header nav {
 
 }
 .manage-slots-calendar .filters input {
-	border: 2px solid #bbbbbb;
+	border: 1px solid #bbbbbb;
 	border-radius: 15px;
 	width: 150px;
 	text-indent: .6em;
@@ -4769,7 +4824,7 @@ header nav {
 	padding: .45em .2em;
 }
 .manage-slots-calendar .filters select {
-	border: 2px solid #bbbbbb;
+	border: 1px solid #bbbbbb;
 	border-radius: 15px;
 	width: 150px;
 	text-indent: .6em;
@@ -4914,7 +4969,7 @@ header nav {
 	font-size: .8em;
 }
 .selected {
-	border: 2px solid #ef6723;
+	border: 1px solid #ef6723;
 }
 .manage-slots-main .manage-slots-aside {
 	width: 32%;
@@ -4931,6 +4986,12 @@ header nav {
 .slot-control, .already-booked-slots, .blocked-slots, .cancellation-settings {
 	background-color: #fff;
 	margin-top: 2em;
+}
+.blocked-slots-all {
+	display: none;
+}
+.blocked-slots-show {
+	display: block;
 }
 .slot-control {
 	position: relative;
@@ -4978,7 +5039,7 @@ header nav {
 	
 }
 .slot-control .price-per-hour input {
-	border: 2px solid #ececec;
+	border: 1px solid #bbbbbb;
 	border-radius: 15px;
 	width: 100%;
 	padding: .2em 0em;
@@ -5101,8 +5162,11 @@ header nav {
 	font-weight: 600;
 }
 .booked-slot-price {
-	display: flex;
+	display: none;
 	justify-content: space-between;
+}
+.booked-slot-price-show {
+	display: flex;
 }
 .booked-slot-price .price-info span {
 	display: block;
@@ -5114,10 +5178,14 @@ header nav {
 	margin-bottom: .4em;
 
 }
-.booked-slot-expanded, .booked-slot-shrink {
+.booked-slot-shrink {
 	padding-bottom: .6em;
 	margin-bottom: 1em;
 	border-bottom: 1px solid #ececec;
+	display: none;
+}
+.booked-slot-expanded {
+	display: block;
 }
 .price .span-black {
 	cursor: pointer;
@@ -5500,7 +5568,7 @@ header nav {
 	padding: .4em 1.2em;
 	padding-bottom: 1.8em;
 	max-width: 65%;
-	border: 2px solid #ececec;
+	border: 1px solid #bbbbbb;
 	border-radius: 10px;
 	word-wrap: break-word;
 }
@@ -5565,7 +5633,7 @@ header nav {
 	width: 100%;
 }
 .write-message-input {
-	border: 2px solid #ececec;
+	border: 1px solid #bbbbbb;
 	border-radius: 10px;
 }
 .write-message-input .add{
@@ -5906,7 +5974,7 @@ header nav {
 	font-size: .9em;
 	width: 70%;
 	margin: auto;
-	border: 2px solid #ececec;
+	border: 1px solid #bbbbbb;
 	display: block;
 	border-radius: 12px;
 	margin-bottom: 2em;
@@ -5968,7 +6036,7 @@ header nav {
 	font-size: .9em;
 	width: 85%;
 	margin: auto;
-	border: 2px solid #ececec;
+	border: 1px solid #bbbbbb;
 	display: block;
 	border-radius: 12px;
 	margin-bottom: 2em;
@@ -6681,6 +6749,11 @@ header nav {
 		margin: auto;
 		text-align: center;
 		font-size: .9em;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		margin-bottom: 0em;
+
 	}
 	.footer-content .my-games {
 		margin-bottom: 0em;
@@ -6689,12 +6762,19 @@ header nav {
 		width: 40px;
 		margin: auto;
 		margin-bottom: 6px;
+
+	}
+	.footer-content #profileFooter {
+		width: 36px;
+		margin-bottom: 7px;
+		margin-top: 3px;
 	}
 	.footer-content .messages-footer {
 		margin-bottom: 0em;
 	}
 
 	.footer-content  p {
+
 		font-size: .8em;
 	}
 
@@ -6871,6 +6951,17 @@ header nav {
 	.sign-in-content {
 		width: 100%;
 		height: 100%;
+	}
+	.log-in-content {
+		position: fixed;
+		top: 20%;
+		width: 100%;
+	}
+	.log-in-content form {
+		max-width: 260px;
+	}
+	.log-in-content form {
+		width: 100%;
 	}
 	.upcoming-games-history-games-content h3 {
 		margin: 0em;
@@ -7375,16 +7466,31 @@ header nav {
 		overflow: hidden;
 	}
 	.messages-content {
-		display: none;
+		height: 300px;
+		overflow-y: scroll;
+		visibility: hidden;
+	}
+	.write-message-input {
+		visibility: hidden;
+	}
+	.lower-header-messages {
+		visibility: hidden;
 	}
 	.show-messages-content {
-		display: block;
+		visibility: visible;
+	}
+
+	.messages .header-messages {
+		margin-bottom: 0em;
 	}
 	.settings-content {
 		width: 95%;
 		
 	}
-
+	
+	.messages {
+		margin-bottom: 0em;
+	}
 	.settings-header ul {
 		flex-wrap: wrap;
 	}
@@ -7847,7 +7953,6 @@ header nav {
 	}
 	.header-content img {
 		height: 50px;
-		width: 150px;
 		margin: auto 0em;
 	}
 	.header-content {
@@ -7923,7 +8028,6 @@ header nav {
 		
 	}
 	.header-content img {
-		height: 70px;
 		width: 200px;
 		margin: auto 0em;
 	}

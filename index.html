@@ -111,6 +111,25 @@
             <span class="x-button exit-signin">x</span>
         </div>
     </div>
+    <div class="log-in-overlay">
+        <div class="log-in-content">
+            <div class="login-signup">
+                <form id="signin-form">
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" name="" id="emailLogin">
+                    </div>
+                    <div>
+                        <label for="password">Password:</label>
+                        <input type="password" name="" id="passLogin">
+                    </div>
+                    <input type="submit" value="Log in">;
+                </form>
+                
+            </div>
+            <span class="x-button">X</span>
+        </div>
+    </div>
     <div class="searching-overlay">
         <div class="pop-up-search">
             <h3>Searching...</h3>
@@ -123,15 +142,8 @@
             <img src="logo/logo-mobile.png" alt="logo"  onclick="location.href='index.html'" class="logo-mobile">
             <img src="logo/sslogo.png" alt="logo"  onclick="location.href='index.html'" class="logo-desktop">
             <nav class="header-nav nav-desktop">
-                <div class="login-signup">
-                            <form id="signin-form">
-                                <label for="email">Email:</label>
-                                <input type="email" name="" id="emailLogin">
-                                <label for="password">Password:</label>
-                                <input type="password" name="" id="passLogin">
-                                <input type="submit" value="Log in">
-                            </form>
-                            <p>Don't have an account? <span class="sign-up-header-btn">Sign up!</span></p>
+                <div class="login-signup-text">
+                            <p><span class="login-btn-header">Log in</span>/<span class="signup-btn-header">Sign up</span></p>
                 </div>
                 <div class="signed-in-content-nav">
                     <ul class="nav-content">
@@ -1255,30 +1267,23 @@
                     <script src="js/waypoints.min.js"></script>
                     <script src="js/slick.min.js"></script>
                     <script src="js/jquery.ajaxchimp.min.js"></script>
+
+                     <!-- Custom Scripts -->
+                    <script src="js/menu.js"></script>
+                    <script src="js/main.js"></script>
+                    <script src="js/courtblocks.js"></script>
                     <script>
                         let hideMapBtn = document.querySelector('.hide-map')
                         let sendMessageBtn = document.querySelectorAll('.send-msg-btn')
                         let sendMessageBtnPopUp = document.querySelector('.send-msg-btn-popup')
-                        let signUpheader = document.querySelector('.sign-up-header-btn')
                         let cancelMessage = document.querySelector('.cancel-msg')
                         let map =  document.querySelector('.map')
                         let signInOverlay = document.querySelector('.sign-in-overlay')
-                        let exitSignin = document.querySelector('.exit-signin')
                         let loadMore = document.querySelector('.load-more');
                         let featuredCourtsSection = document.querySelectorAll('.featured-courts-section .court-block-featured');
                         let nextBtn = document.querySelector('.next');
                         let prevBtn = document.querySelector('.prev');
                         let counter = 0;
-                        let authTest = firebase.auth()
-                        let loggedIn = false;
-                        authTest.onAuthStateChanged(function(user){
-                                if(user) {
-                                    loggedIn = true;
-                                } else {
-                                    loggedIn = false;
-                                }
-                            
-                        });
                         loadMore.addEventListener('click', e => {
                             loadMore.style.display="none"
                             document.querySelectorAll('.court-blocks .court-block:nth-child(n+4)').forEach(elem =>{
@@ -1337,12 +1342,7 @@
 
 
 
-                        signUpheader.addEventListener('click', () => {
-                            signInOverlay.style.display = "block";
-                        })
-                        exitSignin.addEventListener('click', () => {
-                            signInOverlay.style.display = "none";
-                        })
+                       
                         sendMessageBtn.forEach(btn => {
                             btn.addEventListener('click', () => {
                                 if(loggedIn==true) {
@@ -1376,12 +1376,6 @@
 
                         
                     </script>
-
-                     <!-- Custom Scripts -->
-                    <script src="js/menu.js"></script>
-                    <script src="js/main.js"></script>
-
-                    <script src="js/courtblocks.js"></script>
                     <!-- Font Awesome  -->
 
                     <script src="js/all.min.js"></script>

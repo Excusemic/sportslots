@@ -84,27 +84,39 @@
             <span class="x-button exit-signin">x</span>
         </div>
     </div>
+    <div class="log-in-overlay">
+        <div class="log-in-content">
+            <div class="login-signup">
+                <form id="signin-form">
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" name="" id="emailLogin">
+                    </div>
+                    <div>
+                        <label for="password">Password:</label>
+                        <input type="password" name="" id="passLogin">
+                    </div>
+                    <input type="submit" value="Log in">;
+                </form>
+                
+            </div>
+            <span class="x-button">X</span>
+        </div>
+    </div>
     <div class="searching-overlay">
         <div class="pop-up-search">
             <h3>Searching...</h3>
         </div>
     </div>
     
-    <!--**************************************** HEADER AND NAVIGATION START ***********************************-->
-    <header class="header">
+     <!--**************************************** HEADER AND NAVIGATION START ***********************************-->
+     <header class="header">
         <div class="header-content">
             <img src="logo/logo-mobile.png" alt="logo"  onclick="location.href='index.html'" class="logo-mobile">
             <img src="logo/sslogo.png" alt="logo"  onclick="location.href='index.html'" class="logo-desktop">
             <nav class="header-nav nav-desktop">
-                <div class="login-signup">
-                            <form id="signin-form">
-                                <label for="email">Email:</label>
-                                <input type="email" name="" id="emailLogin">
-                                <label for="password">Password:</label>
-                                <input type="password" name="" id="passLogin">
-                                <input type="submit" value="Log in">
-                            </form>
-                            <p>Don't have an account? <span class="sign-up-header-btn">Sign up!</span></p>
+                <div class="login-signup-text">
+                            <p><span class="login-btn-header">Log in</span>/<span class="signup-btn-header">Sign up</span></p>
                 </div>
                 <div class="signed-in-content-nav">
                     <ul class="nav-content">
@@ -208,6 +220,7 @@
         </div>
     </header>
     <!--**************************************** HEADER AND NAVIGATION END ***********************************-->
+
     <!--**************************************** SETTINGS START ***********************************-->
     <section class="settings-container">
         <div class="settings-content">
@@ -232,40 +245,45 @@
                 <form action="">
                     <div class="input-container">
                         <label for="name">Legal name</label>
-                        <button class="edit span-green">Edit</button>
+                        <button class="edit edit-btn span-green">Edit</button>
+                        <button class="edit cancel-btn span-orange editable">Cancel</button>
                         <br>
-                        <input type="text" name="" id="editFirstName" placeholder="First name: Maximillian">
+                        <input type="text" name="" id="editFirstName" placeholder="First name: Maximillian" disabled>
                         <br>
-                        <input type="text" name="" id="editLastName" placeholder="Last name: Rodriguez">
+                        <input type="text" name="" id="editLastName" placeholder="Last name: Rodriguez" disabled>
                     </div>
                     <br>
                     <div class="input-container">
                         <label for="name">Date of birth</label>
-                        <button class="edit span-green">Edit</button>
+                        <button class="edit edit-btn span-green">Edit</button>
+                        <button class="edit cancel-btn span-orange editable">Cancel</button>
                         <br>
                         <input type="text" id="bDayEdit"placeholder="20. Jan. 1992"
                         onfocus="(this.type='date')"
-                        onblur="(this.type='text')" name="bDay">
+                        onblur="(this.type='text')" name="bDay" disabled>
                     </div>
                     <br>
                     <div class="input-container">
                         <label for="name">Location</label>
-                        <button class="edit span-green">Edit</button>
+                        <button class="edit edit-btn span-green">Edit</button>
+                        <button class="edit cancel-btn span-orange editable">Cancel</button>
                         <br>
-                        <input type="text" name="" id="" placeholder="Brooklyn, NY">
+                        <input type="text" name=""  placeholder="Brooklyn, NY" disabled>
                     </div>
                     <br>
                     <div class="input-container">
                         <label for="name">Height</label>
-                        <button class="edit span-green">Edit</button>
+                        <button class="edit edit-btn span-green">Edit</button>
+                        <button class="edit cancel-btn span-orange editable">Cancel</button>
                         <br>
-                        <input type="number" name="" id="" placeholder="187cm">
+                        <input type="number" name=""  placeholder="187cm" disabled>
                     </div>
                     <br>
                     <label for="name">Gender</label>
-                    <button class="edit span-orange">Cancel</button>
+                    <button class="edit edit-btn span-green">Edit</button>
+                    <button class="edit cancel-btn span-orange editable">Cancel</button>
                     <br>
-                    <select name="" id="" required>
+                    <select name=""  required disabled>
                         <option value="" disabled selected hidden>Gender</option>
                         <option value="">Male</option>
                         <option value="">Female</option>
@@ -274,9 +292,10 @@
                 </form>
                 <form action="">
                     <label for="name">Prefered sport</label>
-                    <button class="edit span-orange">Cancel</button>
+                    <button class="edit edit-btn span-green">Edit</button>
+                    <button class="edit cancel-btn span-orange editable">Cancel</button>
                     <br>
-                    <select name="" id="" required>
+                    <select name=""  required disabled>
                         <option value="" disabled selected hidden>Choose sports</option>
                         <option value="">Basketball</option>
                         <option value="">Football</option>
@@ -286,9 +305,10 @@
                 <form action="">
                     <div class="input-container">
                         <label for="name">Email address</label>
-                        <button class="edit span-green">Edit</button>
+                        <button class="edit edit-btn span-green">Edit</button>
+                        <button class="edit cancel-btn span-orange editable">Cancel</button>
                         <br>
-                        <input type="email" name="" id="" placeholder="maximilianrod@gmail.com">
+                        <input type="email" name=""  placeholder="max@gmail.com" disabled>
                         <br>
                         <div class="verify-text">
                             <span class="verified"><i class="fa fa-check" aria-hidden="true"></i>
@@ -299,9 +319,10 @@
                     <br>
                     <div class="input-container">
                         <label for="name">Phone number</label>
-                        <button class="edit span-green">Edit</button>
+                        <button class="edit edit-btn span-green">Edit</button>
+                        <button class="edit cancel-btn span-orange editable">Cancel</button>
                         <br>
-                        <input type="tel" name="" id="" placeholder="+123 1351 5243">
+                        <input type="tel" name=""  placeholder="+123 1351 5243" disabled>
                         <br>
                         <div class="verify-text">
                             <span class="verified"><i class="fa fa-check" aria-hidden="true"></i>
@@ -386,6 +407,69 @@
                     <script src="js/jquery.ajaxchimp.min.js"></script>
 
                      <!-- Custom Scripts -->
+                     <script>
+                         let editInputBtn = document.querySelectorAll('.edit-btn');
+                         let cancelInputBtn = document.querySelectorAll('.cancel-btn');
+
+                         editInputBtn.forEach(elem => {
+                             elem.addEventListener('click', e => {
+                                 e.preventDefault();
+                                 if(elem.innerHTML=="Edit") {
+                                        elem.innerHTML="Save";
+                                        let children = elem.parentNode.childNodes 
+                                        children.forEach(elem => {
+                                            if(elem.tagName == "INPUT" || elem.tagName == "SELECT") {
+                                                elem.disabled = false;
+                                                console.log(elem.classList)
+                                            }
+                                            if(elem.tagName=='BUTTON') {
+                                                if(elem.classList.contains('editable')) {
+                                                    elem.style.display='block';
+                                                }
+                                                
+                                            }
+                                    })
+                                 } else {
+                                     elem.innerHTML="Edit";
+                                     let children = elem.parentNode.childNodes 
+                                        children.forEach(elem => {
+                                            if(elem.tagName == "INPUT" || elem.tagName == "SELECT") {
+                                                elem.disabled = true;
+                                            }
+                                            if(elem.tagName=='BUTTON') {
+                                                if(elem.classList.contains('editable')) {
+                                                    elem.style.display='none';
+                                                }
+                                            }
+                                    })
+                                     
+                                 }
+
+
+
+                             })
+                         })
+                         cancelInputBtn.forEach(btn => {
+                            let children = btn.parentNode.childNodes 
+                             btn.addEventListener('click', (e) => {
+                                e.preventDefault();
+                                children.forEach(elem => {
+                                    if(elem.tagName == "INPUT" || elem.tagName == "SELECT") {
+                                                elem.value='';
+                                                elem.disabled = true;
+                                            }
+                                    if(elem.tagName=='BUTTON') {
+                                        if(elem.classList.contains('editable')) {
+                                            elem.style.display='none';
+                                        } 
+                                        if(elem.classList.contains('edit-btn')) {
+                                            elem.innerHTML="Edit";
+                                        } 
+                                    }
+                                })
+                             })
+                         })
+                     </script>
                      <script src="js/menu.js"></script>
                     <script src="js/main.js"></script>
                     <!-- Font Awesome  -->

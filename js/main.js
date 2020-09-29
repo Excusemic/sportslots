@@ -24,9 +24,17 @@ $('.carousel .carousel-item').each(function(){
         next.children(':first-child').clone().appendTo($(this));
       }
 });
-
+let authTest = firebase.auth()
+let loggedIn = false;
+authTest.onAuthStateChanged(function(user){
+        if(user) {
+            loggedIn = true;
+        } else {
+            loggedIn = false;
+        }
+    
+});
 let db = firebase.firestore();
-let auth = firebase.auth();
 let createAccForm = document.getElementById('create-acc-form');
 let createAccMobile = document.querySelector('.mobile-create-acc-btn')
 let signInForm = document.getElementById('signin-form');
@@ -73,7 +81,7 @@ createAccForm.addEventListener('submit', function(e) {
         .catch(function(error) {
           console.error("Error adding user: ", error);
         });
-        let promise = auth.createUserWithEmailAndPassword(email, pass);
+        let promise = authTest.createUserWithEmailAndPassword(email, pass);
         promise.then(e => {
           alert("Signed Up")
           window.open("index.html", "_self")
@@ -105,7 +113,7 @@ signInForm.addEventListener('submit', (e) => {
   if (email == "" || pass == "") {
     alert('Please fill all the inputs');
   } else {
-    let promise = auth.signInWithEmailAndPassword(email, pass);
+    let promise = authTest.signInWithEmailAndPassword(email, pass);
     promise.then(e => {
       if(!alert('Loged in!')) {
         window.location.reload()
@@ -124,7 +132,7 @@ signInFormMobile.addEventListener('submit', (e) => {
   if (email == "" || pass == "") {
     alert('Please fill all the inputs');
   } else {
-    let promise = auth.signInWithEmailAndPassword(email, pass);
+    let promise = authTest.signInWithEmailAndPassword(email, pass);
     promise.then(e => {
       if(!alert('Loged in!')) {
         window.location.reload()
@@ -138,18 +146,19 @@ signInFormMobile.addEventListener('submit', (e) => {
 })
 logOutBtn.forEach(btn => {
   btn.addEventListener('click', () => {
-		auth.signOut();
+		authTest.signOut();
 		alert("Signed Out");
 })
 })
 
 
-auth.onAuthStateChanged(function(user){
+authTest.onAuthStateChanged(function(user){
 
   if(user){
-    document.querySelector('.login-signup').style.display="none";
+    document.querySelector('.nav-desktop .login-signup-text').style.display="none";
     document.querySelector('.signed-in-content-nav').style.display="block";
     document.querySelector('.new-to-ss').style.display="none";
+    document.querySelector('.login-signup').style.display="none";
     document.querySelector('.signed-in-menu').style.display="block";
     document.querySelector('.footer-container').classList.remove('side-menu')
     document.querySelector('.notification-div').classList.remove('notification-div-hide')
@@ -171,6 +180,7 @@ auth.onAuthStateChanged(function(user){
     });
     
   }else{
+    document.querySelector('.login-signup-text').style.display="block";
     document.querySelector('.footer-container').classList.add('side-menu')
     document.querySelector('.notification-div').classList.add('notification-div-hide')
     document.querySelector('.footer-container').style.display="none";
@@ -180,9 +190,23 @@ auth.onAuthStateChanged(function(user){
     document.querySelector('.new-to-ss').style.display="block";
   }
 });
+let signUpheader = document.querySelector('.signup-btn-header')
+let loginHeader = document.querySelector('.login-btn-header')
+let exitSignin = document.querySelector('.exit-signin')
 
+document.querySelector('.log-in-overlay .x-button').addEventListener('click', () => {
+  document.querySelector('.log-in-overlay').style.display='none'
+  })
 
-
+signUpheader.addEventListener('click', () => {
+    signInOverlay.style.display = "block";
+})
+loginHeader.addEventListener('click', () => {
+    document.querySelector('.log-in-overlay').style.display = "block";
+})
+exitSignin.addEventListener('click', () => {
+    signInOverlay.style.display = "none";
+})
 
 
 

@@ -98,6 +98,25 @@
             <span class="x-button exit-signin">x</span>
         </div>
     </div>
+    <div class="log-in-overlay">
+        <div class="log-in-content">
+            <div class="login-signup">
+                <form id="signin-form">
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" name="" id="emailLogin">
+                    </div>
+                    <div>
+                        <label for="password">Password:</label>
+                        <input type="password" name="" id="passLogin">
+                    </div>
+                    <input type="submit" value="Log in">;
+                </form>
+                
+            </div>
+            <span class="x-button">X</span>
+        </div>
+    </div>
     <div class="searching-overlay">
         <div class="pop-up-search">
             <h3>Searching...</h3>
@@ -110,15 +129,8 @@
             <img src="logo/logo-mobile.png" alt="logo"  onclick="location.href='index.html'" class="logo-mobile">
             <img src="logo/sslogo.png" alt="logo"  onclick="location.href='index.html'" class="logo-desktop">
             <nav class="header-nav nav-desktop">
-                <div class="login-signup">
-                            <form id="signin-form">
-                                <label for="email">Email:</label>
-                                <input type="email" name="" id="emailLogin">
-                                <label for="password">Password:</label>
-                                <input type="password" name="" id="passLogin">
-                                <input type="submit" value="Log in">
-                            </form>
-                            <p>Don't have an account? <span class="sign-up-header-btn">Sign up!</span></p>
+                <div class="login-signup-text">
+                            <p><span class="login-btn-header">Log in</span>/<span class="signup-btn-header">Sign up</span></p>
                 </div>
                 <div class="signed-in-content-nav">
                     <ul class="nav-content">
@@ -905,18 +917,14 @@
                     <script src="js/jquery.ajaxchimp.min.js"></script>
 
                      <!-- Custom Scripts -->
-                     <script>
-                        let authTest = firebase.auth()
-                        let loggedIn = false;
+                     <script src="js/menu.js"></script>
+                    <script src="js/main.js"></script>
+                    <script>
                         let step3createAccBtn = document.querySelector('#step2-create-acc');
                          step3createAccBtn.addEventListener('click', () => {
                             document.querySelector('.create-acc-popup-container').style.display="none";
                              document.querySelector('.sign-in-overlay').style.display="block"
                          })
-                         let exitSignin = document.querySelector('.exit-signin')
-                         exitSignin.addEventListener('click', () => {
-                            document.querySelector('.sign-in-overlay').style.display = "none";
-                        })
                         let signInStepTwo = document.querySelector('#signInStepTwo')
                         signInStepTwo.addEventListener('click', () => {
                             document.querySelector('.create-acc-popup-container').style.display="none";
@@ -947,8 +955,6 @@
 
 
                      </script>
-                     <script src="js/menu.js"></script>
-                    <script src="js/main.js"></script>
                     <!-- Font Awesome  -->
 
                     <script src="js/all.min.js"></script>

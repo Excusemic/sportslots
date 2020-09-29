@@ -75,37 +75,26 @@ let printDays = () => {
     for(i=1; i<dayOfWeek; i++) {
         calendarBlockContainer.innerHTML+=`<div class="calendar-block-unavailable"></div>`;
         }
-    // for(i=1; i<dayOfWeekNextMonth; i++) {
-    //     calendarBlockNextMonthContainer.innerHTML+=`<div class="calendar-block-unavailable"></div>`;
-    //     }
-    // for(i=1; i<dayOfWeekNextMonth1; i++) {
-    //     calendarBlockNextMonthContainer1.innerHTML+=`<div class="calendar-block-unavailable"></div>`;
-    //     }
-    // for(i=1; i<dayOfWeekNextMonth2; i++) {
-    //     calendarBlockNextMonthContainer2.innerHTML+=`<div class="calendar-block-unavailable"></div>`;
-    //     }
-    // for(i=1; i<dayOfWeekNextMonth3; i++) {
-    //     calendarBlockNextMonthContainer3.innerHTML+=`<div class="calendar-block-unavailable"></div>`;
-    //     }
+    for(i=1; i<dayOfWeekNextMonth; i++) {
+        calendarBlockNextMonthContainer.innerHTML+=`<div class="calendar-block-unavailable"></div>`;
+        }
+    for(i=1; i<dayOfWeekNextMonth1; i++) {
+        calendarBlockNextMonthContainer1.innerHTML+=`<div class="calendar-block-unavailable"></div>`;
+        }
+
     for (i=1; i<=daysInCurrentMonth; i++) {
     calendarBlockContainer.innerHTML+=`<div class="calendar-block calendar-block-current-month" selectDate="${i}-${month}-${year}" onClick='selectDateCurrentMonth(this)'><span class="day-number">${i}</span><div class="*slots-booked*"></div><p class="price-dollars"></p></div>`;
     }
 
-    // for (i=1; i<=daysInNextMonth ; i++) {
-    //     calendarBlockNextMonthContainer.innerHTML+=`<div class="calendar-block" selectDate="${i}-${month+1}-${year}" onClick='selectDate(this)'><span class="day-number">${i}</span><div class="*slots-booked*"></div><p class="price-dollars"></p></div>`;
-    // }
+    for (i=1; i<=daysInNextMonth ; i++) {
+        calendarBlockNextMonthContainer.innerHTML+=`<div class="calendar-block" selectDate="${i}-${month+1}-${year}" onClick='selectDate(this)'><span class="day-number">${i}</span><div class="*slots-booked*"></div><p class="price-dollars"></p></div>`;
+    }
 
-    // for (i=1; i<=daysInNextMonth1 ; i++) {
-    //     calendarBlockNextMonthContainer1.innerHTML+=`<div class="calendar-block" selectDate="${i}-${month+2}-${year}" onClick='selectDate(this)'><span class="day-number">${i}</span><div class="*slots-booked*"></div><p class="price-dollars"></p></div>`;
-    // }
+    for (i=1; i<=daysInNextMonth1 ; i++) {
+        calendarBlockNextMonthContainer1.innerHTML+=`<div class="calendar-block" selectDate="${i}-${month+2}-${year}" onClick='selectDate(this)'><span class="day-number">${i}</span><div class="*slots-booked*"></div><p class="price-dollars"></p></div>`;
+    }
 
-    // for (i=1; i<=daysInNextMonth2 ; i++) {
-    //     calendarBlockNextMonthContainer2.innerHTML+=`<div class="calendar-block" selectDate="${i}-${month+3}-${year}" onClick='selectDate(this)'><span class="day-number">${i}</span><div class="*slots-booked*"></div><p class="price-dollars"></p></div>`;
-    // }
 
-    // for (i=1; i<=daysInNextMonth3 ; i++) {
-    //     calendarBlockNextMonthContainer3.innerHTML+=`<div class="calendar-block" selectDate="${i}-${month+4}-${year}" onClick='selectDate(this)'><span class="day-number">${i}</span><div class="*slots-booked*"></div><p class="price-dollars"></p></div>`;
-    // }
 
     
 
@@ -113,80 +102,80 @@ let printDays = () => {
 
 
 
-// let nextMonthName = () => {
-//     if (monthName == "January") {
-//         nextMonth.innerHTML="February"
-//         nextMonth1.innerHTML="March"
-//         nextMonth2.innerHTML="April"
-//         nextMonth3.innerHTML="May"
-//     }
-//     else if (monthName == "February") {
-//         nextMonth.innerHTML="March"
-//         nextMonth1.innerHTML="April"
-//         nextMonth2.innerHTML="May"
-//         nextMonth3.innerHTML="June"
-//     }
-//     else if (monthName == "March") {
-//         nextMonth.innerHTML="April"
-//         nextMonth1.innerHTML="May"
-//         nextMonth2.innerHTML="June"
-//         nextMonth3.innerHTML="July"
-//     }
-//     else if (monthName == "April") {
-//         nextMonth.innerHTML="May"
-//         nextMonth1.innerHTML="June"
-//         nextMonth2.innerHTML="July"
-//         nextMonth3.innerHTML="August"
-//     }
-//     else if (monthName == "May") {
-//         nextMonth.innerHTML="June"
-//         nextMonth1.innerHTML="July"
-//         nextMonth2.innerHTML="August"
-//         nextMonth3.innerHTML="September"
-//     }
-//     else if (monthName == "June") {
-//         nextMonth.innerHTML="July"
-//         nextMonth1.innerHTML="August"
-//         nextMonth2.innerHTML="September"
-//         nextMonth3.innerHTML="October"
-//     }
-//     else if (monthName == "July") {
-//         nextMonth.innerHTML="August"
-//         nextMonth1.innerHTML="September"
-//         nextMonth2.innerHTML="October"
-//         nextMonth3.innerHTML="November"
-//     }
-//     else if (monthName == "August") {
-//         nextMonth.innerHTML="September"
-//         nextMonth1.innerHTML="October"
-//         nextMonth2.innerHTML="November"
-//         nextMonth3.innerHTML="December"
-//     }
-//     else if (monthName == "September") {
-//         nextMonth.innerHTML="October"
-//         nextMonth1.innerHTML="November"
-//         nextMonth2.innerHTML="December"
-//         nextMonth3.innerHTML="January"
-//     }
-//     else if (monthName == "October") {
-//         nextMonth.innerHTML="November"
-//         nextMonth1.innerHTML="December"
-//         nextMonth2.innerHTML="January"
-//         nextMonth3.innerHTML="February"
-//     }
-//     else if (monthName == "November") {
-//         nextMonth.innerHTML="December"
-//         nextMonth1.innerHTML="January"
-//         nextMonth2.innerHTML="February"
-//         nextMonth3.innerHTML="March"
-//     }
-//     else if (monthName == "December") {
-//         nextMonth.innerHTML="January"
-//         nextMonth1.innerHTML="February"
-//         nextMonth2.innerHTML="March"
-//         nextMonth3.innerHTML="April"
-//     }
-// }
+let nextMonthName = () => {
+    if (monthName == "January") {
+        nextMonth.innerHTML="February"
+        nextMonth1.innerHTML="March"
+        nextMonth2.innerHTML="April"
+        nextMonth3.innerHTML="May"
+    }
+    else if (monthName == "February") {
+        nextMonth.innerHTML="March"
+        nextMonth1.innerHTML="April"
+        nextMonth2.innerHTML="May"
+        nextMonth3.innerHTML="June"
+    }
+    else if (monthName == "March") {
+        nextMonth.innerHTML="April"
+        nextMonth1.innerHTML="May"
+        nextMonth2.innerHTML="June"
+        nextMonth3.innerHTML="July"
+    }
+    else if (monthName == "April") {
+        nextMonth.innerHTML="May"
+        nextMonth1.innerHTML="June"
+        nextMonth2.innerHTML="July"
+        nextMonth3.innerHTML="August"
+    }
+    else if (monthName == "May") {
+        nextMonth.innerHTML="June"
+        nextMonth1.innerHTML="July"
+        nextMonth2.innerHTML="August"
+        nextMonth3.innerHTML="September"
+    }
+    else if (monthName == "June") {
+        nextMonth.innerHTML="July"
+        nextMonth1.innerHTML="August"
+        nextMonth2.innerHTML="September"
+        nextMonth3.innerHTML="October"
+    }
+    else if (monthName == "July") {
+        nextMonth.innerHTML="August"
+        nextMonth1.innerHTML="September"
+        nextMonth2.innerHTML="October"
+        nextMonth3.innerHTML="November"
+    }
+    else if (monthName == "August") {
+        nextMonth.innerHTML="September"
+        nextMonth1.innerHTML="October"
+        nextMonth2.innerHTML="November"
+        nextMonth3.innerHTML="December"
+    }
+    else if (monthName == "September") {
+        nextMonth.innerHTML="October"
+        nextMonth1.innerHTML="November"
+        nextMonth2.innerHTML="December"
+        nextMonth3.innerHTML="January"
+    }
+    else if (monthName == "October") {
+        nextMonth.innerHTML="November"
+        nextMonth1.innerHTML="December"
+        nextMonth2.innerHTML="January"
+        nextMonth3.innerHTML="February"
+    }
+    else if (monthName == "November") {
+        nextMonth.innerHTML="December"
+        nextMonth1.innerHTML="January"
+        nextMonth2.innerHTML="February"
+        nextMonth3.innerHTML="March"
+    }
+    else if (monthName == "December") {
+        nextMonth.innerHTML="January"
+        nextMonth1.innerHTML="February"
+        nextMonth2.innerHTML="March"
+        nextMonth3.innerHTML="April"
+    }
+}
 
 
 
@@ -200,15 +189,15 @@ let checkMonth = () => {
     if (monthName=="January" && monthFilter.value == `${year}-01`) {
         month = 1;
         daysInCurrentMonth = new Date(year, 1, 0).getDate(); 
-        // daysInNextMonth = new Date(year, 2, 0).getDate();
-        // daysInNextMonth1 = new Date(year, 3, 0).getDate();
-        // daysInNextMonth2 = new Date(year, 4, 0).getDate();
-        // daysInNextMonth3 = new Date(year, 5, 0).getDate();
+        daysInNextMonth = new Date(year, 2, 0).getDate();
+        daysInNextMonth1 = new Date(year, 3, 0).getDate();
+        daysInNextMonth2 = new Date(year, 4, 0).getDate();
+        daysInNextMonth3 = new Date(year, 5, 0).getDate();
             dayOfWeek= new Date(year, 0, 0).getDay() + 1;  
-        // dayOfWeekNextMonth= new Date(year, 1, 0).getDay() + 1;  
-        // dayOfWeekNextMonth1= new Date(year, 2, 0).getDay() + 1;  
-        // dayOfWeekNextMonth2= new Date(year, 3, 0).getDay() + 1;  
-        // dayOfWeekNextMonth3= new Date(year, 4, 0).getDay() + 1;  
+        dayOfWeekNextMonth= new Date(year, 1, 0).getDay() + 1;  
+        dayOfWeekNextMonth1= new Date(year, 2, 0).getDay() + 1;  
+        dayOfWeekNextMonth2= new Date(year, 3, 0).getDay() + 1;  
+        dayOfWeekNextMonth3= new Date(year, 4, 0).getDay() + 1;  
         
 
         
@@ -217,164 +206,164 @@ let checkMonth = () => {
     else if (monthName=="February"  && monthFilter.value == `${year}-02`) {
         month = 2;
         daysInCurrentMonth = new Date(year, 2, 0).getDate(); 
-        // daysInNextMonth = new Date(year, 3, 0).getDate();
-        // daysInNextMonth1 = new Date(year, 4, 0).getDate();
-        // daysInNextMonth2 = new Date(year, 5, 0).getDate();
-        // daysInNextMonth3 = new Date(year, 6, 0).getDate();
+        daysInNextMonth = new Date(year, 3, 0).getDate();
+        daysInNextMonth1 = new Date(year, 4, 0).getDate();
+        daysInNextMonth2 = new Date(year, 5, 0).getDate();
+        daysInNextMonth3 = new Date(year, 6, 0).getDate();
             dayOfWeek= new Date(year, 1, 0).getDay() + 1;  
-        // dayOfWeekNextMonth= new Date(year, 2, 0).getDay() + 1;  
-        // dayOfWeekNextMonth1= new Date(year, 3, 0).getDay() + 1;  
-        // dayOfWeekNextMonth2= new Date(year, 4, 0).getDay() + 1;  
-        // dayOfWeekNextMonth3= new Date(year, 5, 0).getDay() + 1;  
+        dayOfWeekNextMonth= new Date(year, 2, 0).getDay() + 1;  
+        dayOfWeekNextMonth1= new Date(year, 3, 0).getDay() + 1;  
+        dayOfWeekNextMonth2= new Date(year, 4, 0).getDay() + 1;  
+        dayOfWeekNextMonth3= new Date(year, 5, 0).getDay() + 1;  
 
     
     }
     else if (monthName=="March" && monthFilter.value == `${year}-03`) {
         month = 3;
         daysInCurrentMonth = new Date(year, 3, 0).getDate(); 
-        // daysInNextMonth = new Date(year, 4, 0).getDate();
-        // daysInNextMonth1 = new Date(year, 5, 0).getDate();
-        // daysInNextMonth2 = new Date(year, 6, 0).getDate();
-        // daysInNextMonth3 = new Date(year, 7, 0).getDate();
+        daysInNextMonth = new Date(year, 4, 0).getDate();
+        daysInNextMonth1 = new Date(year, 5, 0).getDate();
+        daysInNextMonth2 = new Date(year, 6, 0).getDate();
+        daysInNextMonth3 = new Date(year, 7, 0).getDate();
            dayOfWeek= new Date(year, 2, 0).getDay() + 1;  
-        // dayOfWeekNextMonth= new Date(year, 3, 0).getDay() + 1;  
-        // dayOfWeekNextMonth1= new Date(year, 4, 0).getDay() + 1;  
-        // dayOfWeekNextMonth2= new Date(year, 5, 0).getDay() + 1;  
-        // dayOfWeekNextMonth3= new Date(year, 6, 0).getDay() + 1;  
+        dayOfWeekNextMonth= new Date(year, 3, 0).getDay() + 1;  
+        dayOfWeekNextMonth1= new Date(year, 4, 0).getDay() + 1;  
+        dayOfWeekNextMonth2= new Date(year, 5, 0).getDay() + 1;  
+        dayOfWeekNextMonth3= new Date(year, 6, 0).getDay() + 1;  
 
     
     }
     else if (monthName=="April" && monthFilter.value == `${year}-04`) {
         month = 4;
         daysInCurrentMonth = new Date(year, 4, 0).getDate(); 
-        // daysInNextMonth = new Date(year, 5, 0).getDate();
-        // daysInNextMonth1 = new Date(year, 6, 0).getDate();
-        // daysInNextMonth2 = new Date(year, 7, 0).getDate();
-        // daysInNextMonth3 = new Date(year, 8, 0).getDate();
+        daysInNextMonth = new Date(year, 5, 0).getDate();
+        daysInNextMonth1 = new Date(year, 6, 0).getDate();
+        daysInNextMonth2 = new Date(year, 7, 0).getDate();
+        daysInNextMonth3 = new Date(year, 8, 0).getDate();
            dayOfWeek= new Date(year, 3, 0).getDay() + 1;  
-        // dayOfWeekNextMonth= new Date(year, 4, 0).getDay() + 1;  
-        // dayOfWeekNextMonth1= new Date(year, 5, 0).getDay() + 1;  
-        // dayOfWeekNextMonth2= new Date(year, 6, 0).getDay() + 1;  
-        // dayOfWeekNextMonth3= new Date(year, 7, 0).getDay() + 1;  
+        dayOfWeekNextMonth= new Date(year, 4, 0).getDay() + 1;  
+        dayOfWeekNextMonth1= new Date(year, 5, 0).getDay() + 1;  
+        dayOfWeekNextMonth2= new Date(year, 6, 0).getDay() + 1;  
+        dayOfWeekNextMonth3= new Date(year, 7, 0).getDay() + 1;  
 
      
     }
     else if (monthName=="May" && monthFilter.value == `${year}-05`) {
         month = 5;
         daysInCurrentMonth = new Date(year, 5, 0).getDate(); 
-        // daysInNextMonth = new Date(year, 6, 0).getDate();
-        // daysInNextMonth1 = new Date(year, 7, 0).getDate();
-        // daysInNextMonth2 = new Date(year, 8, 0).getDate();
-        // daysInNextMonth3 = new Date(year, 9, 0).getDate();
+        daysInNextMonth = new Date(year, 6, 0).getDate();
+        daysInNextMonth1 = new Date(year, 7, 0).getDate();
+        daysInNextMonth2 = new Date(year, 8, 0).getDate();
+        daysInNextMonth3 = new Date(year, 9, 0).getDate();
            dayOfWeek= new Date(year, 4, 0).getDay() + 1;  
-        // dayOfWeekNextMonth= new Date(year, 5, 0).getDay() + 1;  
-        // dayOfWeekNextMonth1= new Date(year, 6, 0).getDay() + 1;  
-        // dayOfWeekNextMonth2= new Date(year, 7, 0).getDay() + 1;  
-        // dayOfWeekNextMonth3= new Date(year, 8, 0).getDay() + 1;  
+        dayOfWeekNextMonth= new Date(year, 5, 0).getDay() + 1;  
+        dayOfWeekNextMonth1= new Date(year, 6, 0).getDay() + 1;  
+        dayOfWeekNextMonth2= new Date(year, 7, 0).getDay() + 1;  
+        dayOfWeekNextMonth3= new Date(year, 8, 0).getDay() + 1;  
 
     }
     else if (monthName=="June" && monthFilter.value == `${year}-06`) {
         month = 6;
         daysInCurrentMonth = new Date(year, 6, 0).getDate(); 
-        // daysInNextMonth = new Date(year, 7, 0).getDate();
-        // daysInNextMonth1 = new Date(year, 8, 0).getDate();
-        // daysInNextMonth2 = new Date(year, 9, 0).getDate();
-        // daysInNextMonth3 = new Date(year, 10, 0).getDate();
+        daysInNextMonth = new Date(year, 7, 0).getDate();
+        daysInNextMonth1 = new Date(year, 8, 0).getDate();
+        daysInNextMonth2 = new Date(year, 9, 0).getDate();
+        daysInNextMonth3 = new Date(year, 10, 0).getDate();
            dayOfWeek= new Date(year, 5, 0).getDay() + 1;  
-        // dayOfWeekNextMonth= new Date(year, 6, 0).getDay() + 1;  
-        // dayOfWeekNextMonth1= new Date(year, 7, 0).getDay() + 1;  
-        // dayOfWeekNextMonth2= new Date(year, 8, 0).getDay() + 1;  
-        // dayOfWeekNextMonth3= new Date(year, 9, 0).getDay() + 1;  
+        dayOfWeekNextMonth= new Date(year, 6, 0).getDay() + 1;  
+        dayOfWeekNextMonth1= new Date(year, 7, 0).getDay() + 1;  
+        dayOfWeekNextMonth2= new Date(year, 8, 0).getDay() + 1;  
+        dayOfWeekNextMonth3= new Date(year, 9, 0).getDay() + 1;  
 
       
     }
     else if (monthName=="July" && monthFilter.value == `${year}-07`) {
         month = 7;
         daysInCurrentMonth = new Date(year, 7, 0).getDate(); 
-        // daysInNextMonth = new Date(year, 8, 0).getDate();
-        // daysInNextMonth1 = new Date(year, 9, 0).getDate();
-        // daysInNextMonth2 = new Date(year, 10, 0).getDate();
-        // daysInNextMonth3 = new Date(year, 11, 0).getDate();
+        daysInNextMonth = new Date(year, 8, 0).getDate();
+        daysInNextMonth1 = new Date(year, 9, 0).getDate();
+        daysInNextMonth2 = new Date(year, 10, 0).getDate();
+        daysInNextMonth3 = new Date(year, 11, 0).getDate();
            dayOfWeek= new Date(year, 6, 0).getDay() + 1;  
-        // dayOfWeekNextMonth= new Date(year, 7, 0).getDay() + 1;  
-        // dayOfWeekNextMonth1= new Date(year, 8, 0).getDay() + 1;  
-        // dayOfWeekNextMonth2= new Date(year, 9, 0).getDay() + 1;  
-        // dayOfWeekNextMonth3= new Date(year, 10, 0).getDay() + 1;  
+        dayOfWeekNextMonth= new Date(year, 7, 0).getDay() + 1;  
+        dayOfWeekNextMonth1= new Date(year, 8, 0).getDay() + 1;  
+        dayOfWeekNextMonth2= new Date(year, 9, 0).getDay() + 1;  
+        dayOfWeekNextMonth3= new Date(year, 10, 0).getDay() + 1;  
 
      
     }
     else if (monthName=="August" && monthFilter.value == `${year}-08`) {
         month = 8;
         daysInCurrentMonth = new Date(year, 8, 0).getDate(); 
-        // daysInNextMonth = new Date(year, 9, 0).getDate();
-        // daysInNextMonth1 = new Date(year, 10, 0).getDate();
-        // daysInNextMonth2 = new Date(year, 11, 0).getDate();
-        // daysInNextMonth3 = new Date(year, 12, 0).getDate();
+        daysInNextMonth = new Date(year, 9, 0).getDate();
+        daysInNextMonth1 = new Date(year, 10, 0).getDate();
+        daysInNextMonth2 = new Date(year, 11, 0).getDate();
+        daysInNextMonth3 = new Date(year, 12, 0).getDate();
            dayOfWeek= new Date(year, 7, 0).getDay() + 1;  
-        // dayOfWeekNextMonth= new Date(year, 8, 0).getDay() + 1;  
-        // dayOfWeekNextMonth1= new Date(year, 9, 0).getDay() + 1;  
-        // dayOfWeekNextMonth2= new Date(year, 10, 0).getDay() + 1;  
-        // dayOfWeekNextMonth3= new Date(year, 11, 0).getDay() + 1;  
+        dayOfWeekNextMonth= new Date(year, 8, 0).getDay() + 1;  
+        dayOfWeekNextMonth1= new Date(year, 9, 0).getDay() + 1;  
+        dayOfWeekNextMonth2= new Date(year, 10, 0).getDay() + 1;  
+        dayOfWeekNextMonth3= new Date(year, 11, 0).getDay() + 1;  
 
         
     }
     else if (monthName=="September" && monthFilter.value == `${year}-09`) {
         month = 9;
         daysInCurrentMonth = new Date(year, 9, 0).getDate(); 
-        // daysInNextMonth = new Date(year, 10, 0).getDate();
-        // daysInNextMonth1 = new Date(year, 11, 0).getDate();
-        // daysInNextMonth2 = new Date(year, 12, 0).getDate();
-        // daysInNextMonth3 = new Date(year + 1, 1, 0).getDate();
+        daysInNextMonth = new Date(year, 10, 0).getDate();
+        daysInNextMonth1 = new Date(year, 11, 0).getDate();
+        daysInNextMonth2 = new Date(year, 12, 0).getDate();
+        daysInNextMonth3 = new Date(year + 1, 1, 0).getDate();
            dayOfWeek= new Date(year, 8, 0).getDay() + 1;  
-        // dayOfWeekNextMonth= new Date(year, 9, 0).getDay() + 1;  
-        // dayOfWeekNextMonth1= new Date(year, 10, 0).getDay() + 1;  
-        // dayOfWeekNextMonth2= new Date(year, 11, 0).getDay() + 1;  
-        // dayOfWeekNextMonth3= new Date(year, 12, 0).getDay() + 1;  
+        dayOfWeekNextMonth= new Date(year, 9, 0).getDay() + 1;  
+        dayOfWeekNextMonth1= new Date(year, 10, 0).getDay() + 1;  
+        dayOfWeekNextMonth2= new Date(year, 11, 0).getDay() + 1;  
+        dayOfWeekNextMonth3= new Date(year, 12, 0).getDay() + 1;  
 
         
     }
     else if (monthName=="October" && monthFilter.value == `${year}-10`) {
         month = 10;
         daysInCurrentMonth = new Date(year, 10, 0).getDate(); 
-        // daysInNextMonth = new Date(year, 11, 0).getDate();
-        // daysInNextMonth1 = new Date(year, 12, 0).getDate();
-        // daysInNextMonth2 = new Date(year + 1, 1, 0).getDate();
-        // daysInNextMonth3 = new Date(year + 1, 2, 0).getDate();
+        daysInNextMonth = new Date(year, 11, 0).getDate();
+        daysInNextMonth1 = new Date(year, 12, 0).getDate();
+        daysInNextMonth2 = new Date(year + 1, 1, 0).getDate();
+        daysInNextMonth3 = new Date(year + 1, 2, 0).getDate();
            dayOfWeek= new Date(year, 9, 0).getDay() + 1;  
-        // dayOfWeekNextMonth= new Date(year, 10, 0).getDay() + 1;  
-        // dayOfWeekNextMonth1= new Date(year, 11, 0).getDay() + 1;  
-        // dayOfWeekNextMonth2= new Date(year, 12, 0).getDay() + 1;  
-        // dayOfWeekNextMonth3= new Date(year + 1, 1, 0).getDay() + 1;  
+        dayOfWeekNextMonth= new Date(year, 10, 0).getDay() + 1;  
+        dayOfWeekNextMonth1= new Date(year, 11, 0).getDay() + 1;  
+        dayOfWeekNextMonth2= new Date(year, 12, 0).getDay() + 1;  
+        dayOfWeekNextMonth3= new Date(year + 1, 1, 0).getDay() + 1;  
 
      
     }
     else if (monthName=="November" && monthFilter.value == `${year}-11`)  {
         month = 11;
         daysInCurrentMonth = new Date(year, 11, 0).getDate(); 
-        // daysInNextMonth = new Date(year, 12, 0).getDate();
-        // daysInNextMonth1 = new Date(year + 1, 1, 0).getDate();
-        // daysInNextMonth2 = new Date(year + 1, 2, 0).getDate();
-        // daysInNextMonth3 = new Date(year + 1, 3, 0).getDate();
+        daysInNextMonth = new Date(year, 12, 0).getDate();
+        daysInNextMonth1 = new Date(year + 1, 1, 0).getDate();
+        daysInNextMonth2 = new Date(year + 1, 2, 0).getDate();
+        daysInNextMonth3 = new Date(year + 1, 3, 0).getDate();
            dayOfWeek= new Date(year, 10, 0).getDay() + 1;  
-        // dayOfWeekNextMonth= new Date(year, 11, 0).getDay() + 1;  
-        // dayOfWeekNextMonth1= new Date(year, 12, 0).getDay() + 1;  
-        // dayOfWeekNextMonth2= new Date(year+1, 1, 0).getDay() + 1;  
-        // dayOfWeekNextMonth3= new Date(year+1, 2, 0).getDay() + 1;  
+        dayOfWeekNextMonth= new Date(year, 11, 0).getDay() + 1;  
+        dayOfWeekNextMonth1= new Date(year, 12, 0).getDay() + 1;  
+        dayOfWeekNextMonth2= new Date(year+1, 1, 0).getDay() + 1;  
+        dayOfWeekNextMonth3= new Date(year+1, 2, 0).getDay() + 1;  
 
     
     }
     else if (monthName=="December" && monthFilter.value == `${year}-12`) {
         month = 12;
         daysInCurrentMonth = new Date(year, 12, 0).getDate(); 
-        // daysInNextMonth = new Date(year + 1, 1, 0).getDate();
-        // daysInNextMonth1 = new Date(year + 1, 2, 0).getDate();
-        // daysInNextMonth2 = new Date(year + 1, 3, 0).getDate();
-        // daysInNextMonth3 = new Date(year + 1, 4, 0).getDate();
+        daysInNextMonth = new Date(year + 1, 1, 0).getDate();
+        daysInNextMonth1 = new Date(year + 1, 2, 0).getDate();
+        daysInNextMonth2 = new Date(year + 1, 3, 0).getDate();
+        daysInNextMonth3 = new Date(year + 1, 4, 0).getDate();
            dayOfWeek= new Date(year, 11, 0).getDay() + 1;  
-        // dayOfWeekNextMonth= new Date(year, 12, 0).getDay() + 1;  
-        // dayOfWeekNextMonth1= new Date(year+1, 1, 0).getDay() + 1;  
-        // dayOfWeekNextMonth2= new Date(year+1, 2, 0).getDay() + 1;  
-        // dayOfWeekNextMonth3= new Date(year+1, 3, 0).getDay() + 1;  
+        dayOfWeekNextMonth= new Date(year, 12, 0).getDay() + 1;  
+        dayOfWeekNextMonth1= new Date(year+1, 1, 0).getDay() + 1;  
+        dayOfWeekNextMonth2= new Date(year+1, 2, 0).getDay() + 1;  
+        dayOfWeekNextMonth3= new Date(year+1, 3, 0).getDay() + 1;  
 
     
     }
@@ -386,191 +375,191 @@ let checkMonth = () => {
     
     // PREVIOUS YEAR START
 
-    // else if (monthName=="January"  && monthFilter.value == `${year-1}-01`) {
-    //     month = 1;
-    //     daysInCurrentMonth = new Date(year-1, 1, 0).getDate(); 
-    //     daysInNextMonth = new Date(year-1, 2, 0).getDate();
-    //     daysInNextMonth1 = new Date(year-1, 3, 0).getDate();
-    //     daysInNextMonth2 = new Date(year-1, 4, 0).getDate();
-    //     daysInNextMonth3 = new Date(year-1, 5, 0).getDate();
-    //     dayOfWeek= new Date(year-1, 0, 0).getDay() + 1;  
-    //     dayOfWeekNextMonth= new Date(year - 1 , 1, 0).getDay() + 1;  
-    //     dayOfWeekNextMonth1= new Date(year - 1 , 2, 0).getDay() + 1;  
-    //     dayOfWeekNextMonth2= new Date(year - 1 , 3, 0).getDay() + 1;  
-    //     dayOfWeekNextMonth3= new Date(year - 1 , 4, 0).getDay() + 1;  
+    else if (monthName=="January"  && monthFilter.value == `${year-1}-01`) {
+        month = 1;
+        daysInCurrentMonth = new Date(year-1, 1, 0).getDate(); 
+        daysInNextMonth = new Date(year-1, 2, 0).getDate();
+        daysInNextMonth1 = new Date(year-1, 3, 0).getDate();
+        daysInNextMonth2 = new Date(year-1, 4, 0).getDate();
+        daysInNextMonth3 = new Date(year-1, 5, 0).getDate();
+        dayOfWeek= new Date(year-1, 0, 0).getDay() + 1;  
+        dayOfWeekNextMonth= new Date(year - 1 , 1, 0).getDay() + 1;  
+        dayOfWeekNextMonth1= new Date(year - 1 , 2, 0).getDay() + 1;  
+        dayOfWeekNextMonth2= new Date(year - 1 , 3, 0).getDay() + 1;  
+        dayOfWeekNextMonth3= new Date(year - 1 , 4, 0).getDay() + 1;  
 
-    // }
-    // else if (monthName=="February"  && monthFilter.value == `${year-1}-02`) {
-    //     month = 2;
-    //         daysInCurrentMonth = new Date(year-1, 2, 0).getDate(); 
-    //         daysInNextMonth = new Date(year-1, 3, 0).getDate();
-    //         daysInNextMonth1 = new Date(year-1, 4, 0).getDate();
-    //         daysInNextMonth2 = new Date(year-1, 5, 0).getDate();
-    //         daysInNextMonth3 = new Date(year-1, 6, 0).getDate();
-    //         dayOfWeek= new Date(year - 1, 1, 0).getDay() + 1;  
-    //         dayOfWeekNextMonth= new Date(year - 1 , 2, 0).getDay() + 1;  
-    //         dayOfWeekNextMonth1= new Date(year - 1 , 3, 0).getDay() + 1;  
-    //         dayOfWeekNextMonth2= new Date(year - 1 , 4, 0).getDay() + 1;  
-    //         dayOfWeekNextMonth3= new Date(year - 1 , 5, 0).getDay() + 1; 
+    }
+    else if (monthName=="February"  && monthFilter.value == `${year-1}-02`) {
+        month = 2;
+            daysInCurrentMonth = new Date(year-1, 2, 0).getDate(); 
+            daysInNextMonth = new Date(year-1, 3, 0).getDate();
+            daysInNextMonth1 = new Date(year-1, 4, 0).getDate();
+            daysInNextMonth2 = new Date(year-1, 5, 0).getDate();
+            daysInNextMonth3 = new Date(year-1, 6, 0).getDate();
+            dayOfWeek= new Date(year - 1, 1, 0).getDay() + 1;  
+            dayOfWeekNextMonth= new Date(year - 1 , 2, 0).getDay() + 1;  
+            dayOfWeekNextMonth1= new Date(year - 1 , 3, 0).getDay() + 1;  
+            dayOfWeekNextMonth2= new Date(year - 1 , 4, 0).getDay() + 1;  
+            dayOfWeekNextMonth3= new Date(year - 1 , 5, 0).getDay() + 1; 
 
-    //     }
-    // else if (monthName=="March" && monthFilter.value == `${year-1}-03`) {
-    //     month = 3;
-    //     daysInCurrentMonth = new Date(year-1, 3, 0).getDate(); 
-    //     daysInNextMonth = new Date(year-1, 4, 0).getDate();
-    //     daysInNextMonth1 = new Date(year-1, 5, 0).getDate();
-    //     daysInNextMonth2 = new Date(year-1, 6, 0).getDate();
-    //     daysInNextMonth3 = new Date(year-1, 7, 0).getDate();
-    //     dayOfWeek= new Date(year - 1, 2, 0).getDay() + 1;  
-    //     dayOfWeekNextMonth= new Date(year - 1 , 3, 0).getDay() + 1;  
-    //     dayOfWeekNextMonth1= new Date(year - 1 , 4, 0).getDay() + 1;  
-    //     dayOfWeekNextMonth2= new Date(year - 1 , 5, 0).getDay() + 1;  
-    //     dayOfWeekNextMonth3= new Date(year - 1 , 6, 0).getDay() + 1;  
-    //     dayOfWeek= new Date(year, 2, 0).getDay() + 1;  
-    //     dayOfWeekNextMonth= new Date(year, 3, 0).getDay() + 1;  
-    //     dayOfWeekNextMonth1= new Date(year, 4, 0).getDay() + 1;  
-    //     dayOfWeekNextMonth2= new Date(year, 5, 0).getDay() + 1;  
-    //     dayOfWeekNextMonth3= new Date(year, 6, 0).getDay() + 1;  
+        }
+    else if (monthName=="March" && monthFilter.value == `${year-1}-03`) {
+        month = 3;
+        daysInCurrentMonth = new Date(year-1, 3, 0).getDate(); 
+        daysInNextMonth = new Date(year-1, 4, 0).getDate();
+        daysInNextMonth1 = new Date(year-1, 5, 0).getDate();
+        daysInNextMonth2 = new Date(year-1, 6, 0).getDate();
+        daysInNextMonth3 = new Date(year-1, 7, 0).getDate();
+        dayOfWeek= new Date(year - 1, 2, 0).getDay() + 1;  
+        dayOfWeekNextMonth= new Date(year - 1 , 3, 0).getDay() + 1;  
+        dayOfWeekNextMonth1= new Date(year - 1 , 4, 0).getDay() + 1;  
+        dayOfWeekNextMonth2= new Date(year - 1 , 5, 0).getDay() + 1;  
+        dayOfWeekNextMonth3= new Date(year - 1 , 6, 0).getDay() + 1;  
+        dayOfWeek= new Date(year, 2, 0).getDay() + 1;  
+        dayOfWeekNextMonth= new Date(year, 3, 0).getDay() + 1;  
+        dayOfWeekNextMonth1= new Date(year, 4, 0).getDay() + 1;  
+        dayOfWeekNextMonth2= new Date(year, 5, 0).getDay() + 1;  
+        dayOfWeekNextMonth3= new Date(year, 6, 0).getDay() + 1;  
 
-    // }
-    // else if (monthName=="April" && monthFilter.value == `${year-1}-04`) {
-    //     month = 4;
-    //     daysInCurrentMonth = new Date(year-1, 4, 0).getDate(); 
-    //     daysInNextMonth = new Date(year-1, 5, 0).getDate();
-    //     daysInNextMonth1 = new Date(year-1, 6, 0).getDate();
-    //     daysInNextMonth2 = new Date(year-1, 7, 0).getDate();
-    //     daysInNextMonth3 = new Date(year-1, 8, 0).getDate();
-    //     dayOfWeek= new Date(year - 1, 3, 0).getDay() + 1;  
-    //     dayOfWeekNextMonth= new Date(year - 1 , 4, 0).getDay() + 1;  
-    //     dayOfWeekNextMonth1= new Date(year - 1 , 5, 0).getDay() + 1;  
-    //     dayOfWeekNextMonth2= new Date(year - 1 , 6, 0).getDay() + 1;  
-    //     dayOfWeekNextMonth3= new Date(year - 1 , 7, 0).getDay() + 1;  
+    }
+    else if (monthName=="April" && monthFilter.value == `${year-1}-04`) {
+        month = 4;
+        daysInCurrentMonth = new Date(year-1, 4, 0).getDate(); 
+        daysInNextMonth = new Date(year-1, 5, 0).getDate();
+        daysInNextMonth1 = new Date(year-1, 6, 0).getDate();
+        daysInNextMonth2 = new Date(year-1, 7, 0).getDate();
+        daysInNextMonth3 = new Date(year-1, 8, 0).getDate();
+        dayOfWeek= new Date(year - 1, 3, 0).getDay() + 1;  
+        dayOfWeekNextMonth= new Date(year - 1 , 4, 0).getDay() + 1;  
+        dayOfWeekNextMonth1= new Date(year - 1 , 5, 0).getDay() + 1;  
+        dayOfWeekNextMonth2= new Date(year - 1 , 6, 0).getDay() + 1;  
+        dayOfWeekNextMonth3= new Date(year - 1 , 7, 0).getDay() + 1;  
 
-    // }
-    // else if (monthName=="May" && monthFilter.value == `${year-1}-05`) {
-    //     month = 5;
-    //     daysInCurrentMonth = new Date(year-1, 5, 0).getDate(); 
-    //     daysInNextMonth = new Date(year-1, 6, 0).getDate();
-    //     daysInNextMonth1 = new Date(year-1, 7, 0).getDate();
-    //     daysInNextMonth2 = new Date(year-1, 8, 0).getDate();
-    //     daysInNextMonth3 = new Date(year-1, 9, 0).getDate();
-    //     dayOfWeek= new Date(year - 1 -1, 4, 0).getDay() + 1;  
-    //     dayOfWeekNextMonth= new Date(year - 1 , 5, 0).getDay() + 1;  
-    //     dayOfWeekNextMonth1= new Date(year - 1 , 6, 0).getDay() + 1;  
-    //     dayOfWeekNextMonth2= new Date(year - 1 , 7, 0).getDay() + 1;  
-    //     dayOfWeekNextMonth3= new Date(year - 1 , 8, 0).getDay() + 1;  
+    }
+    else if (monthName=="May" && monthFilter.value == `${year-1}-05`) {
+        month = 5;
+        daysInCurrentMonth = new Date(year-1, 5, 0).getDate(); 
+        daysInNextMonth = new Date(year-1, 6, 0).getDate();
+        daysInNextMonth1 = new Date(year-1, 7, 0).getDate();
+        daysInNextMonth2 = new Date(year-1, 8, 0).getDate();
+        daysInNextMonth3 = new Date(year-1, 9, 0).getDate();
+        dayOfWeek= new Date(year - 1 -1, 4, 0).getDay() + 1;  
+        dayOfWeekNextMonth= new Date(year - 1 , 5, 0).getDay() + 1;  
+        dayOfWeekNextMonth1= new Date(year - 1 , 6, 0).getDay() + 1;  
+        dayOfWeekNextMonth2= new Date(year - 1 , 7, 0).getDay() + 1;  
+        dayOfWeekNextMonth3= new Date(year - 1 , 8, 0).getDay() + 1;  
 
     
-    // }
-    // else if (monthName=="June" && monthFilter.value == `${year-1}-06`) {
-    //     month = 6;
-    //     daysInCurrentMonth = new Date(year-1, 6, 0).getDate(); 
-    //     daysInNextMonth = new Date(year-1, 7, 0).getDate();
-    //     daysInNextMonth1 = new Date(year-1, 8, 0).getDate();
-    //     daysInNextMonth2 = new Date(year-1, 9, 0).getDate();
-    //     daysInNextMonth3 = new Date(year-1, 10, 0).getDate();
-    //     dayOfWeekNextMonth= new Date(year, 6, 0).getDay() + 1;  
-    //     dayOfWeekNextMonth1= new Date(year, 7, 0).getDay() + 1;  
-    //     dayOfWeekNextMonth2= new Date(year, 8, 0).getDay() + 1;  
-    //     dayOfWeekNextMonth3= new Date(year, 9, 0).getDay() + 1;  
-    //     dayOfWeek= new Date(year - 1 , 5, 0).getDay() + 1;  
-    //     dayOfWeekNextMonth= new Date(year - 1 , 6, 0).getDay() + 1;  
-    //     dayOfWeekNextMonth1= new Date(year - 1 , 7, 0).getDay() + 1;  
-    //     dayOfWeekNextMonth2= new Date(year - 1 , 8, 0).getDay() + 1;  
-    //     dayOfWeekNextMonth3= new Date(year - 1 , 9, 0).getDay() + 1;  
+    }
+    else if (monthName=="June" && monthFilter.value == `${year-1}-06`) {
+        month = 6;
+        daysInCurrentMonth = new Date(year-1, 6, 0).getDate(); 
+        daysInNextMonth = new Date(year-1, 7, 0).getDate();
+        daysInNextMonth1 = new Date(year-1, 8, 0).getDate();
+        daysInNextMonth2 = new Date(year-1, 9, 0).getDate();
+        daysInNextMonth3 = new Date(year-1, 10, 0).getDate();
+        dayOfWeekNextMonth= new Date(year, 6, 0).getDay() + 1;  
+        dayOfWeekNextMonth1= new Date(year, 7, 0).getDay() + 1;  
+        dayOfWeekNextMonth2= new Date(year, 8, 0).getDay() + 1;  
+        dayOfWeekNextMonth3= new Date(year, 9, 0).getDay() + 1;  
+        dayOfWeek= new Date(year - 1 , 5, 0).getDay() + 1;  
+        dayOfWeekNextMonth= new Date(year - 1 , 6, 0).getDay() + 1;  
+        dayOfWeekNextMonth1= new Date(year - 1 , 7, 0).getDay() + 1;  
+        dayOfWeekNextMonth2= new Date(year - 1 , 8, 0).getDay() + 1;  
+        dayOfWeekNextMonth3= new Date(year - 1 , 9, 0).getDay() + 1;  
 
       
-    // }
-    // else if (monthName=="July" && monthFilter.value == `${year-1}-07`) {
-    //     month = 7;
-    //     daysInCurrentMonth = new Date(year-1, 7, 0).getDate(); 
-    //     daysInNextMonth = new Date(year-1, 8, 0).getDate();
-    //     daysInNextMonth1 = new Date(year-1, 9, 0).getDate();
-    //     daysInNextMonth2 = new Date(year-1, 10, 0).getDate();
-    //     daysInNextMonth3 = new Date(year-1, 11, 0).getDate();
-    //     dayOfWeek= new Date(year - 1 , 6, 0).getDay() + 1;  
-    //     dayOfWeekNextMonth= new Date(year - 1 , 7, 0).getDay() + 1;  
-    //     dayOfWeekNextMonth1= new Date(year - 1 , 8, 0).getDay() + 1;  
-    //     dayOfWeekNextMonth2= new Date(year - 1 , 9, 0).getDay() + 1;  
-    //     dayOfWeekNextMonth3= new Date(year - 1 , 10, 0).getDay() + 1;  
+    }
+    else if (monthName=="July" && monthFilter.value == `${year-1}-07`) {
+        month = 7;
+        daysInCurrentMonth = new Date(year-1, 7, 0).getDate(); 
+        daysInNextMonth = new Date(year-1, 8, 0).getDate();
+        daysInNextMonth1 = new Date(year-1, 9, 0).getDate();
+        daysInNextMonth2 = new Date(year-1, 10, 0).getDate();
+        daysInNextMonth3 = new Date(year-1, 11, 0).getDate();
+        dayOfWeek= new Date(year - 1 , 6, 0).getDay() + 1;  
+        dayOfWeekNextMonth= new Date(year - 1 , 7, 0).getDay() + 1;  
+        dayOfWeekNextMonth1= new Date(year - 1 , 8, 0).getDay() + 1;  
+        dayOfWeekNextMonth2= new Date(year - 1 , 9, 0).getDay() + 1;  
+        dayOfWeekNextMonth3= new Date(year - 1 , 10, 0).getDay() + 1;  
 
      
-    // }
-    // else if (monthName=="August" && monthFilter.value == `${year-1}-08`) {
-    //     month = 8;
-    //     daysInCurrentMonth = new Date(year-1, 8, 0).getDate(); 
-    //     daysInNextMonth = new Date(year-1, 9, 0).getDate();
-    //     daysInNextMonth1 = new Date(year-1, 10, 0).getDate();
-    //     daysInNextMonth2 = new Date(year-1, 11, 0).getDate();
-    //     daysInNextMonth3 = new Date(year-1, 12, 0).getDate();
-    //     dayOfWeek= new Date(year - 1 , 7, 0).getDay() + 1;  
-    //     dayOfWeekNextMonth= new Date(year - 1 , 8, 0).getDay() + 1;  
-    //     dayOfWeekNextMonth1= new Date(year - 1 , 9, 0).getDay() + 1;  
-    //     dayOfWeekNextMonth2= new Date(year - 1 , 10, 0).getDay() + 1;  
-    //     dayOfWeekNextMonth3= new Date(year - 1 , 11, 0).getDay() + 1;  
+    }
+    else if (monthName=="August" && monthFilter.value == `${year-1}-08`) {
+        month = 8;
+        daysInCurrentMonth = new Date(year-1, 8, 0).getDate(); 
+        daysInNextMonth = new Date(year-1, 9, 0).getDate();
+        daysInNextMonth1 = new Date(year-1, 10, 0).getDate();
+        daysInNextMonth2 = new Date(year-1, 11, 0).getDate();
+        daysInNextMonth3 = new Date(year-1, 12, 0).getDate();
+        dayOfWeek= new Date(year - 1 , 7, 0).getDay() + 1;  
+        dayOfWeekNextMonth= new Date(year - 1 , 8, 0).getDay() + 1;  
+        dayOfWeekNextMonth1= new Date(year - 1 , 9, 0).getDay() + 1;  
+        dayOfWeekNextMonth2= new Date(year - 1 , 10, 0).getDay() + 1;  
+        dayOfWeekNextMonth3= new Date(year - 1 , 11, 0).getDay() + 1;  
 
         
-    // }
-    // else if (monthName=="September" && monthFilter.value == `${year-1}-09`) {
-    //     month = 9;
-    //     daysInCurrentMonth = new Date(year-1, 9, 0).getDate(); 
-    //     daysInNextMonth = new Date(year-1, 10, 0).getDate();
-    //     daysInNextMonth1 = new Date(year-1, 11, 0).getDate();
-    //     daysInNextMonth2 = new Date(year-1, 12, 0).getDate();
-    //     daysInNextMonth3 = new Date(year, 1, 0).getDate();
-    //     dayOfWeek= new Date(year - 1 , 8, 0).getDay() + 1;  
-    //     dayOfWeekNextMonth= new Date(year - 1 , 9, 0).getDay() + 1;  
-    //     dayOfWeekNextMonth1= new Date(year - 1 , 10, 0).getDay() + 1;  
-    //     dayOfWeekNextMonth2= new Date(year - 1 , 11, 0).getDay() + 1;  
-    //     dayOfWeekNextMonth3= new Date(year - 1 , 12, 0).getDay() + 1;  
+    }
+    else if (monthName=="September" && monthFilter.value == `${year-1}-09`) {
+        month = 9;
+        daysInCurrentMonth = new Date(year-1, 9, 0).getDate(); 
+        daysInNextMonth = new Date(year-1, 10, 0).getDate();
+        daysInNextMonth1 = new Date(year-1, 11, 0).getDate();
+        daysInNextMonth2 = new Date(year-1, 12, 0).getDate();
+        daysInNextMonth3 = new Date(year, 1, 0).getDate();
+        dayOfWeek= new Date(year - 1 , 8, 0).getDay() + 1;  
+        dayOfWeekNextMonth= new Date(year - 1 , 9, 0).getDay() + 1;  
+        dayOfWeekNextMonth1= new Date(year - 1 , 10, 0).getDay() + 1;  
+        dayOfWeekNextMonth2= new Date(year - 1 , 11, 0).getDay() + 1;  
+        dayOfWeekNextMonth3= new Date(year - 1 , 12, 0).getDay() + 1;  
 
         
-    // }
-    // else if (monthName=="October" && monthFilter.value == `${year-1}-10`) {
-    //     month = 10;
-    //     daysInCurrentMonth = new Date(year-1, 10, 0).getDate(); 
-    //     daysInNextMonth = new Date(year-1, 11, 0).getDate();
-    //     daysInNextMonth1 = new Date(year-1, 12, 0).getDate();
-    //     daysInNextMonth2 = new Date(year, 1, 0).getDate();
-    //     daysInNextMonth3 = new Date(year, 2, 0).getDate();
-    //     dayOfWeek= new Date(year - 1, 9, 0).getDay() + 1;  
-    //     dayOfWeekNextMonth= new Date(year - 1 , 10, 0).getDay() + 1;  
-    //     dayOfWeekNextMonth1= new Date(year - 1 , 11, 0).getDay() + 1;  
-    //     dayOfWeekNextMonth2= new Date(year - 1 , 12, 0).getDay() + 1;  
-    //     dayOfWeekNextMonth3= new Date(year, 1, 0).getDay() + 1;  
+    }
+    else if (monthName=="October" && monthFilter.value == `${year-1}-10`) {
+        month = 10;
+        daysInCurrentMonth = new Date(year-1, 10, 0).getDate(); 
+        daysInNextMonth = new Date(year-1, 11, 0).getDate();
+        daysInNextMonth1 = new Date(year-1, 12, 0).getDate();
+        daysInNextMonth2 = new Date(year, 1, 0).getDate();
+        daysInNextMonth3 = new Date(year, 2, 0).getDate();
+        dayOfWeek= new Date(year - 1, 9, 0).getDay() + 1;  
+        dayOfWeekNextMonth= new Date(year - 1 , 10, 0).getDay() + 1;  
+        dayOfWeekNextMonth1= new Date(year - 1 , 11, 0).getDay() + 1;  
+        dayOfWeekNextMonth2= new Date(year - 1 , 12, 0).getDay() + 1;  
+        dayOfWeekNextMonth3= new Date(year, 1, 0).getDay() + 1;  
 
      
-    // }
-    // else if (monthName=="November" && monthFilter.value == `${year-1}-11`)  {
-    //     month = 11;
-    //     daysInCurrentMonth = new Date(year-1, 11, 0).getDate(); 
-    //     daysInNextMonth = new Date(year-1, 12, 0).getDate();
-    //     daysInNextMonth1 = new Date(year, 1, 0).getDate();
-    //     daysInNextMonth2 = new Date(year, 2, 0).getDate();
-    //     daysInNextMonth3 = new Date(year, 3, 0).getDate();
-    //     dayOfWeek= new Date(year-1, 10, 0).getDay() + 1;  
-    //     dayOfWeekNextMonth= new Date(year-1, 11, 0).getDay() + 1;  
-    //     dayOfWeekNextMonth1= new Date(year-1, 12, 0).getDay() + 1;  
-    //     dayOfWeekNextMonth2= new Date(year, 1, 0).getDay() + 1;  
-    //     dayOfWeekNextMonth3= new Date(year, 2, 0).getDay() + 1;  
+    }
+    else if (monthName=="November" && monthFilter.value == `${year-1}-11`)  {
+        month = 11;
+        daysInCurrentMonth = new Date(year-1, 11, 0).getDate(); 
+        daysInNextMonth = new Date(year-1, 12, 0).getDate();
+        daysInNextMonth1 = new Date(year, 1, 0).getDate();
+        daysInNextMonth2 = new Date(year, 2, 0).getDate();
+        daysInNextMonth3 = new Date(year, 3, 0).getDate();
+        dayOfWeek= new Date(year-1, 10, 0).getDay() + 1;  
+        dayOfWeekNextMonth= new Date(year-1, 11, 0).getDay() + 1;  
+        dayOfWeekNextMonth1= new Date(year-1, 12, 0).getDay() + 1;  
+        dayOfWeekNextMonth2= new Date(year, 1, 0).getDay() + 1;  
+        dayOfWeekNextMonth3= new Date(year, 2, 0).getDay() + 1;  
 
     
-    // }
-    // else if (monthName=="December" && monthFilter.value == `${year-1}-12`) {
-    //     month = 12;
-    //     daysInCurrentMonth = new Date(year-1, 12, 0).getDate(); 
-    //     daysInNextMonth = new Date(year, 1, 0).getDate();
-    //     daysInNextMonth1 = new Date(year, 2, 0).getDate();
-    //     daysInNextMonth2 = new Date(year, 3, 0).getDate();
-    //     daysInNextMonth3 = new Date(year, 4, 0).getDate();
-    //     dayOfWeek= new Date(year-1, 11, 0).getDay() + 1;  
-    //     dayOfWeekNextMonth= new Date(year-1, 12, 0).getDay() + 1;  
-    //     dayOfWeekNextMonth1= new Date(year, 1, 0).getDay() + 1;  
-    //     dayOfWeekNextMonth2= new Date(year, 2, 0).getDay() + 1;  
-    //     dayOfWeekNextMonth3= new Date(year, 3, 0).getDay() + 1;  
+    }
+    else if (monthName=="December" && monthFilter.value == `${year-1}-12`) {
+        month = 12;
+        daysInCurrentMonth = new Date(year-1, 12, 0).getDate(); 
+        daysInNextMonth = new Date(year, 1, 0).getDate();
+        daysInNextMonth1 = new Date(year, 2, 0).getDate();
+        daysInNextMonth2 = new Date(year, 3, 0).getDate();
+        daysInNextMonth3 = new Date(year, 4, 0).getDate();
+        dayOfWeek= new Date(year-1, 11, 0).getDay() + 1;  
+        dayOfWeekNextMonth= new Date(year-1, 12, 0).getDay() + 1;  
+        dayOfWeekNextMonth1= new Date(year, 1, 0).getDay() + 1;  
+        dayOfWeekNextMonth2= new Date(year, 2, 0).getDay() + 1;  
+        dayOfWeekNextMonth3= new Date(year, 3, 0).getDay() + 1;  
 
     
-    // }
+    }
 
 
     // PREVIOUS YEAR  END
@@ -586,67 +575,67 @@ let checkMonth = () => {
 
 
 
-    // else if (monthName=="January"  && monthFilter.value == `${year+1}-01`) {
-    //         month = 1;
-    //         year = currentYear+1
-    //         daysInCurrentMonth = new Date(year+1, 1, 0).getDate(); 
-    //         daysInNextMonth = new Date(year+1, 2, 0).getDate();
-    //         daysInNextMonth1 = new Date(year+1, 3, 0).getDate();
-    //         daysInNextMonth2 = new Date(year+1, 4, 0).getDate();
-    //         daysInNextMonth3 = new Date(year+1, 5, 0).getDate();
-    //         dayOfWeek= new Date(year+1, 0, 0).getDay() + 1;  
-    //         dayOfWeekNextMonth= new Date(year +1 , 1, 0).getDay() + 1;  
-    //         dayOfWeekNextMonth1= new Date(year +1 , 2, 0).getDay() + 1;  
-    //         dayOfWeekNextMonth2= new Date(year +1 , 3, 0).getDay() + 1;  
-    //         dayOfWeekNextMonth3= new Date(year +1 , 4, 0).getDay() + 1;  
+    else if (monthName=="January"  && monthFilter.value == `${year+1}-01`) {
+            month = 1;
+            year = currentYear+1
+            daysInCurrentMonth = new Date(year+1, 1, 0).getDate(); 
+            daysInNextMonth = new Date(year+1, 2, 0).getDate();
+            daysInNextMonth1 = new Date(year+1, 3, 0).getDate();
+            daysInNextMonth2 = new Date(year+1, 4, 0).getDate();
+            daysInNextMonth3 = new Date(year+1, 5, 0).getDate();
+            dayOfWeek= new Date(year+1, 0, 0).getDay() + 1;  
+            dayOfWeekNextMonth= new Date(year +1 , 1, 0).getDay() + 1;  
+            dayOfWeekNextMonth1= new Date(year +1 , 2, 0).getDay() + 1;  
+            dayOfWeekNextMonth2= new Date(year +1 , 3, 0).getDay() + 1;  
+            dayOfWeekNextMonth3= new Date(year +1 , 4, 0).getDay() + 1;  
     
-    //     }
-    //     else if (monthName=="February"  && monthFilter.value == `${year+1}-02`) {
-    //         month = 2;
-    //         year = currentYear+1
-    //             daysInCurrentMonth = new Date(year+1, 2, 0).getDate(); 
-    //             daysInNextMonth = new Date(year+1, 3, 0).getDate();
-    //             daysInNextMonth1 = new Date(year+1, 4, 0).getDate();
-    //             daysInNextMonth2 = new Date(year+1, 5, 0).getDate();
-    //             daysInNextMonth3 = new Date(year+1, 6, 0).getDate();
-    //             dayOfWeek= new Date(year + 1, 1, 0).getDay() + 1;  
-    //             dayOfWeekNextMonth= new Date(year + 1 , 2, 0).getDay() + 1;  
-    //             dayOfWeekNextMonth1= new Date(year + 1 , 3, 0).getDay() + 1;  
-    //             dayOfWeekNextMonth2= new Date(year + 1 , 4, 0).getDay() + 1;  
-    //             dayOfWeekNextMonth3= new Date(year + 1 , 5, 0).getDay() + 1; 
+        }
+        else if (monthName=="February"  && monthFilter.value == `${year+1}-02`) {
+            month = 2;
+            year = currentYear+1
+                daysInCurrentMonth = new Date(year+1, 2, 0).getDate(); 
+                daysInNextMonth = new Date(year+1, 3, 0).getDate();
+                daysInNextMonth1 = new Date(year+1, 4, 0).getDate();
+                daysInNextMonth2 = new Date(year+1, 5, 0).getDate();
+                daysInNextMonth3 = new Date(year+1, 6, 0).getDate();
+                dayOfWeek= new Date(year + 1, 1, 0).getDay() + 1;  
+                dayOfWeekNextMonth= new Date(year + 1 , 2, 0).getDay() + 1;  
+                dayOfWeekNextMonth1= new Date(year + 1 , 3, 0).getDay() + 1;  
+                dayOfWeekNextMonth2= new Date(year + 1 , 4, 0).getDay() + 1;  
+                dayOfWeekNextMonth3= new Date(year + 1 , 5, 0).getDay() + 1; 
     
     
-    //         }
-    //     else if (monthName=="March" && monthFilter.value == `${year+1}-03`) {
-    //         month = 3;
-    //         year = currentYear+1
-    //         daysInCurrentMonth = new Date(year+1, 3, 0).getDate(); 
-    //         daysInNextMonth = new Date(year+1, 4, 0).getDate();
-    //         daysInNextMonth1 = new Date(year+1, 5, 0).getDate();
-    //         daysInNextMonth2 = new Date(year+1, 6, 0).getDate();
-    //         daysInNextMonth3 = new Date(year+1, 7, 0).getDate();
-    //         dayOfWeek= new Date(year+1, 2, 0).getDay() + 1;  
-    //         dayOfWeekNextMonth= new Date(year+1, 3, 0).getDay() + 1;  
-    //         dayOfWeekNextMonth1= new Date(year+1, 4, 0).getDay() + 1;  
-    //         dayOfWeekNextMonth2= new Date(year+1, 5, 0).getDay() + 1;  
-    //         dayOfWeekNextMonth3= new Date(year+1, 6, 0).getDay() + 1;  
+            }
+        else if (monthName=="March" && monthFilter.value == `${year+1}-03`) {
+            month = 3;
+            year = currentYear+1
+            daysInCurrentMonth = new Date(year+1, 3, 0).getDate(); 
+            daysInNextMonth = new Date(year+1, 4, 0).getDate();
+            daysInNextMonth1 = new Date(year+1, 5, 0).getDate();
+            daysInNextMonth2 = new Date(year+1, 6, 0).getDate();
+            daysInNextMonth3 = new Date(year+1, 7, 0).getDate();
+            dayOfWeek= new Date(year+1, 2, 0).getDay() + 1;  
+            dayOfWeekNextMonth= new Date(year+1, 3, 0).getDay() + 1;  
+            dayOfWeekNextMonth1= new Date(year+1, 4, 0).getDay() + 1;  
+            dayOfWeekNextMonth2= new Date(year+1, 5, 0).getDay() + 1;  
+            dayOfWeekNextMonth3= new Date(year+1, 6, 0).getDay() + 1;  
     
-    //     }
-    //     else if (monthName=="April" && monthFilter.value == `${year+1}-04`) {
-    //         month = 4;
-    //         year = currentYear+1
-    //         daysInCurrentMonth = new Date(year+1, 4, 0).getDate(); 
-    //         daysInNextMonth = new Date(year+1, 5, 0).getDate();
-    //         daysInNextMonth1 = new Date(year+1, 6, 0).getDate();
-    //         daysInNextMonth2 = new Date(year+1, 7, 0).getDate();
-    //         daysInNextMonth3 = new Date(year+1, 8, 0).getDate();
-    //         dayOfWeek= new Date(year+1, 3, 0).getDay() + 1;  
-    //         dayOfWeekNextMonth= new Date(year+1, 4, 0).getDay() + 1;  
-    //         dayOfWeekNextMonth1= new Date(year+1, 5, 0).getDay() + 1;  
-    //         dayOfWeekNextMonth2= new Date(year+1, 6, 0).getDay() + 1;  
-    //         dayOfWeekNextMonth3= new Date(year+1, 7, 0).getDay() + 1;  
+        }
+        else if (monthName=="April" && monthFilter.value == `${year+1}-04`) {
+            month = 4;
+            year = currentYear+1
+            daysInCurrentMonth = new Date(year+1, 4, 0).getDate(); 
+            daysInNextMonth = new Date(year+1, 5, 0).getDate();
+            daysInNextMonth1 = new Date(year+1, 6, 0).getDate();
+            daysInNextMonth2 = new Date(year+1, 7, 0).getDate();
+            daysInNextMonth3 = new Date(year+1, 8, 0).getDate();
+            dayOfWeek= new Date(year+1, 3, 0).getDay() + 1;  
+            dayOfWeekNextMonth= new Date(year+1, 4, 0).getDay() + 1;  
+            dayOfWeekNextMonth1= new Date(year+1, 5, 0).getDay() + 1;  
+            dayOfWeekNextMonth2= new Date(year+1, 6, 0).getDay() + 1;  
+            dayOfWeekNextMonth3= new Date(year+1, 7, 0).getDay() + 1;  
     
-    //     }
+        }
 
 
 
@@ -657,10 +646,10 @@ let checkMonth = () => {
 
     else {
         daysInCurrentMonth =  new Date(year, month, 0).getDate();    
-        // daysInNextMonth = new Date(year, month + 1, 0).getDate();
-        // daysInNextMonth1 = new Date(year, month + 2, 0).getDate();
-        // daysInNextMonth2 = new Date(year, month + 3, 0).getDate();
-        // daysInNextMonth3 = new Date(year, month + 4, 0).getDate();
+        daysInNextMonth = new Date(year, month + 1, 0).getDate();
+        daysInNextMonth1 = new Date(year, month + 2, 0).getDate();
+        daysInNextMonth2 = new Date(year, month + 3, 0).getDate();
+        daysInNextMonth3 = new Date(year, month + 4, 0).getDate();
     }
     
 }
@@ -785,7 +774,7 @@ else {
 }
 monthFilter.placeholder = `${monthName} ${year}`;
 checkMonth();
-// nextMonthName();
+nextMonthName();
 
 
 
@@ -873,54 +862,54 @@ function selectDateCurrentMonth(calendarDateBlock){
 }
 
 
-// function selectDate(calendarDateBlock){
-//     let checkIfChecked = false;
-//     let test = calendarDateBlock.getAttribute('selectDate').slice(0, 2);
-//     console.log(test)
-//     if (monthFilter.value.includes(`${currentYear}`) && month >= currentMonth || monthFilter.value.includes(`${currentYear+1}`) ) {
-//     if (selectedDates.includes(calendarDateBlock.getAttribute('selectDate'))) {
-//         let index = selectedDates.indexOf(calendarDateBlock.getAttribute('selectDate'));
-//         calendarDateBlock.style.borderColor ="#ececec"
-//         calendarDateBlock.style.borderWidth ="1px"  
+function selectDate(calendarDateBlock){
+    let checkIfChecked = false;
+    let test = calendarDateBlock.getAttribute('selectDate').slice(0, 2);
+    console.log(test)
+    if (monthFilter.value.includes(`${currentYear}`) && month >= currentMonth || monthFilter.value.includes(`${currentYear+1}`) ) {
+    if (selectedDates.includes(calendarDateBlock.getAttribute('selectDate'))) {
+        let index = selectedDates.indexOf(calendarDateBlock.getAttribute('selectDate'));
+        calendarDateBlock.style.borderColor ="#ececec"
+        calendarDateBlock.style.borderWidth ="1px"  
         
 
-//         if (index >= -1) {
-//             selectedDates.splice(index, 1);
-//             showSelectedDates.innerHTML=`${selectedDates} `
+        if (index >= -1) {
+            selectedDates.splice(index, 1);
+            showSelectedDates.innerHTML=`${selectedDates} `
 
-//             }
+            }
                   
-//     }  else {
-//     selectedDates.push(calendarDateBlock.getAttribute('selectDate'));
-//     calendarDateBlock.style.borderColor ="#ef6723"
-//     calendarDateBlock.style.borderWidth ="2px"
-//     checkIfChecked = true;
-//     console.log(selectedDates);
-//     showSelectedDates.innerHTML=`${selectedDates}, `;
-// }
+    }  else {
+    selectedDates.push(calendarDateBlock.getAttribute('selectDate'));
+    calendarDateBlock.style.borderColor ="#ef6723"
+    calendarDateBlock.style.borderWidth ="2px"
+    checkIfChecked = true;
+    console.log(selectedDates);
+    showSelectedDates.innerHTML=`${selectedDates}, `;
+}
   
-//     // showSlobodiTermini();
-// }
-// if (selectedDates.length == 0) {
-//     overlay.style.display="block"
-// } else if (selectedDates.length > 0) {
-//     overlay.style.display="none"
-// }
+    // showSlobodiTermini();
+}
+if (selectedDates.length == 0) {
+    overlay.style.display="block"
+} else if (selectedDates.length > 0) {
+    overlay.style.display="none"
+}
 
-// }
-
-
+}
 
 
 
-// function showSlobodiTermini(cekiraniDatum){
-//     selectedDates.forEach(cekiraniDatum => {
-//         moze.forEach(slobodniDatum => {
-//             if(cekiraniDatum === slobodniDatum.date){
-//                 console.log(slobodniDatum.slobodniTermini);
-//             }
-//         });
-//     })};
+
+
+function showSlobodiTermini(cekiraniDatum){
+    selectedDates.forEach(cekiraniDatum => {
+        moze.forEach(slobodniDatum => {
+            if(cekiraniDatum === slobodniDatum.date){
+                console.log(slobodniDatum.slobodniTermini);
+            }
+        });
+    })};
 
     /*
     *   1. Treba da se nadje zajednicki datum izmedju selektovanog i datuma iz objekta da bi se prikazali slobodni termini

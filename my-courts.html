@@ -59,7 +59,6 @@
 </head>
 <body>
 
-    <!--**************************************** HEADER AND NAVIGATION START ***********************************-->
     <div class="pop-up-delete-overlay">
         <div class="pop-up-delete">
             <h3>Are you sure you want to delete this court?</h3>
@@ -95,6 +94,25 @@
             <span class="x-button exit-signin">x</span>
         </div>
     </div>
+    <div class="log-in-overlay">
+        <div class="log-in-content">
+            <div class="login-signup">
+                <form id="signin-form">
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" name="" id="emailLogin">
+                    </div>
+                    <div>
+                        <label for="password">Password:</label>
+                        <input type="password" name="" id="passLogin">
+                    </div>
+                    <input type="submit" value="Log in">;
+                </form>
+                
+            </div>
+            <span class="x-button">X</span>
+        </div>
+    </div>
     <div class="searching-overlay">
         <div class="pop-up-search">
             <h3>Searching...</h3>
@@ -102,124 +120,116 @@
     </div>
     
     <!--**************************************** HEADER AND NAVIGATION START ***********************************-->
-    <header class="header">
-        <div class="header-content">
-            <img src="logo/logo-mobile.png" alt="logo"  onclick="location.href='index.html'" class="logo-mobile">
-            <img src="logo/sslogo.png" alt="logo"  onclick="location.href='index.html'" class="logo-desktop">
-            <nav class="header-nav nav-desktop">
-                <div class="login-signup">
-                            <form id="signin-form">
-                                <label for="email">Email:</label>
-                                <input type="email" name="" id="emailLogin">
-                                <label for="password">Password:</label>
-                                <input type="password" name="" id="passLogin">
-                                <input type="submit" value="Log in">
-                            </form>
-                            <p>Don't have an account? <span class="sign-up-header-btn">Sign up!</span></p>
+<header class="header">
+    <div class="header-content">
+        <img src="logo/logo-mobile.png" alt="logo"  onclick="location.href='index.html'" class="logo-mobile">
+        <img src="logo/sslogo.png" alt="logo"  onclick="location.href='index.html'" class="logo-desktop">
+        <nav class="header-nav nav-desktop">
+            <div class="login-signup-text">
+                        <p><span class="login-btn-header">Log in</span>/<span class="signup-btn-header">Sign up</span></p>
+            </div>
+            <div class="signed-in-content-nav">
+                <ul class="nav-content">
+                    <li class="nav-item"><a href="#">My games</a>
+                        <ul class="nav-dropdown">
+                            <li><a href="upcoming-games.html">Coming up</a></li>
+                            <li><a href="games-history.html">History</a></li>
+                            <li><a href="create-game-1.html">Create a game</a></li>
+                            <li><a href="find-game.html">Find a game</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#">Courts</a>
+                        <ul class="nav-dropdown">
+                            <li><a href="add-court.html">Add a court</a></li>
+                            <li><a href="my-courts.html">My courts</a></li>
+                            <li><a href="find-court.html">Find a court</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="messages.html">Messages</a></li>
+                    <li class="nav-item"><a href="#">Help</a></li>
+                    <li class="nav-profile sign-up-button nav-item"><a href="#"><span class="nameOfUser"></span><img alt="Profile picture" id="playerAvatar"></a>
+                        <div class="notification-bubble"><span>12</span></div>
+                        <ul class="nav-dropdown">
+                            <li><a href="notifications.html">Notifications</a></li>
+                            <li><a href="account-edit-profile.html">Edit profile</a></li>
+                            <li><a href="account.html">Account</a></li>
+                            <hr>
+                            <li><a href="reservations.html">Reservations</a></li>
+                            <li><a href="manage-slots.html">Manage slots</a></li>
+                            <hr>
+                            <li class="logout-btn"><a href="">Log out</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <nav class="nav mobile-nav">
+            <div class="notification-div">
+                <img src="icons/notification.png" alt="notifications">
+                <div class="notification-bubble"><span>12</span></div>
+            </div>
+            <img src="icons/ham.png" alt="ham" class="hambtn">
+        </nav>
+        <div class="side-menu">
+            <div class="new-to-ss">
+                <div class="create-acc">
+                    <p>New to sportslots?</p>
+                    <button class="green-button mobile-create-acc-btn">Create account</button>
                 </div>
-                <div class="signed-in-content-nav">
-                    <ul class="nav-content">
-                        <li class="nav-item"><a href="#">My games</a>
-                            <ul class="nav-dropdown">
-                                <li><a href="upcoming-games.html">Coming up</a></li>
-                                <li><a href="games-history.html">History</a></li>
-                                <li><a href="create-game-1.html">Create a game</a></li>
-                                <li><a href="find-game.html">Find a game</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item"><a href="#">Courts</a>
-                            <ul class="nav-dropdown">
-                                <li><a href="add-court.html">Add a court</a></li>
-                                <li><a href="my-courts.html">My courts</a></li>
-                                <li><a href="find-court.html">Find a court</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item"><a href="messages.html">Messages</a></li>
-                        <li class="nav-item"><a href="#">Help</a></li>
-                        <li class="nav-profile sign-up-button nav-item"><a href="#"><span class="nameOfUser"></span><img alt="Profile picture" id="playerAvatar"></a>
-                            <div class="notification-bubble"><span>12</span></div>
-                            <ul class="nav-dropdown">
-                                <li><a href="notifications.html">Notifications</a></li>
-                                <li><a href="account-edit-profile.html">Edit profile</a></li>
-                                <li><a href="account.html">Account</a></li>
-                                <hr>
-                                <li><a href="reservations.html">Reservations</a></li>
-                                <li><a href="manage-slots.html">Manage slots</a></li>
-                                <hr>
-                                <li class="logout-btn"><a href="">Log out</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+                <div class="sign-in-side-menu">
+                    <p>Already have an account?</p>
+                    <button class="green-button login-mobile">Sign in</button>
+                    <p class="forgot-password">Forgot password?</p>
                 </div>
-            </nav>
-            <nav class="nav mobile-nav">
-                <div class="notification-div">
-                    <img src="icons/notification.png" alt="notifications">
-                    <div class="notification-bubble"><span>12</span></div>
-                </div>
-                <img src="icons/ham.png" alt="ham" class="hambtn">
-            </nav>
-            <div class="side-menu">
-                <div class="new-to-ss">
-                    <div class="create-acc">
-                        <p>New to sportslots?</p>
-                        <button class="green-button mobile-create-acc-btn">Create account</button>
-                    </div>
-                    <div class="sign-in-side-menu">
-                        <p>Already have an account?</p>
-                        <button class="green-button login-mobile">Sign in</button>
-                        <p class="forgot-password">Forgot password?</p>
-                    </div>
-                    <form id="signin-form-mobile" class="side-menu-form">
-                        <label for="email">Email:</label>
-                        <br>
-                        <input type="email" name="" id="emailLoginMobile">
-                        <br>
-                        <br>
-                        <label for="password">Password:</label>
-                        <br>
-                        <input type="password" name="" id="passLoginMobile">
-                        <br>
-                        <br>
-                        <input type="submit" value="Log in">
-                    </form>
+                <form id="signin-form-mobile" class="side-menu-form">
+                    <label for="email">Email:</label>
+                    <br>
+                    <input type="email" name="" id="emailLoginMobile">
+                    <br>
+                    <br>
+                    <label for="password">Password:</label>
+                    <br>
+                    <input type="password" name="" id="passLoginMobile">
+                    <br>
+                    <br>
+                    <input type="submit" value="Log in">
+                </form>
 
-                </div>
-                <div class="signed-in-menu">
-                    <p class="expand-list expandGames" listTarget="expand-games">My games</p>
-                    <ul class="my-games-mobile-nav">
-                        <li><a href="upcoming-games.html">Coming up</a></li>
-                        <li><a href="games-history.html">History</a></li>
-                        <li><a href="create-game-1.html">Create a game</a></li>
-                        <li><a href="find-game.html">Find a game</a></li>
-                    </ul>
+            </div>
+            <div class="signed-in-menu">
+                <p class="expand-list expandGames" listTarget="expand-games">My games</p>
+                <ul class="my-games-mobile-nav">
+                    <li><a href="upcoming-games.html">Coming up</a></li>
+                    <li><a href="games-history.html">History</a></li>
+                    <li><a href="create-game-1.html">Create a game</a></li>
+                    <li><a href="find-game.html">Find a game</a></li>
+                </ul>
+                <hr>
+                <p class="expand-list expandCourts" listTarget="expand-courts">Courts</p>
+                <ul class="courts-mobile-nav">
+                    <li><a href="add-court.html">Add a court</a></li>
+                    <li><a href="my-courts.html">My courts</a></li>
+                    <li><a href="find-court.html">Find a court</a></li>
+                </ul>
+                <hr>
+                <p class="message-p"><a href="messages.html">Messages</a></p>
+                <hr>
+                <p class="expand-list expandProfile" listTarget="expand-profile">Profile</p>
+                <ul class="profile-mobile-nav">
+                    <li><a href="notifications.html">Notifications</a></li>
+                    <li><a href="account-edit-profile.html">Edit profile</a></li>
+                    <li><a href="account.html">Account</a></li>
                     <hr>
-                    <p class="expand-list expandCourts" listTarget="expand-courts">Courts</p>
-                    <ul class="courts-mobile-nav">
-                        <li><a href="add-court.html">Add a court</a></li>
-                        <li><a href="my-courts.html">My courts</a></li>
-                        <li><a href="find-court.html">Find a court</a></li>
-                    </ul>
+                    <li><a href="reservations.html">Reservations</a></li>
+                    <li><a href="manage-slots.html">Manage slots</a></li>
                     <hr>
-                    <p class="message-p"><a href="messages.html">Messages</a></p>
-                    <hr>
-                    <p class="expand-list expandProfile" listTarget="expand-profile">Profile</p>
-                    <ul class="profile-mobile-nav">
-                        <li><a href="notifications.html">Notifications</a></li>
-                        <li><a href="account-edit-profile.html">Edit profile</a></li>
-                        <li><a href="account.html">Account</a></li>
-                        <hr>
-                        <li><a href="reservations.html">Reservations</a></li>
-                        <li><a href="manage-slots.html">Manage slots</a></li>
-                        <hr>
-                        <li class="logout-btn"><a href="">Log out</a></li>
-                    </ul>
-                </div>
+                    <li class="logout-btn"><a href="">Log out</a></li>
+                </ul>
             </div>
         </div>
-    </header>
-    
-    <!--**************************************** HEADER AND NAVIGATION END ***********************************-->
+    </div>
+</header>
+<!--**************************************** HEADER AND NAVIGATION END ***********************************-->
     <!--**************************************** MY COURTS START ***********************************-->
 
     <section class="my-courts-container">
@@ -366,31 +376,31 @@
                     <script src="js/jquery.ajaxchimp.min.js"></script>
 
                      <!-- Custom Scripts -->
-                     <script>
-                         let deleteCourtBtn = document.querySelectorAll('.delete-court')
-                         let deletePopUp = document.querySelector('.pop-up-delete-overlay')
-                         let cancelBtn = document.querySelector('.no')
-                         let approveBtn = document.querySelector('.yes')
-                         let courtBlock = document.querySelectorAll('.added-court-block')
-
-                         
-                         courtBlock.forEach(block => {
-                             block.addEventListener('click', event => {
-                                 if (event.target.hasAttribute('deleteCourt')) {
-                                     deletePopUp.style.display = "block";
-                                     cancelBtn.addEventListener('click', () => {
-                                     deletePopUp.style.display ="none";
-                                    })
-                                    approveBtn.addEventListener('click', () => {
-                                     block.remove();
-                                     deletePopUp.style.display ="none";
-                                    })
-                                }
-                             })
-                         })
-                     </script>
                     <script src="js/menu.js"></script>
                     <script src="js/main.js"></script>
+                    <script>
+                        let deleteCourtBtn = document.querySelectorAll('.delete-court')
+                        let deletePopUp = document.querySelector('.pop-up-delete-overlay')
+                        let cancelBtn = document.querySelector('.no')
+                        let approveBtn = document.querySelector('.yes')
+                        let courtBlock = document.querySelectorAll('.added-court-block')
+
+                        
+                        courtBlock.forEach(block => {
+                            block.addEventListener('click', event => {
+                                if (event.target.hasAttribute('deleteCourt')) {
+                                    deletePopUp.style.display = "block";
+                                    cancelBtn.addEventListener('click', () => {
+                                    deletePopUp.style.display ="none";
+                                   })
+                                   approveBtn.addEventListener('click', () => {
+                                    block.remove();
+                                    deletePopUp.style.display ="none";
+                                   })
+                               }
+                            })
+                        })
+                    </script>
                     <!-- Font Awesome  -->
 
                     <script src="js/all.min.js"></script>
