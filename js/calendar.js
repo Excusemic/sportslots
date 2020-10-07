@@ -83,16 +83,33 @@ let printDays = () => {
         }
 
     for (i=1; i<=daysInCurrentMonth; i++) {
-    calendarBlockContainer.innerHTML+=`<div class="calendar-block calendar-block-current-month" selectDate="${i}-${month}-${year}" onClick='selectDateCurrentMonth(this)'><span class="day-number">${i}</span><div class="*slots-booked*"></div><p class="price-dollars"></p></div>`;
+    calendarBlockContainer.innerHTML+=`<div class="calendar-block calendar-block-current-month" selectDate="${i}-${month}-${year}" onClick='selectDateCurrentMonth(this)'><span class="day-number">${i}</span><div class="slots-booked"></div><p class="price-dollars"></p><div class="blocked-icon"></div></div>`;
     }
 
     for (i=1; i<=daysInNextMonth ; i++) {
-        calendarBlockNextMonthContainer.innerHTML+=`<div class="calendar-block" selectDate="${i}-${month+1}-${year}" onClick='selectDate(this)'><span class="day-number">${i}</span><div class="*slots-booked*"></div><p class="price-dollars"></p></div>`;
+        calendarBlockNextMonthContainer.innerHTML+=`<div class="calendar-block" selectDate="${i}-${month+1}-${year}" onClick='selectDate(this)'><span class="day-number">${i}</span><div class="slots-booked"></div><p class="price-dollars"></p><div class="blocked-icon"></div></div>`;
     }
 
     for (i=1; i<=daysInNextMonth1 ; i++) {
-        calendarBlockNextMonthContainer1.innerHTML+=`<div class="calendar-block" selectDate="${i}-${month+2}-${year}" onClick='selectDate(this)'><span class="day-number">${i}</span><div class="*slots-booked*"></div><p class="price-dollars"></p></div>`;
+        calendarBlockNextMonthContainer1.innerHTML+=`<div class="calendar-block" selectDate="${i}-${month+2}-${year}" onClick='selectDate(this)'><span class="day-number">${i}</span><div class="slots-booked"></div><p class="price-dollars"></p><div class="blocked-icon"></div></div>`;
     }
+    let allBlocksCurrentMonth = document.querySelectorAll('.calendar-block-current-month') 
+    allBlocksCurrentMonth.forEach((block, i) => {
+        block.children[2].innerHTML="25$"
+        if (i == 23 || i == 24) {
+            block.style.backgroundColor = "rgb(225, 225, 225)";
+            block.innerHTML="<p class='blocked-text'>Blocked<p>";
+            block.style.pointerEvents = "none"
+        }
+        if (i == 18 || i == 20) {
+            block.children[1].style.display="block"
+            block.children[1].innerHTML="4"
+        }
+        if (i == 18 || i == 20 || i == 22) {
+            block.children[3].innerHTML=`<img src='./icons/blocked-slot.png'>`
+        }
+    })
+
 
 
 
@@ -802,8 +819,11 @@ let test;
 function selectDateCurrentMonth(calendarDateBlock){
     let checkIfChecked = false;
     let test = calendarDateBlock.getAttribute('selectDate').slice(0, 2);
+    if(test.slice(1, 2) == '-') {
+        test = test.slice(0, 1);
+    }
     if(monthFilter.value.includes(`${currentYear}`)) {
-        if(month==currentMonth && test >= day) {
+        if(month==currentMonth && Number(test) >= Number(day)) {
                 if (selectedDates.includes(calendarDateBlock.getAttribute('selectDate'))) {
                     let index = selectedDates.indexOf(calendarDateBlock.getAttribute('selectDate'));
                     calendarDateBlock.style.borderColor ="#ececec"
@@ -865,7 +885,6 @@ function selectDateCurrentMonth(calendarDateBlock){
 function selectDate(calendarDateBlock){
     let checkIfChecked = false;
     let test = calendarDateBlock.getAttribute('selectDate').slice(0, 2);
-    console.log(test)
     if (monthFilter.value.includes(`${currentYear}`) && month >= currentMonth || monthFilter.value.includes(`${currentYear+1}`) ) {
     if (selectedDates.includes(calendarDateBlock.getAttribute('selectDate'))) {
         let index = selectedDates.indexOf(calendarDateBlock.getAttribute('selectDate'));

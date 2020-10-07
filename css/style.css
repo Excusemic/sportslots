@@ -1164,7 +1164,7 @@ header nav {
 	background-color: #fff;
 }
 .log-in-content form {
-	width: 50%;
+	width: 220px;
 	margin: auto;
 	display: flex;
 	flex-direction: column;
@@ -1204,7 +1204,7 @@ header nav {
 	
 }
 .login-signup input[type=submit] {
-	width: 80px;
+	width: 150px;
 	background-color: #f07030;
 	color: #fff;
 	font-size: .8em;
@@ -1213,6 +1213,7 @@ header nav {
 	cursor: pointer;
 	margin: auto;
 	margin-top: 1.2em;
+	margin-right: 0em;
 }
 .signed-in-content-nav {
 	display: none;
@@ -4882,6 +4883,12 @@ header nav {
 	position: relative;
 	background-color: #fff;
 }
+.blocked-text {
+	font-size: .7em;
+	text-align: center;
+	margin: auto;
+	margin-top: 30%;
+}
 .manage-slots-calendar .calendar-block-unavailable {
 	background-color: #fff;
 	position: relative;
@@ -4892,14 +4899,21 @@ header nav {
 	transition: .2s ease-out;
 
 }
-.manage-slots-calendar .calendar-block .day-number {
-	font-size: 1em;
+.manage-slots-calendar  .day-number {
+	font-size: .7em;
 	top: 2px;
 	left: 6px;
 	position: absolute;
 	color: #4b4b4b;
 }
-.manage-slots-calendar .calendar-block .slots-booked {
+.manage-slots-calendar  .blocked-icon {
+	bottom: 2px;
+	right: 6px;
+	position: absolute;
+
+}
+.manage-slots-calendar  .slots-booked {
+	display: none;
 	font-size: .7em;
 	top: 4px;
 	right: 6px;
@@ -4912,8 +4926,8 @@ header nav {
 	text-align: center;
 	font-weight: 600;
 }
-.manage-slots-calendar .calendar-block .price-dollars {
-	font-size: 1em;
+.manage-slots-calendar .price-dollars {
+	font-size: .7em;
 	bottom: 2px;
 	left: 6px;
 	position: absolute;
@@ -6544,6 +6558,7 @@ header nav {
 
 	.carousel-mobile .carousel-control-next, .carousel-mobile .carousel-control-prev {
 		z-index: 10;
+		opacity: 0;
 	}
 	.header-content {
 		box-sizing: border-box;
@@ -6957,12 +6972,7 @@ header nav {
 		top: 20%;
 		width: 100%;
 	}
-	.log-in-content form {
-		max-width: 260px;
-	}
-	.log-in-content form {
-		width: 100%;
-	}
+
 	.upcoming-games-history-games-content h3 {
 		margin: 0em;
 		margin-top: 2.6em;
@@ -7783,7 +7793,9 @@ header nav {
 	.rating-content .court-rating-box, .rating-content .player-rating-box {
 		flex-wrap: wrap;
 	}
-
+	.blocked-text {
+		font-size: .6em;
+	}
 }
 
 	@media only screen and (min-width: 650px) and (max-width: 768px){
@@ -7948,7 +7960,7 @@ header nav {
 		margin-top: 1.2em;
 	}
 	#signin-form input{
-		width: 100px;
+		width: 150px;
 		
 	}
 	.header-content img {
@@ -8061,6 +8073,10 @@ header nav {
 	.court-block {
 		flex-basis: 45%;
 	}
-
 	
+}
+@media only screen and (min-width: 1500px) {
+	.log-in-content {
+		width: 25%;
+	}
 }
