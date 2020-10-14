@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+
+<html lang="zxx">
+<head>
+    <!-- TITLE OF SITE -->
+    <title>SportSlots</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="SportSlots" />
+    <meta name="keywords" content="SportSlots, Basketball, Sport, Basket, Kosarka " />
+    <meta name="author" content="SportSlots">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- FAVICON -->
+    <link rel="apple-touch-icon" sizes="57x57" href="favi/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favi/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favi/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favi/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favi/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favi/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favi/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favi/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favi/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="favi/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favi/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favi/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favi/favicon-16x16.png">
+    <link rel="manifest" href="favi/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favi/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- =============================================   CSS Begins   ================================================== -->
+
+    <!-- Bootstrap -->
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-reboot.min.css" rel="stylesheet">
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-
+    Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> --> 
+    
+        
+    <!-- =============================================   FONTS & ICONS  ================================================== -->
+
+    <!-- Font Awesome -->
+
+    <link href="css/all.min.css" rel="stylesheet">
+
+    <!-- FONTS -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900" rel="stylesheet">
+
+
+    <!-- Main Style -->
+
+    <link href="css/style.css" rel="stylesheet">
+
+
+</head>
+<body>
+
+    <div class="sign-in-overlay">
+        <div class="sign-in-content">
+            <p class="sign-in-p">Sign up</p>
+            <form id="create-acc-form">
+              <input type="text" id="fName" name="fName" placeholder="First name"><br>
+              <input type="text" id="lName" name="lName" placeholder="Last name"><br>
+              <input type="text" id="bDay"placeholder="Birthday"
+              onfocus="(this.type='date')"
+              onblur="(this.type='text')" name="bDay"><br>
+              <input type="email" id="email" name="email" placeholder="Email adress"><br>
+              <input type="password" id="pass" name="pass" placeholder="Password"><br>
+              <input type="submit" value="Sign up">
+            </form> 
+            <p  class="sign-in-p">sign up with</p>
+            <button class="sign-in-facebok">
+                <img src="icons/fb-icon-colored.png" alt="facebook">
+                <p>Facebook</p>
+            </button>
+            <button class="sign-in-google">
+                <img src="icons/google-icon-colored.png" alt="google">
+                <p>Google</p>
+            </button>
+            <p class="log-in-text">Already have an account?<a href="#">Log in</a></p>
+            <span class="x-button exit-signin">x</span>
+        </div>
+    </div>
+    <div class="log-in-overlay">
+        <div class="log-in-content">
+            <div class="login-signup">
+                <form id="signin-form">
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" name="" id="emailLogin">
+                    </div>
+                    <div>
+                        <label for="password">Password:</label>
+                        <input type="password" name="" id="passLogin">
+                    </div>
+                    <input type="submit" value="Log in">
+                </form>
+                
+            </div>
+            <span class="x-button">X</span>
+        </div>
+    </div>
+    <div class="searching-overlay">
+        <div class="pop-up-search">
+            <h3>Searching...</h3>
+        </div>
+    </div>
+    
+    <!--**************************************** HEADER AND NAVIGATION START ***********************************-->
+<header class="header">
+    <div class="header-content">
+        <img src="logo/logo-mobile.png" alt="logo"  onclick="location.href='index.html'" class="logo-mobile">
+        <img src="logo/sslogo.png" alt="logo"  onclick="location.href='index.html'" class="logo-desktop">
+        <nav class="header-nav nav-desktop">
+            <div class="login-signup-text">
+                        <p><span class="login-btn-header">Log in</span>/<span class="signup-btn-header">Sign up</span></p>
+            </div>
+            <div class="signed-in-content-nav">
+                <ul class="nav-content">
+                    <li class="nav-item"><a href="#">My games</a>
+                        <ul class="nav-dropdown">
+                            <li><a href="upcoming-games.html">Coming up</a></li>
+                            <li><a href="games-history.html">History</a></li>
+                            <li><a href="create-game-1.html">Create a game</a></li>
+                            <li><a href="find-game.html">Find a game</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#">Courts</a>
+                        <ul class="nav-dropdown">
+                            <li><a href="add-court.html">Add a court</a></li>
+                            <li><a href="my-courts.html">My courts</a></li>
+                            <li><a href="find-court.html">Find a court</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="messages.html">Messages</a></li>
+                    <li class="nav-item"><a href="help.html">Help</a></li>
+                    <li class="nav-profile sign-up-button nav-item"><a href="#"><span class="nameOfUser"></span><img alt="Profile picture" id="playerAvatar"></a>
+                        <div class="notification-bubble"><span>12</span></div>
+                        <ul class="nav-dropdown">
+                            <li><a href="notifications.html">Notifications</a></li>
+                            <li><a href="account-edit-profile.html">Edit profile</a></li>
+                            <li><a href="account.html">Account</a></li>
+                            <hr>
+                            <li><a href="reservations.html">Reservations</a></li>
+                            <li><a href="manage-slots.html">Manage slots</a></li>
+                            <hr>
+                            <li class="logout-btn"><a href="">Log out</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <nav class="nav mobile-nav">
+            <div class="notification-div">
+                <img src="icons/notification.png" alt="notifications">
+                <div class="notification-bubble"><span>12</span></div>
+            </div>
+            <img src="icons/ham.png" alt="ham" class="hambtn">
+        </nav>
+        <div class="side-menu">
+            <div class="new-to-ss">
+                <div class="create-acc">
+                    <p>New to sportslots?</p>
+                    <button class="green-button mobile-create-acc-btn">Create account</button>
+                </div>
+                <div class="sign-in-side-menu">
+                    <p>Already have an account?</p>
+                    <button class="green-button login-mobile">Sign in</button>
+                    <p class="forgot-password">Forgot password?</p>
+                </div>
+                <form id="signin-form-mobile" class="side-menu-form">
+                    <label for="email">Email:</label>
+                    <br>
+                    <input type="email" name="" id="emailLoginMobile">
+                    <br>
+                    <br>
+                    <label for="password">Password:</label>
+                    <br>
+                    <input type="password" name="" id="passLoginMobile">
+                    <br>
+                    <br>
+                    <input type="submit" value="Log in">
+                </form>
+
+            </div>
+            <div class="signed-in-menu">
+                <p class="expand-list expandGames" listTarget="expand-games">My games</p>
+                <ul class="my-games-mobile-nav">
+                    <li><a href="upcoming-games.html">Coming up</a></li>
+                    <li><a href="games-history.html">History</a></li>
+                    <li><a href="create-game-1.html">Create a game</a></li>
+                    <li><a href="find-game.html">Find a game</a></li>
+                </ul>
+                <hr>
+                <p class="expand-list expandCourts" listTarget="expand-courts">Courts</p>
+                <ul class="courts-mobile-nav">
+                    <li><a href="add-court.html">Add a court</a></li>
+                    <li><a href="my-courts.html">My courts</a></li>
+                    <li><a href="find-court.html">Find a court</a></li>
+                </ul>
+                <hr>
+                <p class="message-p"><a href="messages.html">Messages</a></p>
+                <hr>
+                <p class="expand-list expandProfile" listTarget="expand-profile">Profile</p>
+                <ul class="profile-mobile-nav">
+                    <li><a href="notifications.html">Notifications</a></li>
+                    <li><a href="account-edit-profile.html">Edit profile</a></li>
+                    <li><a href="account.html">Account</a></li>
+                    <hr>
+                    <li><a href="reservations.html">Reservations</a></li>
+                    <li><a href="manage-slots.html">Manage slots</a></li>
+                    <hr>
+                    <li class="logout-btn"><a href="">Log out</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+<!--**************************************** HEADER AND NAVIGATION END ***********************************-->
+<div class="help-container">
+    <div class="help-content">
+        <div class="help-header">
+            <h3>How can we help?</h3>
+        </div>
+        <div class="faq-content">
+            <h3>FAQ</h3>
+            <input type="text" name="searchquestion" id="searchquestion" placeholder="Search">
+            <div class="question">
+                <div class="question-text">
+                    <h5 class="span-black">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit?
+                    </h5>
+                    <img src="icons/arrow.png" alt="arrow">
+                </div>
+                <div class="answer">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas dolor consequuntur, hic nesciunt blanditiis soluta a molestias. Similique, consequuntur accusantium.</p>
+                </div>
+            </div>
+            <div class="question">
+                <div class="question-text">
+                    <h5 class="span-black">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit?
+                    </h5>
+                    <img src="icons/arrow.png" alt="arrow">
+                </div>
+                <div class="answer">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas dolor consequuntur, hic nesciunt blanditiis soluta a molestias. Similique, consequuntur accusantium.</p>
+                </div>
+            </div>
+            <div class="question">
+                <div class="question-text">
+                    <h5 class="span-black">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit?
+                    </h5>
+                    <img src="icons/arrow.png" alt="arrow">
+                </div>
+                <div class="answer">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas dolor consequuntur, hic nesciunt blanditiis soluta a molestias. Similique, consequuntur accusantium.</p>
+                </div>
+            </div>
+            <div class="question">
+                <div class="question-text">
+                    <h5 class="span-black">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit?
+                    </h5>
+                    <img src="icons/arrow.png" alt="arrow">
+                </div>
+                <div class="answer">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas dolor consequuntur, hic nesciunt blanditiis soluta a molestias. Similique, consequuntur accusantium.</p>
+                </div>
+            </div>
+            <div class="question">
+                <div class="question-text">
+                    <h5 class="span-black">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit?
+                    </h5>
+                    <img src="icons/arrow.png" alt="arrow">
+                </div>
+                <div class="answer">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas dolor consequuntur, hic nesciunt blanditiis soluta a molestias. Similique, consequuntur accusantium.</p>
+                </div>
+            </div>
+            <div class="question">
+                <div class="question-text">
+                    <h5 class="span-black">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit?
+                    </h5>
+                    <img src="icons/arrow.png" alt="arrow">
+                </div>
+                <div class="answer">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas dolor consequuntur, hic nesciunt blanditiis soluta a molestias. Similique, consequuntur accusantium.</p>
+                </div>
+            </div>
+            
+        </div>
+        <div class="contact-us">
+            <h3>Contact us</h3>
+            <form action="">
+                <input type="text" name="" id="" placeholder="Full name">
+                <br>
+                <input type="email" name="" id="" placeholder="Email adress">
+                <br>
+                <input type="text" name="" id="" placeholder="Subject">
+                <br>
+                <textarea name="" id="" placeholder="Message"></textarea>
+                <br>
+                <input type="submit" value="Send" class="green-button">
+            </form>
+        </div>
+    </div>
+</div>
+
+<!--**************************************** HELP START ***********************************-->
+
+
+
+
+
+<!--**************************************** HELP END  ***********************************-->
+
+
+<!--************************************ DESKTOP FOOTER START ************************************-->
+<div class="desktop-footer">
+    <div class="desktop-footer-content">
+        <div class="upper">
+            <div class="left">
+                <div class="row">
+                    <p onclick="location.href='images/404-page-not-found.png'">Community</p>
+                    <p onclick="location.href='images/404-page-not-found.png'">Careers</p>
+                    <p onclick="location.href='help.html'">Help</p>
+                </div>
+                <div class="row">
+                    <p onclick="location.href='images/404-page-not-found.png'">Privacy</p>
+                    <p onclick="location.href='images/404-page-not-found.png'">Partners</p>
+                    <p onclick="location.href='images/404-page-not-found.png'">Become a member</p>
+                </div>
+                <div class="row">
+                    <p onclick="location.href='images/404-page-not-found.png'">Terms</p>
+                    <p onclick="location.href='images/404-page-not-found.png'">Events</p>
+                    <p onclick="location.href='help.html'">Contact us</p>
+                </div>
+            </div>
+            <div class="right">
+                <p>Subscribe to our newsletter</p>
+                <input type="email" name="" id="" placeholder="email adress">
+                <button class="green-button">Subscribe</button>
+            </div>
+        </div>
+        <div class="lower">
+            <div class="left">
+                    <img src="logo/sslogo.png" alt="">
+                    <span>
+                        © Copyright Sportslots 2020
+                    </span>
+                    <span>
+                        Payments protected by Lorem IPS
+                    </span>
+            </div>
+            <div class="right">
+                <span><i class="fab fa-instagram" aria-hidden="true"></i></span>
+                <span><i class="fab fa-twitter" aria-hidden="true"></i></span>
+                <span><i class="fab fa-facebook" aria-hidden="true"></i></span>
+                <span><i class="fab fa-instagram" aria-hidden="true"></i></span>
+                <span><i class="fab fa-youtube" aria-hidden="true"></i></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!--************************************ DESKTOP FOOTER END************************************-->
+    
+        <!--************************************ MOBILE FOOTER START ************************************-->
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="my-games" id="myGamesFooter">
+                    <img src="icons/mygames-bottom.png" alt="my games">
+                    <p>My games</p>
+                </div>
+                <div class="new-game"  onclick="location.href='create-game-1.html'">
+                    <img src="icons/newgame-bottom.png" alt="new game">
+                    <p>New game</p>
+                </div>
+                <div class="messages-footer"  onclick="location.href='messages.html'">
+                    <img src="icons/msg-bottom.png" alt="messages">
+                    <p>Messages</p>
+                </div>
+                <div class="profile">
+                    <img src="icons/profileicon.png" alt="profile" id="profileFooter">
+                    <p>Profile</p>
+                </div>
+            </div>
+        </div>
+    
+    
+    
+        <!--************************************ MOBILE FOOTER END************************************-->
+
+
+
+
+
+
+
+
+    <!--************************************ SCRIPTS *****************************************-->
+                    <!-- The core Firebase JS SDK is always required and must be listed first -->
+                    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+                    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-firestore.js"></script>
+                    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-auth.js"></script>
+
+                    <!-- TODO: Add SDKs for Firebase products that you want to use
+                        https://firebase.google.com/docs/web/setup#available-libraries -->
+
+                    <script>
+                    // Your web app's Firebase configuration
+                    var firebaseConfig = {
+                        apiKey: "AIzaSyAOer4uBO05vpedXG0S68_TC_gDuylFVVU",
+                        authDomain: "sportslots-f03b9.firebaseapp.com",
+                        databaseURL: "https://sportslots-f03b9.firebaseio.com",
+                        projectId: "sportslots-f03b9",
+                        storageBucket: "sportslots-f03b9.appspot.com",
+                        messagingSenderId: "486189809343",
+                        appId: "1:486189809343:web:40b83e90bfe895d053100a"
+                    };
+                    // Initialize Firebase
+                    firebase.initializeApp(firebaseConfig);
+
+                    </script>
+                    <!-- jquery -->
+                    <script src="js/jquery-3.4.1.slim.min.js"></script>
+                    <!-- Bootstrap -->
+                    <script src="js/popper.min.js"></script>
+                    <script src="js/bootstrap.min.js"></script>
+                    <script src="js/waypoints.min.js"></script>
+                    <script src="js/slick.min.js"></script>
+                    <script src="js/jquery.ajaxchimp.min.js"></script>
+
+                     <!-- Custom Scripts -->
+                    <script> 
+                        let questions = document.querySelectorAll('.question-text');
+                        questions.forEach(question => {
+                            question.addEventListener('click', () => {
+                                let answer = question.parentElement.children[1];
+                                let arrow = question.children[1]
+                                arrow.classList.toggle('rotate-arrow');
+                                answer.classList.toggle('show')
+                            })
+                        })
+                    </script>
+                    <script src="js/menu.js"></script>
+                    <script src="js/main.js"></script>
+                    <!-- Font Awesome  -->
+
+                    <script src="js/all.min.js"></script>
+                    <!--<script src="https://use.fontawesome.com/b9733a5df8.js"></script>-->
+
+
+                    <!-- Bootstrap ONLINE LINK -->
+
+
+
+                    <!--
+                    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+                    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+                    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> 
+                    -->
+
+</body>
+</html>

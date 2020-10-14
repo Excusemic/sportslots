@@ -487,7 +487,9 @@ header nav {
 
 
 /*******-----------------------------CAROUSEL------------------------------********/
-
+.tabletCarouselImage {
+	display: none;
+}
 
 .carousel-desktop .carousel-control-next-icon, .carousel-desktop .carousel-control-prev-icon {
     opacity: 0;
@@ -1079,9 +1081,109 @@ header nav {
 .player-box img, .player-info h5 {
 	cursor: pointer;
 }
+.player-box img {
+	height: 100px;
+	width: 100px;
+}
 
 .footer-container {
 	display: none;
+}
+
+.desktop-footer {
+	background-color: #000000;
+	color: #999999;
+}
+.desktop-footer-content {
+	padding: 1.2em 0em;
+	width: 80%;
+	margin: auto;
+	font-size: .8em;
+}
+.desktop-footer-content .upper, .desktop-footer-content .lower{
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+
+}
+.desktop-footer-content .upper {
+	padding-left: 1.6em;
+	padding-bottom: 2.8em;
+	padding-top: 1.2em;
+	border-bottom: 1px solid #fff;
+	margin-bottom: 1em;
+}
+.desktop-footer-content .upper .left p {
+	margin-bottom: .4em;
+	cursor: pointer;
+}
+.desktop-footer-content .upper .right p{
+	font-weight: bold;
+	color: #fff;
+	margin-bottom: 1.6em;
+}
+.desktop-footer-content .upper .right input {
+	border: 1px solid #fff;
+	border-radius: 15px;
+	color: #fff;
+	font-size: .8em;
+	padding: .3em 1em;
+	color: #fff;
+	cursor: pointer;
+	background-color: #000;
+	outline: none;
+}
+.desktop-footer-content .upper .right .green-button {
+	background-color: #37b34a;
+	border-radius: 15px;
+	outline: none;
+	color: #fff;
+	border: none;
+	width: 70px;
+	padding: .5em 0em;
+	font-size: .8em;
+	margin-bottom: .6em;
+	font-weight: 600;
+}
+.desktop-footer-content .upper .right input::placeholder {
+	color: #999999;
+}
+.desktop-footer-content .left {
+	width: 50%;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+}
+.desktop-footer-content .left img {
+	height: 30px;
+	width: 100px;
+}
+.desktop-footer-content .right img {
+	height: 30px;
+	width: 30px;
+}
+.desktop-footer-content .row {
+	display: flex;
+	flex-direction: column;
+
+}
+.desktop-footer-content .lower {
+	padding: 1em 0em;
+}
+.desktop-footer-content .lower .left {
+	width: 67%;
+}
+.desktop-footer-content .lower .right span {
+	display: inline-block;
+	font-size: 1.2em;
+	margin-left: 1em;
+	border: 1px solid #999999;
+	border-radius: 60px;
+	padding: 0.2em 0.4em;
+	cursor: pointer;
+}
+.desktop-footer-content .lower .left span {
+	line-height: 2.4em;
 }
 /******** SIGN IN *********/
 .searching-overlay {
@@ -1175,6 +1277,9 @@ header nav {
 	margin-top: 0em;
 	display: flex;
 	justify-content: space-between;
+}
+.log-in-content form  div:nth-child(1) {
+	margin-bottom: 1em;
 }
 .log-in-content form  div:nth-child(2) {
 	margin: 0;
@@ -3129,6 +3234,14 @@ header nav {
 	text-align: right;
 
 }
+.button-view-details {
+	text-align: center;
+}
+.button-view-details a {
+	text-decoration: none;
+	font-weight: bold;
+	color: #4b4b4b;
+}
 .ask-to-join-group .buttons p {
 	width: 60%;
 	font-size: .7em;
@@ -3351,7 +3464,7 @@ header nav {
 	font-size: .8em;
 	font-weight: 400;
 }
-.card-recieved-payment .buttons {
+.card-recieved-payment .buttons, .slot-updated .buttons, .slot-ended .buttons {
 	margin-top: 2em;
 }
 
@@ -3360,13 +3473,18 @@ header nav {
 	font-weight: 700;
 	margin-right: 1em;
 }
-.slot-ended span {
+.slot-updated .buttons a {
+	color: #4b4b4b;
+	font-weight: 700;
+	margin-right: 1em;
+}
+.slot-ended span, .slot-updated span {
 	font-size: 1em;
 }
-.slot-ended .span-green {
+.slot-ended .span-green, .slot-updated .span-green {
 	font-weight: 700;
 }
-.slot-ended .give-rating-button {
+.slot-ended .give-rating-button, .slot-updated .give-rating-button {
 	display: block;
 	background: rgba(55, 179, 74, 1);
 	color: #fff;
@@ -3981,6 +4099,9 @@ header nav {
 	 padding: 1.4em 0em;
 	 border-bottom: 2px solid #ececec;
  }
+ .player-profile-content aside .achievements p {
+	line-height: 2em;
+ }
  .player-profile-content aside .achievements div {
 	 margin: 1em 0em;
 	 display: grid;
@@ -3991,6 +4112,13 @@ header nav {
 
  .player-profile-content aside .achievements div  img {
 	 margin: auto;
+	 width: 18px;
+	 height: 24px;
+ }
+ .verified img {
+	width: 18px;
+	height: 18px;
+ }
  }
  .player-profile-content aside .achievements div p {
 	 padding-left: 1em;
@@ -4476,10 +4604,15 @@ header nav {
 .slot-details-content .change-or-pay {
 	padding-top: 2.6em;
 }
+.slot-details-content .change-or-pay img {
+	width: 50px;
+	height: 50px;
+}
 .slot-details-content .change-or-pay .booked-slot img{
 	display: inline-block;
-	vertical-align: baseline;
+	vertical-align: top;
 	margin-right: .6em;
+	margin-bottom: .6em;
 }
 .slot-details-content .change-or-pay .booked-slot  {
 	margin-bottom: 3em;
@@ -4502,6 +4635,36 @@ header nav {
 	margin-top: 1em;
 }
 
+.rebook-notice .buttons-rebook .green-button {
+	width: 100px;
+	height: auto;
+	background-color: #37b34a;
+    border-radius: 15px;
+    outline: none;
+    color: #fff;
+    border: none;
+    padding: .2em 0em;
+    font-size: .8em;
+    margin-bottom: 2em;
+    font-weight: 600;
+
+}
+.rebook-notice .buttons-rebook .grey-button {
+	width: 100px;
+	height: auto;
+}
+.rebook-notice .span-black {
+	display: block;
+}
+.rebook-notice p:nth-child(2) {
+	font-size: .9em;
+	margin: .6em 0em;
+}
+.rebook-notice .notice {
+	font-size: .7em;
+	margin: 1em 0em;
+	width: 50%;
+}
 .slot-details-content .change-or-pay .booked-slot  .buttons-rebook .green-button {
 	width: 100px;
 	height: auto;
@@ -4513,7 +4676,10 @@ header nav {
 }
 
 .slot-details-content .change-or-pay .booked-slot .text p {
-	margin: 0em;
+
+}
+.ended-slot .text p:nth-child(1) {
+	margin-bottom: 1.4em;
 }
 .slot-details-content .change-or-pay .disclaimer {
 	margin: 0em;
@@ -5304,6 +5470,118 @@ header nav {
 	padding-top: 1.6em;
 }
 
+
+/********HELP *******/
+
+.help-content {
+	width: 70%;
+	margin: auto;
+}
+.help-header {
+	color: #ef6723;
+	font-size: 2em;
+	font-weight: 700;
+	margin: 1.4em auto;
+}
+.faq-content h3 {
+	color: #4b4b4b;
+	font-size: 1.8em;
+	font-weight: 700;
+	margin: 1em auto;
+}
+.faq-content input {
+	background-image: url("../icons/search_icon_grey.png");
+	background-repeat: no-repeat;
+	background-position: 95%;
+	border-width: 1px;
+	background-color: #f9f9f9;
+	border-style: solid;
+	border-radius: 20px;
+	border-color: #bbbbbb;
+	width: 40%;
+	padding-top: 0.4em;
+	padding-bottom: 0.4em;
+	padding-left: 1em;
+	font-weight: 300;
+	font-size: 1em;
+	outline: none;
+}
+.question-text {
+	cursor: pointer;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	border-bottom: 1px solid #4b4b4b;
+	margin: 1.2em 0em;
+	padding: 1.2em 0em;
+}
+.answer {
+	display: none;
+}
+.show {
+	display: block;
+}
+.question-text img {
+	width: 17px;
+	height: 10px;
+	cursor: pointer;
+}
+.rotate-arrow {
+	transform: rotate(180deg);
+}
+.contact-us {
+	margin-top: 5em;
+}
+.contact-us h3 {
+	color: #4b4b4b;
+	font-size: 1.8em;
+	font-weight: 700;
+	margin: 1em auto;
+}
+.contact-us input[type="text"], .contact-us input[type="email"] {
+	border-width: 1px;
+	background-color: #f9f9f9;
+	border-style: solid;
+	border-radius: 20px;
+	border-color: #bbbbbb;
+	width: 40%;
+	padding-top: 0.4em;
+	padding-bottom: 0.4em;
+	padding-left: 1em;
+	font-weight: 300;
+	font-size: 1em;
+	outline: none;
+	margin: .6em 0em;
+}
+.contact-us textarea {
+	border-width: 1px;
+	background-color: #f9f9f9;
+	border-style: solid;
+	border-radius: 20px;
+	border-color: #bbbbbb;
+	width: 40%;
+	height: 140px;
+	padding-top: 0.4em;
+	padding-bottom: 0.4em;
+	padding-left: 1em;
+	font-weight: 300;
+	font-size: 1em;
+	outline: none;
+	margin: .6em 0em;
+}
+.contact-us .green-button {
+	background-color: #37b34a;
+	border-radius: 15px;
+	outline: none;
+	color: #fff;
+	border: none;
+	width: 120px;
+	padding: .2em 0em;
+	font-size: .8em;
+	margin-bottom: 2em;
+	font-weight: 600;
+}
+
 /******SET WORKING HOURS ********/
 
 .set-working-hours-content {
@@ -5498,7 +5776,6 @@ header nav {
 	width: 95%;
 	margin: auto;
 	border-bottom: 2px solid #ececec;
-	padding-bottom: 2em;
 	margin-bottom: 2em;
 }
 .messages .upper-header-messages {
@@ -5519,9 +5796,12 @@ header nav {
 }
 .messages .lower-header-messages {
 	font-size: .9em;
-	display: flex;
+	display: none;
 	flex-wrap: nowrap;
 	justify-content: space-between;
+}
+.header-messages .time {
+	display: none;
 }
 .messages .lower-header-messages .number-of-players{
 	margin-left: 1em;
@@ -5649,6 +5929,7 @@ header nav {
 .write-message-input {
 	border: 1px solid #bbbbbb;
 	border-radius: 10px;
+	display: none;
 }
 .write-message-input .add{
 	font-size: 1.2em;
@@ -6272,6 +6553,9 @@ header nav {
 	.my-courts-added-courts .added-court-block-outdoor, .my-courts-added-courts .added-court-block-indoor{
 		min-height: 600px;
 	}
+	.desktop-footer-content .lower .left {
+		width: 60%;
+	}
 
 }
 @media only screen and (min-width: 2175px) {
@@ -6283,6 +6567,9 @@ header nav {
 	}
 	.my-courts-added-courts .added-court-block-outdoor, .my-courts-added-courts .added-court-block-indoor{
 		min-height: 700px;
+	}
+	.desktop-footer-content .lower .left {
+		width: 58%;
 	}
 
 }
@@ -6738,6 +7025,9 @@ header nav {
 		width: 50%;
 		
 	}
+	.desktop-footer {
+		display: none;
+	}
 	.footer-container {
 		z-index: 2;
 		width: 100%;
@@ -6748,6 +7038,18 @@ header nav {
 		transition: .3s ease-in-out;
 		bottom: -100%;
 		position: relative;
+	}
+	.fix-bottom {
+		position: sticky;
+		bottom: 0;
+		width: 100%;
+	}
+	.fix-bottom-write-message {
+		position: sticky;
+		bottom: 80px;
+		width: 100%;
+		z-index: 50;
+		background: #fff;
 	}
 	.footer-sticky {
 		position: sticky;
@@ -6819,7 +7121,6 @@ header nav {
 	.toggle-menu {
 		position: fixed;
 		width: 100%;
-		height: 100%;
 		
 	}	
 	.side-menu a {
@@ -7278,9 +7579,18 @@ header nav {
 	.notification-box .buttons {
 		width: 70%;
 		margin: .8em auto;
-		margin-bottom: 2.5em;
+		margin-bottom: 1.8em;
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: space-between;
+		margin-left: 4.4em;
+		
+	}
+	.slot-ended .give-rating-button, .slot-updated .give-rating-button {
+		margin: 0;
+	}
+	.notification-box .button-view-details{
+		margin-left: 0em;
 		
 	}
 	.notification-box .buttons .accept {
@@ -7292,10 +7602,17 @@ header nav {
 	.notification-box .buttons .accept {
 		width: 45%;
 		padding: 0em;
+		order: 2;
 	}
 	.notification-box .buttons .decline {
 		width: 45%;
 		padding: 0em;
+		order: 3;
+	}
+	.canceled-slot-admin .info {
+		display: inline;
+		margin: 0;
+		margin-bottom: .8em;
 	}
 	.notification-box h5 {
 		font-size: 1em;
@@ -7303,8 +7620,8 @@ header nav {
 	.notification-box .court-available-time {
 		font-size: .7em;
 	}
-	.notification-box span {
-		font-size: .9em;
+	.invitation-indoor-paid span {
+		font-size: 1.2em;
 	}
 	.notification-box p  {
 		font-size: .7em;
@@ -7317,25 +7634,26 @@ header nav {
 	}
 	.notification-box .price-system {
 		font-size: .9em;
-		position: absolute;
-		bottom: 10px;
-		right: 10px;
+		order: 1;
+		margin-left: 0;
+		margin-bottom: .8em;
+		flex-basis: 100%;
 		
 	}
 	.asked-to-join-groups .price-system p {
 		display: inline-block;
+		font-size: 1em;
 		margin: 0em;
 		margin-right: .6em;
 	}
 	.accepted-invitation .buttons a {
 		display: block;
-		width: 80%;
+		width: 100%;
 		margin: auto;
 
 	}
 	.someone-booked-slot .buttons .price-info span {
 		font-size: 1.1em;
-		font-weight: bold;
 		vertical-align: sub;
 	}
 	.notification-box .price-info {
@@ -7343,7 +7661,8 @@ header nav {
 		
 	}
 	.notification-box .go-to-chat{
-		width: 50%;
+		width: 100%;
+		text-align: left;
 	}
 	.someone-booked-slot .buttons a {
 		margin-left: 0em;
@@ -7351,10 +7670,11 @@ header nav {
 		font-size: 1em;
 	}
 	.someone-booked-slot .buttons .go-to-chat {
-		text-align: right;
+
 	}
 	.someone-booked-slot .buttons .price-info{
-		text-align: right;
+
+		margin-bottom: .8em;
 	}
 	.join-groups-accepted .buttons a {
 		display: block;
@@ -7363,30 +7683,26 @@ header nav {
 	}
 	.paid-for-slot .buttons a {
 		display: block;
-		width: 70%;
 		margin: auto;
 	}
 	.canceled-slot .buttons a {
 		display: block;
-		width: 70%;
+		width: 100%;
 		margin: auto;
 	}
 	.card-charged .buttons a {
 		display: block;
-		text-align: center;
-		width: 80%;
 		margin: auto;
 	}
 	.canceled-slot-admin .buttons a {
-		margin-right: 0em;
+		margin: auto;
 	}
 	.ask-to-join-group .buttons .join-groups-button {
 		padding: .1em 2em;
 	}
-	.card-recieved-payment .buttons a {
+	.card-recieved-payment .buttons a, .slot-updated .buttons a {
 		display: block;
-		text-align: center;
-		width: 80%;
+		width: 100%;
 		margin: auto;
 	}
 	.notification-box.ask-to-join-group .buttons {
@@ -7476,18 +7792,15 @@ header nav {
 		overflow: hidden;
 	}
 	.messages-content {
-		height: 300px;
-		overflow-y: scroll;
-		visibility: hidden;
 	}
 	.write-message-input {
-		visibility: hidden;
+	
 	}
 	.lower-header-messages {
-		visibility: hidden;
+	
 	}
 	.show-messages-content {
-		visibility: visible;
+		display: flex!important;
 	}
 
 	.messages .header-messages {
@@ -7604,12 +7917,13 @@ header nav {
    
 	.hide-for-desktop .achievements div  img {
 		margin: auto;
+		width: 18px;
+		height: 24px;
 	}
 	.hide-for-desktop .achievements div p {
 		padding-left: 1em;
 		margin: auto;
 		margin-left: 0em;
-		margin-bottom: 0em;
 		
 	}
 	.hide-for-desktop .achievements h6 {
@@ -7796,6 +8110,32 @@ header nav {
 	.blocked-text {
 		font-size: .6em;
 	}
+	.faq-content input {
+		width: 100%;
+	}
+	.contact-us input[type="text"], .contact-us input[type="email"] {
+		width: 100%;
+	}
+	.contact-us textarea {
+		width: 100%;
+	}
+	.rebook-notice span {
+		width: 85%;
+		margin: auto;
+	}
+
+	.rebook-notice .notice {
+		width: 85%!important;
+		margin: auto;
+	}
+	.rebook-notice .rebook-info {
+		margin: .7em 0em;
+	}
+	.buttons-rebook {
+		width: 85%;
+		margin: auto;
+		margin-top: 1.2em;
+	}
 }
 
 	@media only screen and (min-width: 650px) and (max-width: 768px){
@@ -7874,8 +8214,38 @@ header nav {
 		.request-sent-content {
 
 		}
-
-
+		.contact-us input[type="text"], .contact-us input[type="email"] {
+			width: 70%;
+		}
+		.contact-us textarea {
+			width: 70%;
+		}
+		.rebook-notice span {
+			width: 100%;
+			margin: auto;
+		}
+	
+		.rebook-notice .notice {
+			width: 100%!important;
+			margin: auto;
+		}
+		.rebook-notice .rebook-info {
+			margin: .7em 0em;
+		}
+		.buttons-rebook {
+			width: 100%;
+			margin: auto;
+			margin-top: 1.2em;
+		}
+		.rebook-notice .upcoming-court-history-court-paid .chosen-court-details-paid p {
+			width: 100%;
+		}
+		.rebook-notice {
+			justify-content: unset!important;
+		}
+		.rebook-notice p {
+			width: 100%!important;
+		}
 
 		
 
@@ -7897,6 +8267,12 @@ header nav {
 	}
 	.featured-courts-section {
 		width: 80%;
+	}
+	.desktop-footer-content {
+		width: 80%;
+	}
+	.desktop-footer-content .lower .left {
+		width: 70%;
 	}
 	.court-block-featured {
 		min-height: 290px;
@@ -7998,6 +8374,12 @@ header nav {
 		width: 80%;
 		height: 80%;
 	}
+	.contact-us input[type="text"], .contact-us input[type="email"] {
+		width: 60%;
+	}
+	.contact-us textarea {
+		width: 60%;
+	}
 
 
 
@@ -8067,6 +8449,9 @@ header nav {
 	.other-slots-content {
 		width: 90%;
 	}
+	.desktop-footer-content .lower .left {
+		width: 70%;
+	}
 
 }
 @media only screen and (max-width: 1221px) {
@@ -8078,5 +8463,16 @@ header nav {
 @media only screen and (min-width: 1500px) {
 	.log-in-content {
 		width: 25%;
+	}
+	.desktop-footer-content .lower .left {
+		max-width: 61.5%;
+	}
+}
+@media only screen and (min-width: 560px) and (max-width: 768px) {
+	.mobileCarouselImage {
+		display: none!important;
+	}
+	.tabletCarouselImage {
+		display: block!important;
 	}
 }

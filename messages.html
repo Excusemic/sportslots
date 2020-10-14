@@ -113,7 +113,7 @@
                         <label for="password">Password:</label>
                         <input type="password" name="" id="passLogin">
                     </div>
-                    <input type="submit" value="Log in">;
+                    <input type="submit" value="Log in">
                 </form>
                 
             </div>
@@ -153,7 +153,7 @@
                         </ul>
                     </li>
                     <li class="nav-item"><a href="messages.html">Messages</a></li>
-                    <li class="nav-item"><a href="#">Help</a></li>
+                    <li class="nav-item"><a href="help.html">Help</a></li>
                     <li class="nav-profile sign-up-button nav-item"><a href="#"><span class="nameOfUser"></span><img alt="Profile picture" id="playerAvatar"></a>
                         <div class="notification-bubble"><span>12</span></div>
                         <ul class="nav-dropdown">
@@ -593,17 +593,71 @@
                     </div>
                 </div>
             </div>
-            <div class="write-message">
-                <div class="write-message-input">
-                    <textarea name="" id="" placeholder="Write a message"></textarea>
-                    <div class="add">+</div>
-                </div>
-            </div>
         </section>
     </div>
+    <div class="write-message fix-bottom-write-message">
+        <div class="write-message-input">
+            <textarea name="" id="" placeholder="Write a message"></textarea>
+            <div class="add">+</div>
+        </div>
+    </div>
     <!--**************************************** MESSAGEs END ***********************************-->
+
+
+    <!--************************************ DESKTOP FOOTER START ************************************-->
+    <div class="desktop-footer">
+        <div class="desktop-footer-content">
+            <div class="upper">
+                <div class="left">
+                    <div class="row">
+                        <p onclick="location.href='images/404-page-not-found.png'">Community</p>
+                        <p onclick="location.href='images/404-page-not-found.png'">Careers</p>
+                        <p onclick="location.href='help.html'">Help</p>
+                    </div>
+                    <div class="row">
+                        <p onclick="location.href='images/404-page-not-found.png'">Privacy</p>
+                        <p onclick="location.href='images/404-page-not-found.png'">Partners</p>
+                        <p onclick="location.href='images/404-page-not-found.png'">Become a member</p>
+                    </div>
+                    <div class="row">
+                        <p onclick="location.href='images/404-page-not-found.png'">Terms</p>
+                        <p onclick="location.href='images/404-page-not-found.png'">Events</p>
+                        <p onclick="location.href='help.html'">Contact us</p>
+                    </div>
+                </div>
+                <div class="right">
+                    <p>Subscribe to our newsletter</p>
+                    <input type="email" name="" id="" placeholder="email adress">
+                    <button class="green-button">Subscribe</button>
+                </div>
+            </div>
+            <div class="lower">
+                <div class="left">
+                        <img src="logo/sslogo.png" alt="">
+                        <span>
+                            © Copyright Sportslots 2020
+                        </span>
+                        <span>
+                            Payments protected by Lorem IPS
+                        </span>
+                </div>
+                <div class="right">
+                    <span><i class="fab fa-instagram" aria-hidden="true"></i></span>
+                    <span><i class="fab fa-twitter" aria-hidden="true"></i></span>
+                    <span><i class="fab fa-facebook" aria-hidden="true"></i></span>
+                    <span><i class="fab fa-instagram" aria-hidden="true"></i></span>
+                    <span><i class="fab fa-youtube" aria-hidden="true"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--************************************ DESKTOP FOOTER END************************************-->
     <!--************************************ MOBILE FOOTER START ************************************-->
-    <div class="footer-container">
+    <div class="footer-container fix-bottom">
+
         <div class="footer-content">
             <div class="my-games" id="myGamesFooter">
                 <img src="icons/mygames-bottom.png" alt="my games">
@@ -673,18 +727,18 @@
                         let messages = document.querySelector('.messages')
                         let messageList = document.querySelector('.message-list')
                         let expandChat = document.querySelector('.expand-chat');
-                        let messagesContent = document.querySelector('.messages-content')
                         chathead.forEach(elem => {
                             elem.addEventListener('click', () => {
                                messages.classList.add('messages-show');
                                messageList.classList.add('message-list-hide');
+                               document.querySelector('.write-message-input').style.display='block';
 
                             })
                         })
                         expandChat.addEventListener('click', () => {
-                           document.querySelector('.write-message-input').classList.toggle('show-messages-content')
                            document.querySelector('.messages .lower-header-messages').classList.toggle('show-messages-content')
-                           messagesContent.classList.toggle('show-messages-content')
+                           document.querySelector('.header-messages .time').classList.toggle('show-messages-content')
+                                                   
                         })
                     </script>
                     <!-- Font Awesome  -->
