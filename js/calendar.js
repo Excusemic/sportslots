@@ -846,8 +846,10 @@ function selectDateCurrentMonth(calendarDateBlock){
 
             if (selectedDates.length == 0) {
                 overlay.style.display="block"
+                document.querySelector('.manage-slots-calendar  .green-button').style.display="none";
             } else if (selectedDates.length > 0) {
                 overlay.style.display="none"
+                document.querySelector('.manage-slots-calendar  .green-button').style.display="block";
             }
         }
     }
@@ -887,6 +889,7 @@ function selectDate(calendarDateBlock){
     let test = calendarDateBlock.getAttribute('selectDate').slice(0, 2);
     if (monthFilter.value.includes(`${currentYear}`) && month >= currentMonth || monthFilter.value.includes(`${currentYear+1}`) ) {
     if (selectedDates.includes(calendarDateBlock.getAttribute('selectDate'))) {
+
         let index = selectedDates.indexOf(calendarDateBlock.getAttribute('selectDate'));
         calendarDateBlock.style.borderColor ="#ececec"
         calendarDateBlock.style.borderWidth ="1px"  
@@ -909,11 +912,12 @@ function selectDate(calendarDateBlock){
   
     // showSlobodiTermini();
 }
-if (selectedDates.length == 0) {
-    overlay.style.display="block"
-} else if (selectedDates.length > 0) {
-    overlay.style.display="none"
-}
+    if (selectedDates.length == 0) {
+        overlay.style.display="block";
+    } else if (selectedDates.length > 0) {
+        overlay.style.display="none";
+
+    }
 
 }
 

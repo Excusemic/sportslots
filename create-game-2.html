@@ -335,18 +335,18 @@
                 </div>
                 <div class="court-create-choose-details">
                     <form action="">
-                        <select id="sport" placeholder="Sport" name="sport" class="sport noselect" required>
-                            <option value="" disabled selected hidden>Sport</option>
-                            <option value="football">Football</option>
+                        <select id="sport" placeholder="Sport" name="sport" class="sport noselect" disabled>
+                            <option value="" disabled hidden>Sport</option>
+                            <option value="football" selected>Football</option>
                             <option value="basketball">Basketball</option>
                         </select>
                         <input type="text" id="date" placeholder="Date"
                         onfocus="(this.type='date')"
-                        onblur="(this.type='text')" name="date" class="date noselect">
-                        <input type="number" min="0" step="1" id="totalPlayersNeeded" placeholder="Total player needed" class="total-players-needed">
-                        <input type="text" id="time" placeholder="Time"
+                        onblur="(this.type='text')" name="date" class="date noselect" value="10/10/2020" disabled>
+                        <input type="number" min="0" step="1" id="totalPlayersNeeded" placeholder="Total player needed" class="total-players-needed" value="10" disabled>
+                        <input type="text" id="time" placeholder="Time" 
                         onfocus="(this.type='time')"
-                        onblur="(this.type='text')" name="time" class="time noselect">
+                        onblur="(this.type='text')" name="time" class="time noselect" value="10:00" disabled>
                         <div class="countrol-group">
                             <label class="control control-radio">
                                 Half court

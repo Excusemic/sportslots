@@ -242,7 +242,7 @@
                     <p class="span-black">Today</p>
                 </div>
                 <div class="preview-court-set-hours">
-                    <span class="span-black">Preview court</span>
+                    <span class="span-black" onclick="location.href='selected-indoor-court.html'">Preview court</span>
                     <span class="span-black">Set working hours</span>
                 </div>
             </div>
@@ -653,6 +653,8 @@
                         let expandDetails = document.querySelectorAll('.open-details');
                         let blockedSlotsExpand = document.querySelector('.show-blocked-arrow');
                         let expandBookedSlots = document.querySelector('.show-booked-arrow')
+                        let blocks = document.querySelectorAll('.calendar-block');
+
                         blockedSlotsExpand.addEventListener('click', () => {
                             let blockedSlots = document.querySelector('.blocked-slots-all');
                             blockedSlots.classList.toggle('blocked-slots-show');

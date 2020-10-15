@@ -109,7 +109,18 @@
             <h3>Searching...</h3>
         </div>
     </div>
-    
+    <div class="send-message-container">
+        <div class="send-message-content">
+            <h4 class="span-green">Send a message to</h4>
+            <div class="player">
+                <img src="players/player1.png" alt="">
+                <p class="player-name">Smoke Mardeljano</p>
+            </div>
+            <textarea name="" id="" placeholder="Write a message"></textarea>
+            <button class="green-button send-msg-btn-popup">Send</button>
+            <div class="x-button cancel-msg">X</div>
+        </div>
+    </div>
  <!--**************************************** HEADER AND NAVIGATION START ***********************************-->
  <header class="header">
     <div class="header-content">
@@ -238,7 +249,7 @@
 
 
                     <div class="player-box-invite">
-                        <img src="players/player1.png" alt="player">
+                        <img src="players/player1.png" alt="player" onclick="location.href='selected-profile.html'">
                         <div class="player-info-invite">
                             <h5>Smoke Mardeljano</h5>
                             <p>Belgrade, Serbia</p>
@@ -255,11 +266,11 @@
                                 <span class="fa fa-star checked"></span>
                                 <span>5.0</span>
                         </div>
-                        <button class="message-button-fp">Message</button>
+                        <button class="message-button-fp send-msg-btn">Message</button>
                     </div>
 
                     <div class="player-box-invite">
-                        <img src="players/player1.png" alt="player">
+                        <img src="players/player1.png" alt="player" onclick="location.href='selected-profile.html'">
                         <div class="player-info-invite">
                             <h5>Smoke Mardeljano</h5>
                             <p>Belgrade, Serbia</p>
@@ -276,11 +287,11 @@
                                 <span class="fa fa-star checked"></span>
                                 <span>5.0</span>
                         </div>
-                        <button class="message-button-fp">Message</button>
+                        <button class="message-button-fp send-msg-btn">Message</button>
                     </div>
 
                     <div class="player-box-invite">
-                        <img src="players/player1.png" alt="player">
+                        <img src="players/player1.png" alt="player" onclick="location.href='selected-profile.html'">
                         <div class="player-info-invite">
                             <h5>Smoke Mardeljano</h5>
                             <p>Belgrade, Serbia</p>
@@ -297,11 +308,11 @@
                                 <span class="fa fa-star checked"></span>
                                 <span>5.0</span>
                         </div>
-                        <button class="message-button-fp">Message</button>
+                        <button class="message-button-fp send-msg-btn">Message</button>
                     </div>
 
                     <div class="player-box-invite">
-                        <img src="players/player1.png" alt="player">
+                        <img src="players/player1.png" alt="player" onclick="location.href='selected-profile.html'">
                         <div class="player-info-invite">
                             <h5>Smoke Mardeljano</h5>
                             <p>Belgrade, Serbia</p>
@@ -318,11 +329,11 @@
                                 <span class="fa fa-star checked"></span>
                                 <span>5.0</span>
                         </div>
-                        <button class="message-button-fp">Message</button>
+                        <button class="message-button-fp send-msg-btn">Message</button>
                     </div>
 
                     <div class="player-box-invite">
-                        <img src="players/player1.png" alt="player">
+                        <img src="players/player1.png" alt="player" onclick="location.href='selected-profile.html'">
                         <div class="player-info-invite">
                             <h5>Smoke Mardeljano</h5>
                             <p>Belgrade, Serbia</p>
@@ -339,11 +350,11 @@
                                 <span class="fa fa-star checked"></span>
                                 <span>5.0</span>
                         </div>
-                        <button class="message-button-fp">Message</button>
+                        <button class="message-button-fp send-msg-btn">Message</button>
                     </div>
 
                     <div class="player-box-invite">
-                        <img src="players/player1.png" alt="player">
+                        <img src="players/player1.png" alt="player" onclick="location.href='selected-profile.html'">
                         <div class="player-info-invite">
                             <h5>Smoke Mardeljano</h5>
                             <p>Belgrade, Serbia</p>
@@ -360,7 +371,7 @@
                                 <span class="fa fa-star checked"></span>
                                 <span>5.0</span>
                         </div>
-                        <button class="message-button-fp">Message</button>
+                        <button class="message-button-fp send-msg-btn">Message</button>
                     </div>
 
 
@@ -471,6 +482,28 @@
                 };
                 // Initialize Firebase
                 firebase.initializeApp(firebaseConfig);
+                let sendMessageBtn = document.querySelectorAll('.send-msg-btn')
+                let sendMessageBtnPopUp = document.querySelector('.send-msg-btn-popup')
+                let cancelMessage = document.querySelector('.cancel-msg')
+                sendMessageBtnPopUp.addEventListener('click', () => {
+                    document.querySelector('.send-message-container').style.display="none"
+                })
+                cancelMessage.addEventListener('click', () => {
+                    document.querySelector('.send-message-container').style.display="none"
+                })
+
+
+
+                sendMessageBtn.forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        if(loggedIn==true) {
+                        document.querySelector('.send-message-container').style.display="block"
+                        } 
+                    })
+
+                    });
+                    
+
 
                 </script>
                 <!-- jquery -->
