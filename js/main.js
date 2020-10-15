@@ -44,6 +44,7 @@ let nameOfUser = document.querySelector('.nameOfUser')
 let loginMobileBtn = document.querySelector('.login-mobile')
 let playerAvatar = document.getElementById('playerAvatar');
 let notificationBtn = document.querySelector('.notification-div');
+let signInOverlay = document.querySelector('.sign-in-overlay')
 notificationBtn.addEventListener('click', () => {
   window.location="notifications.html"
 })

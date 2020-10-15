@@ -58,6 +58,32 @@
 
 </head>
 <body>
+    <div class="send-message-container">
+        <div class="send-message-content">
+            <h4 class="span-green">Send a message to</h4>
+            <div class="player">
+                <img src="players/player1.png" alt="">
+                <p class="player-name">Smoke Mardeljano</p>
+            </div>
+            <textarea name="" id="" placeholder="Write a message"></textarea>
+            <button class="green-button send-msg-btn-popup">Send</button>
+            <div class="x-button cancel-msg">X</div>
+        </div>
+    </div>
+    <div class="create-acc-popup-container">
+        <div class="create-acc-popup-content">
+            <h4 class="span-green">Jump in</h4>
+            <div>
+                <p class="span-black">New to sportslots?</p>
+                <button class="green-button" id="step2-create-acc">Create account</button>
+            </div>
+            <div>
+                <p class="span-black">Already have an account?</p>
+                <button class="green-button" id="signInStepTwo">Sign in</button>
+            </div>
+            <p class="forgot-password">Forgot password?</p>
+        </div>
+    </div>
     <div class="report-user-container">
         <div class="report-user-content">
             <h4 class="span-orange">Report user</h4>
@@ -257,7 +283,7 @@
             <aside class="left-side-section">
                 <div class="user-image">
                     <img src="players/player4.png" alt="player" class="player-image" id="playerAvatar">
-                    <div class="send-message change-image">
+                    <div class="send-message change-image send-msg-btn">
                         <img src="icons/message.png" alt="message">
                         <p>Send message</p>
                     </div>
@@ -503,11 +529,27 @@
             firebase.initializeApp(firebaseConfig);
 
             </script>
+           
+            <!-- jquery -->
+            <script src="js/jquery-3.4.1.slim.min.js"></script>
+            <!-- Bootstrap -->
+            <script src="js/popper.min.js"></script>
+            <script src="js/bootstrap.min.js"></script>
+            <script src="js/waypoints.min.js"></script>
+            <script src="js/slick.min.js"></script>
+            <script src="js/jquery.ajaxchimp.min.js"></script>
+
+             <!-- Custom Scripts -->
+             <script src="js/menu.js"></script>
+            <script src="js/main.js"></script>
             <script>
               
                 let reportUserBtn = document.querySelector('.report-user-btn')
                 let submitReport = document.querySelector('.submit-report')
                 let cancelReport = document.querySelectorAll('.cancel-report')
+                let sendMessageBtn = document.querySelectorAll('.send-msg-btn')
+                let sendMessageBtnPopUp = document.querySelector('.send-msg-btn-popup')
+                let cancelMessage = document.querySelector('.cancel-msg')
                 console.log(cancelReport)
 
                 reportUserBtn.addEventListener('click', () => {
@@ -522,19 +564,36 @@
                         document.querySelector('.report-user-container').style.display="none"
                     })
                 })
+                sendMessageBtn.forEach(btn => {
+                                btn.addEventListener('click', () => {
+                                    if(loggedIn==true) {
+                                    document.querySelector('.send-message-container').style.display="block"
+                                 } else {
+                                     document.querySelector('.create-acc-popup-container').style.display="block";
+                                 }
+                                })
+    
+                             });
+                            sendMessageBtnPopUp.addEventListener('click', () => {
+                                document.querySelector('.send-message-container').style.display="none"
+                            })
+                            cancelMessage.addEventListener('click', () => {
+                                document.querySelector('.send-message-container').style.display="none"
+                            })
+                            let step3createAccBtn = document.querySelector('#step2-create-acc');
+                            step3createAccBtn.addEventListener('click', () => {
+                            document.querySelector('.create-acc-popup-container').style.display="none";
+                                document.querySelector('.sign-in-overlay').style.display="block"
+                            })
+                        let signInStepTwo = document.querySelector('#signInStepTwo')
+                        signInStepTwo.addEventListener('click', () => {
+                            document.querySelector('.create-acc-popup-container').style.display="none";
+                            document.documentElement.scrollTop = 0;
+                            document.querySelector('.side-menu').classList.add('toggle-menu');
+                            document.querySelector('.login-mobile').click()
+                        
+                        })            
             </script>
-            <!-- jquery -->
-            <script src="js/jquery-3.4.1.slim.min.js"></script>
-            <!-- Bootstrap -->
-            <script src="js/popper.min.js"></script>
-            <script src="js/bootstrap.min.js"></script>
-            <script src="js/waypoints.min.js"></script>
-            <script src="js/slick.min.js"></script>
-            <script src="js/jquery.ajaxchimp.min.js"></script>
-
-             <!-- Custom Scripts -->
-             <script src="js/menu.js"></script>
-            <script src="js/main.js"></script>
             <!-- Font Awesome  -->
 
             <script src="js/all.min.js"></script>
