@@ -7318,6 +7318,21 @@ header nav {
 		padding-bottom: 1.8em;
 		padding-top: .8em;
 	}
+	.table-header {
+		display: none;
+	}
+	.reservations-container table td {
+		padding: .3em 0em;
+		display: block;
+	}
+	.reservations-container table .reservationRow {
+		display: block;
+		margin-bottom: 1.4em;
+		padding-bottom: 1.4em;
+	}
+	.reservations-container .more {
+		top: -120px;
+	}
 	.upcoming-court-history-court-free .chosen-court-details-free h4 {
 		margin-top: .5em;
 	}
@@ -7749,10 +7764,13 @@ header nav {
 	}
 	.reservations-content .control-group {
 		flex-wrap: wrap;
+		margin-bottom: 1em;
 	}
 	.reservations-content .control-group .control-checkbox {
 		width: 40%;
 		margin-top: .4em;
+		margin: .8em;
+		margin-left: 0em;
 	}
 	.messages-container {
 		width: 95%;
