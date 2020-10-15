@@ -795,6 +795,7 @@ header nav {
 	flex-basis: 32%;
 	background-color: #fff;
 	box-shadow: 1px 4px 3px 1px #ebebeb;
+	border-radius: 5px;
 }
 .court-block-featured .players-field-info {
 	width: 95%;
