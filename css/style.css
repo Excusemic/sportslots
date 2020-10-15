@@ -5787,7 +5787,7 @@ header nav {
 .messages {
 	background-color: #fff;
 	padding: 1.2em 0em;
-	padding-bottom: 7em;
+	padding-bottom: 3em;
 	margin-bottom: 3em;
 	box-shadow: 2px 4px 3px 1px #ebebeb;
 }
@@ -5948,6 +5948,9 @@ header nav {
 .write-message-input {
 	border: 1px solid #bbbbbb;
 	border-radius: 10px;
+
+}
+.write-message-input-mobile {
 	display: none;
 }
 .write-message-input .add{
