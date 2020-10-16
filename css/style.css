@@ -588,6 +588,7 @@ header nav {
 .court-search form input:focus {
 	outline: none;
 }
+
 .court-search form .sport {
 	background-image: url("../icons/sport_icon.png");
 	background-repeat: no-repeat;
@@ -5739,6 +5740,54 @@ header nav {
 	display: inline-block;
 	margin-bottom: .3em;
 	
+}
+.message-chatheads-header .upper-header  {
+	width: 95%;
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+}
+.message-chatheads-header .upper-header img{
+	width: 22px;
+	height: 22px;
+	margin-left: 1.2em;
+	cursor: pointer;
+
+}
+.more-list-msg {
+	padding: 0em;
+	position: absolute;
+	display: none;
+	margin-right: 0em;
+	margin-left: 0em;
+	list-style-type: none;
+	right: -20px;
+	z-index: 10;
+	background-color: #fff;
+	border: 1px solid #ececec;
+	border-radius: 5px;
+	box-shadow: 2px 4px 3px 1px #ebebeb;
+}
+.more-list-msg li {
+	padding-left: 0em;
+	padding: .6em;
+	padding-right: 2em;
+	cursor: pointer;
+	font-size: .8em;
+}
+.more-list-msg li:nth-child(1) {
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+}
+.more-list-msg li:last-child {
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+.more-list-msg li:hover {
+	background-color: #ececec;
+}
+.more-msg:hover .more-list-msg{
+	display: block;
 }
 .message-chatheads-header input {
 	width: 100%;
