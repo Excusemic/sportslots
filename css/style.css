@@ -597,7 +597,7 @@ header nav {
 	padding-top: 0.5em;
 	padding-bottom: 0.5em;
 	width: 20%;
-	
+	background-size: 22px;
 }
 .court-search form select {
     -webkit-appearance: none;
@@ -617,6 +617,7 @@ header nav {
 	padding-top: 0.5em;
 	padding-bottom: 0.5em;
 	width: 20%;
+	background-size: 22px;
 	
 	
 }
@@ -634,6 +635,7 @@ header nav {
 	padding-top: 0.5em;
 	padding-bottom: 0.5em;
 	width: 20%;
+	background-size: 22px;
 }
 .court-search form .time:focus {
 	background-image: none;
@@ -687,9 +689,12 @@ header nav {
 	padding-bottom: 1.6em;
 	display: flex;
 	flex-wrap: nowrap;
-	jusify-content: space-between;
 	font-weight: 600;
 
+}
+.filters img {
+	height: 25px;
+	width: 22px;
 }
 
 .filters p {
@@ -1040,6 +1045,7 @@ header nav {
 	font-weight: 300;
 	font-size: 1em;
 	outline: none;
+	background-size: 22px;
 }
 .players {
 	margin-top: 2em;
@@ -1465,6 +1471,7 @@ header nav {
 	font-weight: 300;
 	font-size: 1em;
 	outline: none;
+	background-size: 22px;
 }
 .load-more-players {
 	color: #37b34a;
@@ -1653,6 +1660,8 @@ header nav {
 	cursor: pointer;
 }
 .court-create-price  img {
+	width: 20px;
+	height: 22px;
 	margin: auto;
 	margin-right: 0px;
 	margin-left: 0px;
@@ -1768,6 +1777,7 @@ header nav {
 	padding-bottom: 0.8em;
 	background-color: #f9f9f9;
 	grid-area: sport;
+	background-size: 22px;
 }
 .court-create-choose-details form .date {
 	background-image: url("../icons/date_icon.png");
@@ -1779,6 +1789,7 @@ header nav {
 	padding-bottom: 0.8em;
 	background-color: #f9f9f9;
 	grid-area: date;
+	background-size: 22px;
 }
 .court-create-choose-details form .date:focus {
 	background-image: none;
@@ -1808,6 +1819,7 @@ header nav {
 	padding-bottom: 0.8em;
 	background-color: #f9f9f9;
 	grid-area: time;
+	background-size: 22px;
 }
 .court-create-choose-details form .time:focus {
 	background-image: none;
@@ -2013,6 +2025,7 @@ header nav {
 	font-weight: 300;
 	font-size: 1em;
 	outline: none;
+	background-size: 22px;
 }
 .next-button-invite-div {
 	text-align: center;
@@ -4067,6 +4080,7 @@ header nav {
 	text-align: center;
 	font-weight: 700;
 	padding-right: 24px;
+	padding-left: 24px;
 	cursor: pointer;
 	
 }
@@ -4128,7 +4142,7 @@ header nav {
  .player-profile-content aside .achievements div  img {
 	 margin: auto;
 	 width: 18px;
-	 height: 24px;
+	 height: 20px;
  }
  .verified img {
 	width: 18px;
@@ -4972,6 +4986,9 @@ header nav {
 	width: 60%;
 	
 }
+.manage-slots-calendar .green-button {
+	display: none;
+}
 .manage-slots-calendar .calendar-blocks-all {
 	height: 900px;
 	overflow: auto;
@@ -5394,6 +5411,10 @@ header nav {
 	margin: auto;
 	padding-bottom: 2em;
 }
+.blocked-slots-content img {
+	height: 22px;
+	width: 22px;
+}
 .blocked-slots-content .header-slots {
 	display: flex;
 	justify-content: space-between;
@@ -5524,6 +5545,7 @@ header nav {
 	font-weight: 300;
 	font-size: 1em;
 	outline: none;
+	background-size: 22px;
 }
 .question-text {
 	cursor: pointer;
@@ -6887,6 +6909,8 @@ header nav {
 	}
 	.notification-div img {
 		padding-top: .3em;
+		width: 25px;
+		height: 28px;
 	}
 	.notification-div .notification-bubble{ 
 		position: absolute;
@@ -8188,6 +8212,7 @@ header nav {
 	}
 	.buttons-rebook {
 		width: 85%;
+		margin: auto;
 		margin-top: 1.2em;
 	}
 }

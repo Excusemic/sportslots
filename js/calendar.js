@@ -846,10 +846,19 @@ function selectDateCurrentMonth(calendarDateBlock){
 
             if (selectedDates.length == 0) {
                 overlay.style.display="block"
-                document.querySelector('.manage-slots-calendar  .green-button').style.display="none";
+                let widht = window.innerWidth;
+                if(widht <= 768) {
+                    document.querySelector('.manage-slots-calendar  .green-button').style.display="none";
+                }
+
+
             } else if (selectedDates.length > 0) {
                 overlay.style.display="none"
-                document.querySelector('.manage-slots-calendar  .green-button').style.display="block";
+                let widht = window.innerWidth;
+                if(widht <= 768) {
+                    document.querySelector('.manage-slots-calendar  .green-button').style.display="block";
+                }
+                
             }
         }
     }
