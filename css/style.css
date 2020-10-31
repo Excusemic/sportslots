@@ -904,6 +904,7 @@ header nav {
 	margin: auto;
 	margin-bottom: .4em;
 	margin-left: 0em;
+	margin-right: 0em;
 }
 .star-rating-step2 span {
 	font-size: .8em;
@@ -1924,7 +1925,8 @@ header nav {
  	width: 70px;
  	height: 70px;
  	margin: auto;
- 	margin-left: 0em;
+	margin-left: 0em;
+	margin-right: 50px;
  }
   .player-info-invite {
 	cursor: pointer;
@@ -2654,7 +2656,7 @@ header nav {
 }
 .upcoming-court-history-court-paid .chosen-court-details-paid p  {
 	font-size: 0.8em;
-	line-height: 1.1em;
+	line-height: 1.4em;
 }
 .upcoming-court-history-court-free .go-to-chat, .upcoming-court-history-court-paid .go-to-chat  {
 	padding-top: 0.8em;
@@ -6649,6 +6651,10 @@ header nav {
 	.desktop-footer-content .lower .left {
 		width: 60%;
 	}
+	.slot-details-container-invited-player .slot-details-content .change-or-pay .buttons {
+		width: 20%;
+	}
+
 
 }
 @media only screen and (min-width: 2175px) {
@@ -6663,6 +6669,9 @@ header nav {
 	}
 	.desktop-footer-content .lower .left {
 		width: 58%;
+	}
+	.confirmed-players-slot-details .player-box-invite {
+		width: 80%;
 	}
 
 }
