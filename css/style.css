@@ -8516,6 +8516,10 @@ header nav {
 	.contact-us textarea {
 		width: 60%;
 	}
+	.confirmed-players-slot-details .more img{
+		right: -30px
+	
+	}
 
 
 
@@ -8589,6 +8593,13 @@ header nav {
 		width: 70%;
 	}
 
+
+}
+@media only screen and (min-width: 1001px) {
+	.confirmed-players-slot-details .more img{
+		right: -30px
+	
+	}
 }
 @media only screen and (max-width: 1221px) {
 	.court-block {
@@ -8603,6 +8614,7 @@ header nav {
 	.desktop-footer-content .lower .left {
 		max-width: 61.5%;
 	}
+	
 }
 @media only screen and (min-width: 560px) and (max-width: 768px) {
 	.mobileCarouselImage {
